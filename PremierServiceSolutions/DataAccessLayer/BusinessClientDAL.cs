@@ -54,57 +54,64 @@ namespace PremierServiceSolutions.DataAccessLayer
             return myClient;
         }
 
-        public List<Job> GetBusinessClientJobByClientID(string id)
+        
+
+        public void InsertBusinessClient(BusinessClient client)
         {
-            Job clientJob = new Job();
-            List<Job> jobs = new List<Job>();
-            string query = $"SELECT * FROM IndividualClientJobs WHERE ClientID = '{id}'";
+            string query = $"insert into BusinessClients values" +
+                $"('{client.clientID}', " +
+                $"'{client.CompanyName}', " +
+                $"'{client.Phone}', " +
+                $"{client.Email}, " +
+                $"'{client.AddressID}', " +
+                $"'{client.ContractID}')";
 
             try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-
-
-                        clientJob.JobID = reader.GetString(0);
-                        clientJob.Description = reader.GetString(1);
-                        clientJob.Status = reader.GetString(2);
-                        clientJob.Duration = reader.GetInt32(3);
-                        clientJob.ClientID = reader.GetString(4);
-                        clientJob.EmployeeID = reader.GetString(5);
-
-                        jobs.Add(clientJob);
-                    }
-
-                }
-
-                else
-                {
-                    MessageBox.Show("No Jobs found");
-                }
-
-                reader.Close();
-
+                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+
             finally
             {
                 conn.Close();
-
             }
 
 
+        }
 
-            return jobs;
+        public void UpdateBusinessClient(BusinessClient client)
+        {
+            string query = $"update BusinessClients set " +
+                $"ClientID = '{client.clientID}', " +
+                $"CompanyName = '{client.CompanyName}', " +
+                $"Phone = {client.Phone}, " +
+                $"Email = '{client.Email}', " +
+                $"AddressID = '{client.AddressID}', " +
+                $"ContractID = '{client.ContractID}' where " +
+                $"ClientID = '{client.clientID}'";
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

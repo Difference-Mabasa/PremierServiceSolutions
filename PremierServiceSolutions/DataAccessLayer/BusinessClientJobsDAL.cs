@@ -8,16 +8,15 @@ using System.Windows.Forms;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
-    class IndividualClientDAL
+    class BusinessClientJobsDAL
     {
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
-
-        public IndividualClient SearchIndividualClientByID(string id)
+        public List<Job> GetBusinessClientJobByClientID(string id)
         {
-
-            IndividualClient myClient = new IndividualClient();
-            string query = $"SELECT * FROM IndividualClients WHERE ClientID = '{id}'";
+            Job clientJob = new Job();
+            List<Job> jobs = new List<Job>();
+            string query = $"SELECT * FROM BusinessClientJobs WHERE ClientID = '{id}'";
 
             try
             {
@@ -29,21 +28,23 @@ namespace PremierServiceSolutions.DataAccessLayer
                 {
                     while (reader.Read())
                     {
-                        myClient.clientID = reader.GetString(0);
-                        myClient.Name = reader.GetString(1);
-                        myClient.Surname = reader.GetString(2);
-                        myClient.Phone = reader.GetString(3);
-                        myClient.Email = reader.GetString(4);
-                        myClient.AddressID = reader.GetString(5);
-                        myClient.ContractID = reader.GetString(6);
 
+
+                        clientJob.JobID = reader.GetString(0);
+                        clientJob.Description = reader.GetString(1);
+                        clientJob.Status = reader.GetString(2);
+                        clientJob.Duration = reader.GetInt32(3);
+                        clientJob.ClientID = reader.GetString(4);
+                        clientJob.EmployeeID = reader.GetString(5);
+
+                        jobs.Add(clientJob);
                     }
 
                 }
 
                 else
                 {
-                    MessageBox.Show("No matches found");
+                    MessageBox.Show("No Jobs found");
                 }
 
                 reader.Close();
@@ -58,26 +59,25 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
 
             }
-
-            return myClient;
+            return jobs;
         }
 
-        public void InsertIndividualClient(IndividualClient client)
+        public void InsertBusinessClientJob(Job job)
         {
-            string query = $"insert into IndividualClients values" +
-                $"('{client.clientID}', " +
-                $"'{client.Name}', " +
-                $"'{client.Surname}', " +
-                $"{client.Phone}, " +
-                $"'{client.Email}', " +
-                $"'{client.AddressID}', " +
-                $"'{client.ContractID}')";
+            string query = $"insert into BusinessClientJobs values" +
+                $"('{job.JobID}', " +
+                $"'{job.Description}', " +
+                $"'{job.Status}', " +
+                $"'{job.Duration}', " +
+                $"{job.ClientID}, " +
+                $"'{job.EmployeeID}')";
 
             try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Inserted Successfully");
             }
             catch (Exception ex)
             {
@@ -90,18 +90,16 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        public void UpdateIndividualClient(IndividualClient client)
+        public void UpdateBusinessClientJob(Job job)
         {
-            string query = $"update IndividualClients set " +
-                $"ClientID = '{client.clientID}', " +
-                $"ClientName = '{client.Name}', " +
-                $"ClientSurname = '{client.Surname}', " +
-                $"Phone = {client.Phone}, " +
-                $"Email = '{client.Email}', " +
-                $"AddressID = '{client.AddressID}', " +
-                $"ContractID = '{client.ContractID}' where " +
-                $"ClientID = '{client.clientID}'";
-
+            string query = $"update IndividualClientJobs set" +
+                $"JobID = '{job.JobID}', " +
+                $"JobDescription = '{job.Description}', " +
+                $"JobStatus = '{job.Status}', " +
+                $"JobDuration = '{job.Duration}', " +
+                $"CompanyID = {job.ClientID}, " +
+                $"EmployeeID = '{job.EmployeeID}'" +
+                $"where JobID = '{job.JobID}'";
             try
             {
                 conn.Open();

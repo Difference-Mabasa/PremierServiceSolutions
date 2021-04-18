@@ -21,10 +21,10 @@ namespace PremierServiceSolutions
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            IndividualClientBLL bl = new IndividualClientBLL();
-            IndividualClient client = bl.GetIndividualClientByID("I001");
+            //IndividualClientBLL bl = new IndividualClientBLL();
+            //IndividualClient client = bl.GetIndividualClientByID("I001");
 
-            MessageBox.Show("Name: " + client.Name);
+            //MessageBox.Show("Name: " + client.Name);
         }
     }
 }
