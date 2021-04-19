@@ -29,18 +29,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
             List<String> a;
         }
-        public void InsertIndividualClient(string clientID, string name, string surname, string phone, string email,
-            string addressid, string contractId)
+        public void InsertIndividualClient(IndividualClient client)
         {
-            IndividualClient client = new IndividualClient();
-            client.clientID = clientID;
-            client.Name = name;
-            client.Surname = surname;
-            client.Phone = phone;
-            client.Email = email;
-            client.AddressID = addressid;
-            client.ContractID = contractId;
-
             try
             {
                 IndividualClientDAL clientData = new IndividualClientDAL();
@@ -54,18 +44,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
-        public void UpdateIndividualClient(string clientID, string name, string surname, string phone, string email,
-            string addressid, string contractId)
+        public void UpdateIndividualClient(IndividualClient client)
         {
-            IndividualClient client = new IndividualClient();
-            client.clientID = clientID;
-            client.Name = name;
-            client.Surname = surname;
-            client.Phone = phone;
-            client.Email = email;
-            client.AddressID = addressid;
-            client.ContractID = contractId;
-
             try
             {
                 IndividualClientDAL clientData = new IndividualClientDAL();

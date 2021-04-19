@@ -28,22 +28,12 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
-        public void InsertIndividualClient(string clientID, string name, string surname, string phone, string email,
-            string addressid, string contractId)
+        public void InsertIndividualClient(BusinessClient client)
         {
-            IndividualClient client = new IndividualClient();
-            client.clientID = clientID;
-            client.Name = name;
-            client.Surname = surname;
-            client.Phone = phone;
-            client.Email = email;
-            client.AddressID = addressid;
-            client.ContractID = contractId;
-
             try
             {
-                IndividualClientDAL clientData = new IndividualClientDAL();
-                clientData.InsertIndividualClient(client);
+                BusinessClientDAL clientData = new BusinessClientDAL();
+                clientData.InsertBusinessClient(client);
             }
             catch (Exception e)
             {
@@ -53,22 +43,12 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
-        public void UpdateIndividualClient(string clientID, string name, string surname, string phone, string email,
-            string addressid, string contractId)
+        public void UpdateIndividualClient(BusinessClient client)
         {
-            IndividualClient client = new IndividualClient();
-            client.clientID = clientID;
-            client.Name = name;
-            client.Surname = surname;
-            client.Phone = phone;
-            client.Email = email;
-            client.AddressID = addressid;
-            client.ContractID = contractId;
-
             try
             {
-                IndividualClientDAL clientData = new IndividualClientDAL();
-                clientData.UpdateIndividualClient(client);
+                BusinessClientDAL clientData = new BusinessClientDAL();
+                clientData.InsertBusinessClient(client);
             }
             catch (Exception e)
             {
