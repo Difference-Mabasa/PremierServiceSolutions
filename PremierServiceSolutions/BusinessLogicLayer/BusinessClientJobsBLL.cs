@@ -8,15 +8,15 @@ using PremierServiceSolutions.DataAccessLayer;
 
 namespace PremierServiceSolutions.BusinessLogicLayer
 {
-    class IndividualClientJobsBLL
+    class BusinessClientJobsBLL
     {
-        public List<Job> GetIndividualClientJobByClientID(string id)
+        public List<Job> GetBusinessClientJobByClientID(string id)
         {
             List<Job> jobs = new List<Job>();
             try
             {
-                IndividualClientJobsDAL clientData = new IndividualClientJobsDAL();
-                jobs = clientData.GetIndividualClientJobByClientID(id);
+                BusinessClientJobsDAL clientData = new BusinessClientJobsDAL();
+                jobs = clientData.GetBusinessClientJobByClientID(id);
             }
             catch (Exception e)
             {
@@ -26,12 +26,12 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return jobs;
         }
 
-        public void InsertIndividualClientJob(Job job)
+        public void InsertBusinessClientJob(Job job)
         {
             try
             {
-                IndividualClientJobsDAL clientData = new IndividualClientJobsDAL();
-                clientData.InsertIndividualClientJob(job);
+                BusinessClientJobsDAL clientData = new BusinessClientJobsDAL();
+                clientData.InsertBusinessClientJob(job);
             }
             catch (Exception e)
             {
@@ -39,12 +39,12 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
         }
 
-        public void UpdateIndividualClientJob(Job job)
+        public void UpdateBusinessClientJob(Job job)
         {
             try
             {
-                IndividualClientJobsDAL clientData = new IndividualClientJobsDAL();
-                clientData.UpdateIndividualClientJob(job);
+                BusinessClientJobsDAL clientData = new BusinessClientJobsDAL();
+                clientData.UpdateBusinessClientJob(job);
             }
             catch (Exception e)
             {
