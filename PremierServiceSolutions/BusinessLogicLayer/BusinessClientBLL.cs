@@ -28,7 +28,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
-        public void InsertIndividualClient(BusinessClient client)
+        public void InsertBusinessClient(BusinessClient client)
         {
             try
             {
@@ -43,12 +43,12 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
-        public void UpdateIndividualClient(BusinessClient client)
+        public void UpdateBusinessClient(BusinessClient client)
         {
             try
             {
                 BusinessClientDAL clientData = new BusinessClientDAL();
-                clientData.InsertBusinessClient(client);
+                clientData.UpdateBusinessClient(client);
             }
             catch (Exception e)
             {
