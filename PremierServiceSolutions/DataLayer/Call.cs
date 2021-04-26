@@ -22,24 +22,7 @@ namespace PremierServiceSolutions
             Time = time;
             Duration = duration;
         }
-
-        public void MakeCall()
-        {
-
-        }
-        public void AcceptCall()
-        {
-
-        }
-
-        public void EndCall()
-        {
-
-        }
-
-        public void RecordCall()
-        {
-
-        }
+        public Call() { }
+        
     }
 }
