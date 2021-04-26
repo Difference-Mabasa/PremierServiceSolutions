@@ -23,6 +23,10 @@ namespace PremierServiceSolutions
             Duration = duration;
         }
 
+        public void MakeCall()
+        {
+
+        }
         public void AcceptCall()
         {
 
