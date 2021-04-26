@@ -9,15 +9,19 @@ namespace PremierServiceSolutions
     class Employee : Person
     {
 
-        string employeeID, department;
+        string employeeID, department, password;
 
         public string EmployeeID { get => employeeID; set => employeeID = value; }
         public string Department { get => department; set => department = value; }
-
+        public string Password { get => password; set => password = value; }
         public Employee()
         {
         }
-
+        public Employee(string id, string password)
+        {
+            this.EmployeeID = id;
+            this.Password = password;
+        }
         public Employee(string id, string name, string surname, string phone, string department)
         {
             this.EmployeeID = id;
