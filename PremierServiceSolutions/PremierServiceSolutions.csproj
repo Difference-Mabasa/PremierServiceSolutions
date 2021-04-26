@@ -60,6 +60,48 @@
     <Compile Include="DataLayer\Contract.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\Employee.cs" />
+    <Compile Include="PresentationLayer\CallCentre\AddRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\AddRequest.Designer.cs">
+      <DependentUpon>AddRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\Call.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\Call.Designer.cs">
+      <DependentUpon>Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\ClientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\ClientDetails.Designer.cs">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\UpdateRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\UpdateRequest.Designer.cs">
+      <DependentUpon>UpdateRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintanance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintanance.Designer.cs">
+      <DependentUpon>ClientMaintanance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientSatisfaction\ClientSatisfaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientSatisfaction\ClientSatisfaction.Designer.cs">
+      <DependentUpon>ClientSatisfaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanance.Designer.cs">
+      <DependentUpon>ContractMaintanance.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +114,50 @@
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
     <Compile Include="DataLayer\PremiumContract.cs" />
+    <Compile Include="PresentationLayer\ServiceDapartment\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDepartment.Designer.cs">
+      <DependentUpon>ServiceDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataLayer\StandardContract.cs" />
+    <EmbeddedResource Include="PresentationLayer\CallCentre\AddRequest.resx">
+      <DependentUpon>AddRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\Call.resx">
+      <DependentUpon>Call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\ClientDetails.resx">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\UpdateRequest.resx">
+      <DependentUpon>UpdateRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ClientMaintanance\ClientMaintanance.resx">
+      <DependentUpon>ClientMaintanance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ClientSatisfaction\ClientSatisfaction.resx">
+      <DependentUpon>ClientSatisfaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintanance.resx">
+      <DependentUpon>ContractMaintanance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\ServiceDepartment.resx">
+      <DependentUpon>ServiceDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
