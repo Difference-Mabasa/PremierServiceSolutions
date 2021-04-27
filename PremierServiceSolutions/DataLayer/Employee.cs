@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PremierServiceSolutions.BusinessLogicLayer;
+using PremierServiceSolutions.DataAccessLayer;
 
 namespace PremierServiceSolutions
 {
@@ -69,6 +70,20 @@ namespace PremierServiceSolutions
             }
 
         }
+        //Returns false if employee details not found 
+        public bool Login(string id, string password)
+        {
+            List<Employee> employeeData = new List<Employee>();
+            bool valid = false;
+            foreach (Employee emp in employeeData)
+            {
+                if (emp.EmployeeID.Equals(id) && emp.Password.Equals(password))
+                {
+                    valid = true;
+                }
+            }
+            return valid;
+        } 
 
         public override string ToString()
         {
