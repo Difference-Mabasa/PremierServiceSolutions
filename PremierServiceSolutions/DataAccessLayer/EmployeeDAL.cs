@@ -9,7 +9,7 @@ using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
-
+    //Employee Data access Class
     class EmployeeDAL
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
