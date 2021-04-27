@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 using PremierServiceSolutions.DataAccessLayer;
 
@@ -12,15 +13,16 @@ namespace PremierServiceSolutions.BusinessLogicLayer
     class BusinessClientBLL
     {
 
-        public void GetBusinessClients() 
+        public DataTable GetAllBusinessClients() 
         {
-            List<BusinessClient> 
+            DataTable table;
             BusinessClientDAL businessClientDAL = new BusinessClientDAL();
-            businessClientDAL.GetAllBusinessClients();
+            table = businessClientDAL.GetAllBusinessClients();
 
-
+            return table;
            
         }
+
         public BusinessClient GetBusinessClientByID(string id)
         {
             BusinessClientDAL clientData = new BusinessClientDAL();

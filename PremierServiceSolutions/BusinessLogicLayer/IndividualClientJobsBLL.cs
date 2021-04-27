@@ -16,7 +16,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             try
             {
                 IndividualClientJobsDAL clientData = new IndividualClientJobsDAL();
-                jobs = clientData.GetIndividualClientJobByClientID(id);
+                jobs = clientData.GetIndividualClientJobsByClientID(id);
             }
             catch (Exception e)
             {

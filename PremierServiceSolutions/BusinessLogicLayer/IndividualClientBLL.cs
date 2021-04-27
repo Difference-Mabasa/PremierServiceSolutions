@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 using PremierServiceSolutions.DataAccessLayer;
 
@@ -20,15 +21,15 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return client;
         }
 
-        public List<Job> GetIndividualClientJosbsByClientID(string id)
+        public DataTable GetAllIndividualClients()
         {
             IndividualClientDAL clientData = new IndividualClientDAL();
-            List<Job> jobs = clientData.GetIndividualClientJobByClientID(id);
+            DataTable table;
+            table = clientData.GetAllIndividualClients();
 
-            return jobs;
-
-            List<String> a;
+            return table;
         }
+
         public void InsertIndividualClient(IndividualClient client)
         {
             try

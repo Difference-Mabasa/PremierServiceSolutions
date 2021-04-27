@@ -40,6 +40,7 @@ namespace PremierServiceSolutions
 
             
         }
+
         public void EndCall()
         {
             string clientName = " ";
@@ -48,6 +49,7 @@ namespace PremierServiceSolutions
             Duration = (int.Parse(EndTime) - int.Parse(StartTime)).ToString();
             RecordCall(clientName, employeeName, Duration);
         }
+
         public void RecordCall(string clientName, string employeeName, string duration)
         {
 
