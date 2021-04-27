@@ -71,5 +71,26 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
             }
         }
+
+        public void RemoveEmployee(Employee emp)
+        {
+            string query = $"DELETE FROM Employees WHERE EmployeeID = '{emp.EmployeeID}'";
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Removed Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }
