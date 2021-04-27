@@ -46,6 +46,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblClientID = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.GbSCD.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,11 +204,21 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblClientID.TabIndex = 0;
             this.lblClientID.Text = "clientID";
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(266, 137);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(124, 33);
+            this.btnExit.TabIndex = 44;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // AddClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.GbSCD);
             this.Controls.Add(this.btnAddBC);
             this.Controls.Add(this.btnAddIC);
@@ -239,5 +250,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblClientID;
+        private System.Windows.Forms.Button btnExit;
     }
 }

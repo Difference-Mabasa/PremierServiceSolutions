@@ -46,6 +46,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblClientID = new System.Windows.Forms.Label();
             this.btnAddBC = new System.Windows.Forms.Button();
             this.btnAddIC = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.GbSCD.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,11 +204,21 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnAddIC.Text = "Add Individual Client";
             this.btnAddIC.UseVisualStyleBackColor = true;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(273, 147);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(124, 33);
+            this.btnExit.TabIndex = 47;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // UpdateClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.GbSCD);
             this.Controls.Add(this.btnAddBC);
             this.Controls.Add(this.btnAddIC);
@@ -238,5 +249,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Label lblClientID;
         private System.Windows.Forms.Button btnAddBC;
         private System.Windows.Forms.Button btnAddIC;
+        private System.Windows.Forms.Button btnExit;
     }
 }
