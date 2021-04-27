@@ -29,9 +29,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         /// </summary>
         private void InitializeComponent()
         {
-            this.Gbnav = new System.Windows.Forms.GroupBox();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnFirst = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -44,38 +41,8 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgbDisplay = new System.Windows.Forms.DataGridView();
-            this.Gbnav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbDisplay)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Gbnav
-            // 
-            this.Gbnav.Controls.Add(this.btnPrevious);
-            this.Gbnav.Controls.Add(this.btnFirst);
-            this.Gbnav.Location = new System.Drawing.Point(65, 391);
-            this.Gbnav.Name = "Gbnav";
-            this.Gbnav.Size = new System.Drawing.Size(201, 47);
-            this.Gbnav.TabIndex = 57;
-            this.Gbnav.TabStop = false;
-            this.Gbnav.Text = "Navigation";
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Location = new System.Drawing.Point(116, 19);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 1;
-            this.btnPrevious.Text = "<<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.Location = new System.Drawing.Point(15, 18);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(75, 23);
-            this.btnFirst.TabIndex = 0;
-            this.btnFirst.Text = "|<";
-            this.btnFirst.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -188,8 +155,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Gbnav);
+            this.ClientSize = new System.Drawing.Size(800, 397);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -204,7 +170,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.Controls.Add(this.dgbDisplay);
             this.Name = "Schedule";
             this.Text = "Schedule";
-            this.Gbnav.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgbDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,10 +177,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox Gbnav;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

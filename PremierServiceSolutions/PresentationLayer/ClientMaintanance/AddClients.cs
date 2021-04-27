@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 {
-    public partial class ClientMaintanance : Form
+    public partial class AddClients : Form
     {
-        public ClientMaintanance()
+        public AddClients()
         {
             InitializeComponent();
         }
 
-        private void btnViewIndividual_Click(object sender, EventArgs e)
+        private void AddClients_Load(object sender, EventArgs e)
         {
-           
-        }
 
-        private void btnViewBusiness_Click(object sender, EventArgs e)
-        {
-            lblSurname.Hide();
-            txtSurname.Hide();
         }
     }
 }

@@ -31,21 +31,21 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.GbStudDet = new System.Windows.Forms.GroupBox();
-            this.txtServiceLevel = new System.Windows.Forms.TextBox();
+            this.GbSCD = new System.Windows.Forms.GroupBox();
+            this.txtContract = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblContract = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblClientID = new System.Windows.Forms.Label();
             this.GbSearchStud = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchClient = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnFirst = new System.Windows.Forms.Button();
             this.dgvDisplay = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.GbStudDet.SuspendLayout();
+            this.GbSCD.SuspendLayout();
             this.GbSearchStud.SuspendLayout();
             this.GbDisplayButtons.SuspendLayout();
             this.Gbnav.SuspendLayout();
@@ -87,39 +87,39 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnAdd.Text = "Add Client";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // GbStudDet
+            // GbSCD
             // 
-            this.GbStudDet.Controls.Add(this.txtServiceLevel);
-            this.GbStudDet.Controls.Add(this.txtStatus);
-            this.GbStudDet.Controls.Add(this.txtName);
-            this.GbStudDet.Controls.Add(this.txtSurname);
-            this.GbStudDet.Controls.Add(this.txtAddress);
-            this.GbStudDet.Controls.Add(this.txtPhone);
-            this.GbStudDet.Controls.Add(this.txtID);
-            this.GbStudDet.Controls.Add(this.label8);
-            this.GbStudDet.Controls.Add(this.label9);
-            this.GbStudDet.Controls.Add(this.label7);
-            this.GbStudDet.Controls.Add(this.label6);
-            this.GbStudDet.Controls.Add(this.label5);
-            this.GbStudDet.Controls.Add(this.label4);
-            this.GbStudDet.Controls.Add(this.label3);
-            this.GbStudDet.Location = new System.Drawing.Point(26, 366);
-            this.GbStudDet.Name = "GbStudDet";
-            this.GbStudDet.Size = new System.Drawing.Size(220, 284);
-            this.GbStudDet.TabIndex = 33;
-            this.GbStudDet.TabStop = false;
-            this.GbStudDet.Text = "Client Details";
+            this.GbSCD.Controls.Add(this.txtContract);
+            this.GbSCD.Controls.Add(this.txtStatus);
+            this.GbSCD.Controls.Add(this.txtName);
+            this.GbSCD.Controls.Add(this.txtSurname);
+            this.GbSCD.Controls.Add(this.txtAddress);
+            this.GbSCD.Controls.Add(this.txtPhone);
+            this.GbSCD.Controls.Add(this.txtID);
+            this.GbSCD.Controls.Add(this.lblEmail);
+            this.GbSCD.Controls.Add(this.lblContract);
+            this.GbSCD.Controls.Add(this.lblPhone);
+            this.GbSCD.Controls.Add(this.lblAddress);
+            this.GbSCD.Controls.Add(this.lblSurname);
+            this.GbSCD.Controls.Add(this.lblName);
+            this.GbSCD.Controls.Add(this.lblClientID);
+            this.GbSCD.Location = new System.Drawing.Point(26, 366);
+            this.GbSCD.Name = "GbSCD";
+            this.GbSCD.Size = new System.Drawing.Size(220, 284);
+            this.GbSCD.TabIndex = 33;
+            this.GbSCD.TabStop = false;
+            this.GbSCD.Text = "Client Details";
             // 
-            // txtServiceLevel
+            // txtContract
             // 
-            this.txtServiceLevel.Location = new System.Drawing.Point(95, 230);
-            this.txtServiceLevel.Name = "txtServiceLevel";
-            this.txtServiceLevel.Size = new System.Drawing.Size(100, 20);
-            this.txtServiceLevel.TabIndex = 18;
+            this.txtContract.Location = new System.Drawing.Point(95, 230);
+            this.txtContract.Name = "txtContract";
+            this.txtContract.Size = new System.Drawing.Size(100, 20);
+            this.txtContract.TabIndex = 18;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(95, 194);
+            this.txtStatus.Location = new System.Drawing.Point(95, 160);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(100, 20);
             this.txtStatus.TabIndex = 17;
@@ -140,14 +140,14 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(95, 119);
+            this.txtAddress.Location = new System.Drawing.Point(95, 194);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 20);
             this.txtAddress.TabIndex = 14;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(95, 160);
+            this.txtPhone.Location = new System.Drawing.Point(95, 122);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 13;
@@ -160,68 +160,68 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 12;
             // 
-            // label8
+            // lblEmail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 160);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Phone";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(15, 160);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 11;
+            this.lblEmail.Text = "Email";
             // 
-            // label9
+            // lblContract
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 230);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "service level";
+            this.lblContract.AutoSize = true;
+            this.lblContract.Location = new System.Drawing.Point(14, 230);
+            this.lblContract.Name = "lblContract";
+            this.lblContract.Size = new System.Drawing.Size(47, 13);
+            this.lblContract.TabIndex = 10;
+            this.lblContract.Text = "Contract";
             // 
-            // label7
+            // lblPhone
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Address";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(15, 122);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(38, 13);
+            this.lblPhone.TabIndex = 4;
+            this.lblPhone.Text = "Phone";
             // 
-            // label6
+            // lblAddress
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Status";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(14, 197);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 3;
+            this.lblAddress.Text = "Address";
             // 
-            // label5
+            // lblSurname
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Surname";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(15, 85);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(49, 13);
+            this.lblSurname.TabIndex = 2;
+            this.lblSurname.Text = "Surname";
             // 
-            // label4
+            // lblName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(15, 56);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Name";
             // 
-            // label3
+            // lblClientID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "clientID";
+            this.lblClientID.AutoSize = true;
+            this.lblClientID.Location = new System.Drawing.Point(14, 29);
+            this.lblClientID.Name = "lblClientID";
+            this.lblClientID.Size = new System.Drawing.Size(43, 13);
+            this.lblClientID.TabIndex = 0;
+            this.lblClientID.Text = "clientID";
             // 
             // GbSearchStud
             // 
@@ -281,6 +281,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnViewBusiness.TabIndex = 2;
             this.btnViewBusiness.Text = "View Business Clients";
             this.btnViewBusiness.UseVisualStyleBackColor = true;
+            this.btnViewBusiness.Click += new System.EventHandler(this.btnViewBusiness_Click);
             // 
             // btnViewIndividual
             // 
@@ -290,6 +291,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnViewIndividual.TabIndex = 1;
             this.btnViewIndividual.Text = "View Individual Clients";
             this.btnViewIndividual.UseVisualStyleBackColor = true;
+            this.btnViewIndividual.Click += new System.EventHandler(this.btnViewIndividual_Click);
             // 
             // btnViewAll
             // 
@@ -383,7 +385,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ClientSize = new System.Drawing.Size(800, 701);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.GbStudDet);
+            this.Controls.Add(this.GbSCD);
             this.Controls.Add(this.GbSearchStud);
             this.Controls.Add(this.GbDisplayButtons);
             this.Controls.Add(this.btnExit);
@@ -392,8 +394,8 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.Controls.Add(this.label1);
             this.Name = "ClientMaintanance";
             this.Text = "ClientMaintanance";
-            this.GbStudDet.ResumeLayout(false);
-            this.GbStudDet.PerformLayout();
+            this.GbSCD.ResumeLayout(false);
+            this.GbSCD.PerformLayout();
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
             this.GbDisplayButtons.ResumeLayout(false);
@@ -408,21 +410,21 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.GroupBox GbStudDet;
-        private System.Windows.Forms.TextBox txtServiceLevel;
+        private System.Windows.Forms.GroupBox GbSCD;
+        private System.Windows.Forms.TextBox txtContract;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblContract;
+        private System.Windows.Forms.Label lblPhone;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblClientID;
         private System.Windows.Forms.GroupBox GbSearchStud;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearchClient;

@@ -10,7 +10,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class IndividualClientDAL
     {
-        SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = new SqlConnection("Server= .; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
 
         public IndividualClient SearchIndividualClientByID(string id)
