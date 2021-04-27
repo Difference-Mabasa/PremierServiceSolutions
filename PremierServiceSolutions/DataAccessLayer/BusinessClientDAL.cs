@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
@@ -112,6 +113,29 @@ namespace PremierServiceSolutions.DataAccessLayer
             {
                 conn.Close();
             }
+        }
+
+        public DataTable GetAllBusinessClients()
+        {
+            DataTable datatable = new DataTable();
+            string query = $"SELECT * FROM BusinessClients ";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return datatable;
         }
     }
 }
