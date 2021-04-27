@@ -27,13 +27,13 @@ namespace PremierServiceSolutions
             try
             {
                 IndividualClient client = new IndividualClient();
-                this.clientID = client.clientID;
-                this.Name = client.Name;
-                this.Surname = client.Surname;
-                this.Phone = client.Phone;
-                this.Email = client.Email;
-                this.AddressID = client.AddressID;
-                this.ContractID = client.ContractID;
+                client.clientID = this.clientID;
+                client.Name = this.Name;
+                client.Surname = this.Surname;
+                client.Phone = this.Phone;
+                client.Email = this.Email;
+                client.AddressID = this.AddressID;
+                client.ContractID = this.ContractID;
 
                 IndividualClientBLL individualData = new IndividualClientBLL();
                 individualData.InsertIndividualClient(client);

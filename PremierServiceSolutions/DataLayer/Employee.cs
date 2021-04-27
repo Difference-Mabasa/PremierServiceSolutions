@@ -52,14 +52,14 @@ namespace PremierServiceSolutions
             try
             {
                 Employee employee = new Employee();
-                this.EmployeeID = employee.EmployeeID;
-                this.Name = employee.Name;
-                this.Surname = employee.Surname;
-                this.Department = employee.Department;
-                this.JobTitle = employee.JobTitle;
-                this.Phone = employee.Phone;
-                this.Email = employee.Email;
-                this.Password = employee.Password;
+                employee.EmployeeID = this.EmployeeID;
+                employee.Name = this.Name;
+                employee.Surname = this.Surname;
+                employee.Department = this.Department;
+                employee.JobTitle = this.JobTitle;
+                employee.Phone = this.Phone;
+                employee.Email = this.Email;
+                employee.Password = this.Password;
 
                 EmployeeBLL employeeData = new EmployeeBLL();
                 employeeData.InsertEmployee(employee);
