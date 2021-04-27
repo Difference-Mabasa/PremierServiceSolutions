@@ -1,16 +1,18 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
     class IndividualClientDAL
     {
-        SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
 
         public IndividualClient SearchIndividualClientByID(string id)
@@ -119,7 +121,29 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
             }
         }
+        
+        public DataTable GetAllIndividualClients()
+        {
+            DataTable datatable = new DataTable();
+            string query = $"SELECT * FROM IndividualClients ";
 
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return datatable;
+        }
 
     }
 }
