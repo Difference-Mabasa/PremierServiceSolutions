@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions
 {
@@ -22,7 +24,24 @@ namespace PremierServiceSolutions
 
         public override void Regiter()
         {
-            throw new NotImplementedException();
+            try
+            {
+                IndividualClient client = new IndividualClient();
+                this.clientID = client.clientID;
+                this.Name = client.Name;
+                this.Surname = client.Surname;
+                this.Phone = client.Phone;
+                this.Email = client.Email;
+                this.AddressID = client.AddressID;
+                this.ContractID = client.ContractID;
+
+                IndividualClientBLL individualData = new IndividualClientBLL();
+                individualData.InsertIndividualClient(client);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show($"Error on IndividualClient class : {e.Message}");
+            }
         }
 
         public void sendRequest()

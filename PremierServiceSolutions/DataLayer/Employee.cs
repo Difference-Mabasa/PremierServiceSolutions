@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions
 {
@@ -48,7 +50,26 @@ namespace PremierServiceSolutions
 
         public override void Regiter()
         {
-            throw new NotImplementedException();
+            try
+            {
+                Employee employee = new Employee();
+                this.EmployeeID = employee.EmployeeID;
+                this.Name = employee.Name;
+                this.Surname = employee.Surname;
+                this.Department = employee.Department;
+                this.JobTitle = employee.JobTitle;
+                this.Phone = employee.Phone;
+                this.Email = employee.Email;
+                this.Password = employee.Password;
+
+                EmployeeBLL employeeData = new EmployeeBLL();
+                employeeData.InsertEmployee(employee);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on Employee Class: {e.Message}");
+            }
+
         }
 
         public override string ToString()
