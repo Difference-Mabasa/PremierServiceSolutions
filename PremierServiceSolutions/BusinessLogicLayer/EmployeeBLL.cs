@@ -10,6 +10,20 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class EmployeeBLL
     {
+        public List<Employee> GetEmployees()
+        {
+            List<Employee> data = new List<Employee>();
+            try
+            {
+                EmployeeDAL employeeData = new EmployeeDAL();
+                data = employeeData.GetAllEmployees();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on EmployeeBLL {e.Message}");
+            }
+            return data;
+        }
         public void InsertEmployee(Employee emp)
         {   
             try
