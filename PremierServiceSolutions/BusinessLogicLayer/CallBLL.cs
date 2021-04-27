@@ -15,29 +15,27 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public string CallStartTime{ get; set; }
         public string CallEndTime { get; set; }
 
+        public bool onCall = false;
+
         List<CallBLL> callLog = new List<CallBLL>();
 
         public void MakeCall()
         {
+            onCall = true;
             CallStartTime = DateTime.Now.ToString();
             //call client
+            // maybe open an outgoing call form
         }
         public void AcceptCall()
         {
+            onCall = true;
             CallStartTime = DateTime.Now.ToString();
             
             bool isClient = false;
 
-
-            if (isClient == true) 
-            {
-                PresentationLayer.CallCentre.ClientDetails clientDetails = new PresentationLayer.CallCentre.ClientDetails() ;
-                clientDetails.Show();
+            while(){
             }
-            else 
-            { 
-                //register & login
-            }
+            
         }
 
         public void EndCall()
@@ -52,5 +50,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             //call record
 
         }
+
+        
+        
     }
 }
