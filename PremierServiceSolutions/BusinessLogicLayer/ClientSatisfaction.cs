@@ -8,10 +8,6 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class ClientSatisfaction
     {
-        string typeOfClient = "";
-        IndividualClientJobsBLL individualClientjob = new IndividualClientJobsBLL();
-
-
         public void FollowUp(Job Job) 
         {
             Call call = new Call();
