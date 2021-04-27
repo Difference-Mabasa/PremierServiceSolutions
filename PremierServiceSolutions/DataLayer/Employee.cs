@@ -73,9 +73,10 @@ namespace PremierServiceSolutions
         //Returns false if employee details not found 
         public bool Login(string id, string password)
         {
-            List<Employee> employeeData = new List<Employee>();
+            EmployeeDAL employeeData = new EmployeeDAL();
+            List<Employee> employees = employeeData.GetAllEmployees();
             bool valid = false;
-            foreach (Employee emp in employeeData)
+            foreach (Employee emp in employees)
             {
                 if (emp.EmployeeID.Equals(id) && emp.Password.Equals(password))
                 {
