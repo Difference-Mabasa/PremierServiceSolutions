@@ -29,8 +29,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            BusinessLogicLayer.CallBLL callBLL = new BusinessLogicLayer.CallBLL();
-            callBLL.EndCall();
+          
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -39,6 +38,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
 
         private void dgvClientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvPreviousRequest_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

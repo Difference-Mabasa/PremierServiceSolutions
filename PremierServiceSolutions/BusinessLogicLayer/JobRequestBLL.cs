@@ -9,19 +9,34 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class JobRequestBLL
     {
+        string typeOfClient = " ";
+
+        IndividualClientBLL individualClient = new IndividualClientBLL();
+        IndividualClientJobsBLL individualClientJobsBLL = new IndividualClientJobsBLL();
+
+        BusinessClientBLL businessClient = new BusinessClientBLL();
+        BusinessClientJobsBLL businessClientJobsBLL = new BusinessClientJobsBLL();
+
         public void addRequest(string clientID, string jobType, string employeeName, string date) 
         {
             JobRequest jobRequest = new JobRequest(clientID, jobType, employeeName, date);
-
-            MessageBox.Show("Job Request Sent");
-            //notify service department?
+            // service department
+           
         }
 
-        public void updateRequest() 
-        { 
-            //Search job request by job ID
-            //then modify
-            //class that contains all clients and jobs
+        public void updateRequest(Job job) 
+        {
+            string typeOfClient = " ";
+
+            if(typeOfClient == "I")
+            {
+                
+                individualClientJobsBLL.UpdateIndividualClientJob(job);
+            }
+            else if(typeOfClient == "B")
+            {
+                businessClientJobsBLL.UpdateBusinessClientJob(job);
+            }
 
         }
     }

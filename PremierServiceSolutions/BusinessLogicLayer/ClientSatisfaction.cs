@@ -8,12 +8,14 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class ClientSatisfaction
     {
-        //handles events of job that are done and had issues
-        //recieves list of jobsa that need follow up
-        //calls relevant client
-        //outgoing calling
-        //call record
-        //update job status, maybe there should be another follow up, 
-        //ends with client satisfied
+        string typeOfClient = "";
+        IndividualClientJobsBLL individualClientjob = new IndividualClientJobsBLL();
+
+
+        public void FollowUp(Job Job) 
+        {
+            Call call = new Call();
+            call.MakeCall(Job.ClientID);
+        }
     }
 }

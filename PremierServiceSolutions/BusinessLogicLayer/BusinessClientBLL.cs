@@ -11,9 +11,15 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class BusinessClientBLL
     {
-        public void GetClients() 
-        {
 
+        public void GetBusinessClients() 
+        {
+            List<BusinessClient> 
+            BusinessClientDAL businessClientDAL = new BusinessClientDAL();
+            businessClientDAL.GetAllBusinessClients();
+
+
+           
         }
         public BusinessClient GetBusinessClientByID(string id)
         {

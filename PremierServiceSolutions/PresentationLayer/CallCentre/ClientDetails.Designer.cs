@@ -97,6 +97,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.dgvPreviousRequest.Name = "dgvPreviousRequest";
             this.dgvPreviousRequest.Size = new System.Drawing.Size(508, 152);
             this.dgvPreviousRequest.TabIndex = 50;
+            this.dgvPreviousRequest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreviousRequest_CellContentClick);
             // 
             // GbSearchStud
             // 

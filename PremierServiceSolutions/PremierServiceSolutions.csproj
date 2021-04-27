@@ -48,7 +48,8 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
-    <Compile Include="BusinessLogicLayer\CallBLL.cs" />
+    <Compile Include="BusinessLogicLayer\Call.cs" />
+    <Compile Include="BusinessLogicLayer\ClientsAndJobsCollection.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
@@ -59,7 +60,6 @@
     <Compile Include="DataAccessLayer\IndividualClientJobsDAL.cs" />
     <Compile Include="DataLayer\BasicContract.cs" />
     <Compile Include="DataLayer\BusinessClient.cs" />
-    <Compile Include="DataLayer\Call.cs" />
     <Compile Include="DataLayer\Contract.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\Employee.cs" />
