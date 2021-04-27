@@ -41,6 +41,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnAcceptCall.TabIndex = 5;
             this.btnAcceptCall.Text = "Accept call";
             this.btnAcceptCall.UseVisualStyleBackColor = true;
+            this.btnAcceptCall.Click += new System.EventHandler(this.btnAcceptCall_Click);
             // 
             // lblCall
             // 

@@ -90,6 +90,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.button1.TabIndex = 37;
             this.button1.Text = "Add Request";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -166,6 +167,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.Controls.Add(this.label7);
             this.Name = "AddRequest";
             this.Text = "AddRequest";
+            this.Load += new System.EventHandler(this.AddRequest_Load);
             this.Gbnav.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

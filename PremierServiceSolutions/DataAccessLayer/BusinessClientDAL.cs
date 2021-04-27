@@ -12,7 +12,7 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
-
+        
         public BusinessClient SearchBusinessClientByID(string id)
         {
 

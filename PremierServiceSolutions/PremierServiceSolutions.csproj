@@ -52,6 +52,7 @@
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientDAL.cs" />

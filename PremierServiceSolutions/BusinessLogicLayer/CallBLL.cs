@@ -3,70 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class CallBLL
     {
+        string callStartTime;
+        string callEndTime;
 
-        public void IncomingCall()
-        {
+        public string CallStartTime{ get; set; }
+        public string CallEndTime { get; set; }
 
-            Console.WriteLine("incoming call, press 'a' to accept or 'd' to decline call ");
+        List<CallBLL> callLog = new List<CallBLL>();
 
-            string key = Console.ReadLine();
-
-            if (key == "a")
-            {
-               AcceptCall();
-            }
-            else if (key == "d")
-            {
-               EndCall();
-            }
-            else
-            {
-                Console.WriteLine("call missed");
-            }
-
-        }
         public void MakeCall()
         {
-
+            CallStartTime = DateTime.Now.ToString();
+            //call client
         }
         public void AcceptCall()
         {
-            RecordCall();
-
-            //we assume user is not a client 
+            CallStartTime = DateTime.Now.ToString();
+            
             bool isClient = false;
 
-            //Console.WriteLine("client or not?");
-            //how/
 
-            if (isClient == true)
+            if (isClient == true) 
             {
-                //enter client ID from presentation
-                //BusinessClientBLL BCbll = new BusinessClientBLL();
-                //search client by id? and view details
-
-                //the log job request
+                PresentationLayer.CallCentre.ClientDetails clientDetails = new PresentationLayer.CallCentre.ClientDetails() ;
+                clientDetails.Show();
             }
             else 
             { 
-                //register new client
+                //register & login
             }
-
         }
 
         public void EndCall()
         {
-
+            //end call
+            CallEndTime = DateTime.Now.ToString();
+            Console.WriteLine("Duration: {0} - {1}", CallEndTime, CallStartTime);
         }
 
         public void RecordCall()
         {
-
+            //call record
 
         }
     }
