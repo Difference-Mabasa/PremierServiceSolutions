@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
+    <Compile Include="BusinessLogicLayer\EmployeeBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
