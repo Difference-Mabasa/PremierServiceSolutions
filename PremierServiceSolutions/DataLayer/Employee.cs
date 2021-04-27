@@ -36,8 +36,6 @@ namespace PremierServiceSolutions
             this.Department = department;
         }
 
-        
-
         public override bool Equals(object obj)
         {
             return base.Equals(obj);

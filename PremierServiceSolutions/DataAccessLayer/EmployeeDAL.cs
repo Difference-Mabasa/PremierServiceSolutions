@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
@@ -91,6 +92,45 @@ namespace PremierServiceSolutions.DataAccessLayer
             {
                 conn.Close();
             }
+        }
+
+        public List<Employee> GetAllEmployees()
+        {
+            List<Employee> employees = new List<Employee>();
+
+            DataTable datatable = new DataTable();
+            string query = $"SELECT * FROM Employees ";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    Employee emp = new Employee();
+                    emp.EmployeeID = row["EmployeeID"].ToString();
+                    emp.Name = row["EmployeeName"].ToString();
+                    emp.Surname = row["EmployeeSurname"].ToString();
+                    emp.Phone = row["Phone"].ToString();
+                    emp.Department = row["EmployeeSurname"].ToString();
+                    emp.Password = row["Password"].ToString();
+                    emp.Email = row["Email"].ToString();
+                    emp.JobTitle = row["JobTitle"].ToString();
+                    emp.AddressID = row["AddressID"].ToString();
+                    employees.Add(emp);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return employees;
         }
     }
 }
