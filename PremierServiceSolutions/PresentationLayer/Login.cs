@@ -26,5 +26,16 @@ namespace PremierServiceSolutions
 
             //MessageBox.Show("Name: " + client.Name);
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtPassword.Clear();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
