@@ -61,8 +61,8 @@ namespace PremierServiceSolutions
                 employee.Email = this.Email;
                 employee.Password = this.Password;
 
-                EmployeeBLL employeeData = new EmployeeBLL();
-                employeeData.InsertEmployee(employee);
+                //EmployeeBLL employeeData = new EmployeeBLL();
+                //employeeData.InsertEmployee(employee);
             }
             catch (Exception e)
             {
@@ -70,21 +70,22 @@ namespace PremierServiceSolutions
             }
 
         }
-        //Returns false if employee details not found 
-        public bool Login(string id, string password)
-        {
-            EmployeeDAL employeeData = new EmployeeDAL();
-            List<Employee> employees = employeeData.GetAllEmployees();
-            bool valid = false;
-            foreach (Employee emp in employees)
-            {
-                if (emp.EmployeeID.Equals(id) && emp.Password.Equals(password))
-                {
-                    valid = true;
-                }
-            }
-            return valid;
-        } 
+        //Returns false if employee details not found
+        
+        //public bool Login(string id, string password)
+        //{
+        //    EmployeeDAL employeeData = new EmployeeDAL();
+        //    List<Employee> employees = employeeData.GetAllEmployees();
+        //    bool valid = false;
+        //    foreach (Employee emp in employees)
+        //    {
+        //        if (emp.EmployeeID.Equals(id) && emp.Password.Equals(password))
+        //        {
+        //            valid = true;
+        //        }
+        //    }
+        //    return valid;
+        //} 
 
         public override string ToString()
         {

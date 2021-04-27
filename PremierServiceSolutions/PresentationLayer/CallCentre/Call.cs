@@ -19,8 +19,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
-            BusinessLogicLayer.CallBLL callBLL = new BusinessLogicLayer.CallBLL();
-            callBLL.AcceptCall();
+            //BusinessLogicLayer.CallBLL callBLL = new BusinessLogicLayer.CallBLL();
+            //callBLL.AcceptCall();
         }
     }
 }
