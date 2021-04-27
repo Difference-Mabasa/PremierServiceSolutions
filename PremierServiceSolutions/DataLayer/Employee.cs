@@ -10,10 +10,13 @@ namespace PremierServiceSolutions
     {
 
         string employeeID, department, password;
+        string jobTitle;
 
         public string EmployeeID { get => employeeID; set => employeeID = value; }
         public string Department { get => department; set => department = value; }
         public string Password { get => password; set => password = value; }
+        public string JobTitle { get => jobTitle; set => jobTitle = value; }
+
         public Employee()
         {
         }
