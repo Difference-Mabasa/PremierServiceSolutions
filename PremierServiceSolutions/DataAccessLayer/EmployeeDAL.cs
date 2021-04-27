@@ -34,7 +34,36 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR: " + ex.Message);
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void UpdateEmployees(Employee emp)
+        {
+            query = $"update Employees set " +
+            $"EmployeeID = '{emp.EmployeeID}', " +
+            $"EmployeeName = '{emp.Name}', " +
+            $"EmployeeSurname = '{emp.Surname}', " +
+            $"Department = '{emp.Department}', " +
+            $"JobTitle = '{emp.JobTitle}', " +
+            $"Phone = {emp.Phone}, " +
+            $"Email = '{emp.Email}' " +
+            $"WHERE EmployeeID = '{emp.EmployeeID}'";
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
             }
 
             finally
