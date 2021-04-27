@@ -117,16 +117,18 @@
     <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanance.Designer.cs">
       <DependentUpon>ContractMaintanance.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Form1.cs" />
-    <Compile Include="PresentationLayer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataLayer\IClient.cs" />
     <Compile Include="DataLayer\IndividualClient.cs" />
     <Compile Include="DataLayer\Job.cs" />
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
     <Compile Include="DataLayer\PremiumContract.cs" />
+    <Compile Include="PresentationLayer\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ServiceDapartment\Schedule.cs">
       <SubType>Form</SubType>
     </Compile>

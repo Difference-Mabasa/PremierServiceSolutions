@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 {
     partial class ClientMaintanance
@@ -405,6 +407,21 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void btnViewIndividual_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnViewBusiness_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
