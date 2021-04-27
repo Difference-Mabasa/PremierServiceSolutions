@@ -243,6 +243,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search client";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchClient
             // 

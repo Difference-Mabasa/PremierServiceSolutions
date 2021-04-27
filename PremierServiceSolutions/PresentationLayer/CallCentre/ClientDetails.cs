@@ -16,5 +16,31 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             InitializeComponent();
         }
+
+        private void txtSearchClient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPhone_Click(object sender, EventArgs e)
+        {
+            //chec
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            BusinessLogicLayer.CallBLL callBLL = new BusinessLogicLayer.CallBLL();
+            callBLL.EndCall();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvClientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

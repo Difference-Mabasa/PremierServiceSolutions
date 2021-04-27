@@ -16,16 +16,5 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
             InitializeComponent();
         }
-
-        private void btnViewIndividual_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnViewBusiness_Click(object sender, EventArgs e)
-        {
-            lblSurname.Hide();
-            txtSurname.Hide();
-        }
     }
 }

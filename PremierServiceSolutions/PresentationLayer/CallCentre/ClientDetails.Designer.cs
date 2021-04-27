@@ -60,6 +60,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnPhone.TabIndex = 54;
             this.btnPhone.Text = "View by Phone number";
             this.btnPhone.UseVisualStyleBackColor = true;
+            this.btnPhone.Click += new System.EventHandler(this.btnPhone_Click);
             // 
             // btnAdd
             // 
@@ -117,6 +118,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search client";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchClient
             // 
@@ -124,6 +126,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.txtSearchClient.Name = "txtSearchClient";
             this.txtSearchClient.Size = new System.Drawing.Size(130, 20);
             this.txtSearchClient.TabIndex = 1;
+            this.txtSearchClient.TextChanged += new System.EventHandler(this.txtSearchClient_TextChanged);
             // 
             // label2
             // 
@@ -143,6 +146,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnExit.TabIndex = 48;
             this.btnExit.Text = "End";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Gbnav
             // 
@@ -200,6 +204,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.dgvClientDetails.Name = "dgvClientDetails";
             this.dgvClientDetails.Size = new System.Drawing.Size(508, 152);
             this.dgvClientDetails.TabIndex = 46;
+            this.dgvClientDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientDetails_CellContentClick);
             // 
             // label1
             // 
