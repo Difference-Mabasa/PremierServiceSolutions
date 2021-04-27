@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 {
-    public partial class ClientMaintanance : Form
+    public partial class UpdateClient : Form
     {
-        public ClientMaintanance()
+        public UpdateClient()
         {
             InitializeComponent();
         }

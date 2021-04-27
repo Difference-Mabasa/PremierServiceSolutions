@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 {
-    public partial class ClientMaintanance : Form
+    public partial class AddClients : Form
     {
-        public ClientMaintanance()
+        public AddClients()
         {
             InitializeComponent();
+        }
+
+        private void AddClients_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

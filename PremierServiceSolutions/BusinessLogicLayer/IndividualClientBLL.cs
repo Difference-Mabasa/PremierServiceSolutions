@@ -20,7 +20,15 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return client;
         }
 
-        
+        public List<Job> GetIndividualClientJosbsByClientID(string id)
+        {
+            IndividualClientDAL clientData = new IndividualClientDAL();
+            List<Job> jobs = clientData.GetIndividualClientJobByClientID(id);
+
+            return jobs;
+
+            List<String> a;
+        }
         public void InsertIndividualClient(IndividualClient client)
         {
             try
