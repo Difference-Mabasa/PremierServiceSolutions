@@ -8,6 +8,18 @@ namespace PremierServiceSolutions
 {
     class PremiumContract : Contract
     {
-        public override double Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PremiumContract(string contractId, string contractType, string serviceLevel, string contractDescription, double price, bool available) : base(contractId, contractType, serviceLevel, contractDescription, price, available)
+        {
+            this.ContractId = contractId;
+            this.ContractType = contractType;
+            this.ServiceLevel = serviceLevel;
+            this.ContractDescription = contractDescription;
+            this.Price = price;
+            this.Available = available;
+        }
+        public PremiumContract()
+        {
+
+        }
     }
 }
