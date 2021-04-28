@@ -24,7 +24,23 @@ namespace PremierServiceSolutions.PresentationLayer
             string id = txtID.Text;
             string pass = txtPassword.Text;
 
-            
+            //checking for empty fields
+
+            if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Fields cannot be left empty");
+            }
+            else if (String.IsNullOrEmpty(txtID.Text))
+            {
+                MessageBox.Show("Employee ID cannot be empty");
+                txtPassword.Clear();
+
+            }
+            else if (String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Password field cannot be left empty");
+                txtID.Clear();
+            }
 
         }
 
