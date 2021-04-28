@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+
+using PremierServiceSolutions.DataAccessLayer;
+
 
 namespace PremierServiceSolutions
 {
@@ -31,6 +35,7 @@ namespace PremierServiceSolutions
         {
             //open outgoing call form
         }
+
         public void AcceptCall()
         {
             StartTime = DateTime.Now.ToString();
@@ -57,6 +62,28 @@ namespace PremierServiceSolutions
                 "Call from: {0}/n" +
                 "Call To: {1}/n" +
                 "Duration: {2}", clientName, employeeName, duration);
+        }
+
+        public IndividualClient RandomizeCall()
+        {
+            IndividualClientDAL dal = new IndividualClientDAL();
+            Random ran = new Random();
+            int index = ran.Next(0, dal.CountIndividualClients());
+
+            DataTable table = dal.GetAllIndividualClients();
+            DataRow row = table.Rows[index];
+
+            IndividualClient client = new IndividualClient();
+
+            client.clientID = row[0].ToString();
+            client.Name = row[1].ToString();
+            client.Surname = row[2].ToString();
+            client.Phone = row[3].ToString();
+            client.Email = row[4].ToString();
+
+            //The rest of the field will be added
+
+            return client;
         }
         
     }

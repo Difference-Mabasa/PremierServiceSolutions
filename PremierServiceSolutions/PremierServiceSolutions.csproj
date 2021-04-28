@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
-    <Compile Include="BusinessLogicLayer\Call.cs" />
+    <Compile Include="BusinessLogicLayer\CallBLL.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\EmployeeBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />

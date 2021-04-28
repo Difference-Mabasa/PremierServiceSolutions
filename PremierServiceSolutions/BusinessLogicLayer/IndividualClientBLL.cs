@@ -59,5 +59,24 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
 
         }
+
+        public int CountIndividualClients()
+        {
+            int total = 0;
+
+            try
+            {
+                IndividualClientDAL dal = new IndividualClientDAL();
+                total = dal.CountIndividualClients();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            
+
+            return total;
+        }
     }
 }

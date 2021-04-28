@@ -19,8 +19,16 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
-            //BusinessLogicLayer.CallBLL callBLL = new BusinessLogicLayer.CallBLL();
-            //callBLL.AcceptCall();
+            this.Hide();
+            ClientDetails frm = new ClientDetails();
+            frm.Show();
+        }
+
+        private void Call_Load(object sender, EventArgs e)
+        {
+            //Randomize call
+            
+
         }
     }
 }

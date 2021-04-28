@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using PremierServiceSolutions.BusinessLogicLayer;
+
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
     public partial class ClientDetails : Form
@@ -34,7 +36,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            string id = txtSearchClient.Text;
+            IndividualClientBLL bll = new IndividualClientBLL();
+
+            IndividualClient ic = bll.GetIndividualClientByID(id);
+
+            BindingSource source = new BindingSource();
+            source.Add(ic);
+
+            dgvClientDetails.DataSource = source;
         }
 
         private void dgvClientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)

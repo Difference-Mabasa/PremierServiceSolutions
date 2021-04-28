@@ -61,6 +61,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.Controls.Add(this.lblCall);
             this.Name = "Call";
             this.Text = "Call";
+            this.Load += new System.EventHandler(this.Call_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

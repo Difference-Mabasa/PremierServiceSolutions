@@ -145,5 +145,31 @@ namespace PremierServiceSolutions.DataAccessLayer
             return datatable;
         }
 
+        public int CountIndividualClients()
+        {
+            string query = $"SELECT COUNT(ClientID) FROM IndividualClients";
+            int total=0;
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                
+                total = (int)cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            return total;
+        }
+
     }
 }
