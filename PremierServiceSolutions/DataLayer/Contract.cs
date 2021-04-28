@@ -14,6 +14,8 @@ namespace PremierServiceSolutions
         public string ContractId { get => contractId; set => contractId = value; }
         public abstract double Price { get ; set; }
 
+        //anything
+
 
     }
 }
