@@ -49,5 +49,14 @@ namespace PremierServiceSolutions.PresentationLayer
             txtID.Clear();
             txtPassword.Clear();
         }
+
+        //need to have a forgot password and maybe a sign up with a hover effect
+
+        private void btnEXIT_Click(object sender, EventArgs e)
+        {
+            //exit
+
+            Environment.Exit(0);
+        }
     }
 }
