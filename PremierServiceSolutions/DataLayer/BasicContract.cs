@@ -9,7 +9,7 @@ namespace PremierServiceSolutions
     class BasicContract : Contract
     {
         //Set price
-
+        
         public override double Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
     }
