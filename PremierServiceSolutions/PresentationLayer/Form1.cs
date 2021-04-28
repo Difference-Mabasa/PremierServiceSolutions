@@ -21,10 +21,33 @@ namespace PremierServiceSolutions.PresentationLayer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool authenticationSuccessful = false;
             string id = txtID.Text;
             string pass = txtPassword.Text;
 
+            EmployeeBLL bll = new EmployeeBLL();
+            List<Employee> employees = bll.GetAllEmployees();
 
+            foreach (Employee item in employees)
+            {
+                if (item.EmployeeID == id && item.Password == pass)
+                {
+                    authenticationSuccessful = true;
+                    break;
+                }
+            }
+
+            if (authenticationSuccessful)
+            {
+                this.Hide();
+                CallCentre.Call frm = new CallCentre.Call();
+                frm.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Incorrect username or password");
+            }
         }
     }
 }

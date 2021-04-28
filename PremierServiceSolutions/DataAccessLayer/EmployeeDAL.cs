@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
-    //Employee Data access Class
     class EmployeeDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
         SqlCommand cmd;
         string query;
+
         public void InsertEmployee(Employee emp)
         {
-            string query = $"insert into Employees(EmployeeID,EmployeeName,EmployeeSurname,Department,JobTitle,Phone,Email,Password) values" +
+            string query = $"insert into Employees(EmployeeID,EmployeeName,EmployeeSurname,Department,JobTitle,Phone,Email,EmployeePassword) values" +
             $"('{emp.EmployeeID}', " +
             $"'{emp.Name}', " +
             $"'{emp.Surname}', " +
@@ -44,7 +44,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        public void UpdateEmployees(Employee emp)
+        public void UpdateEmployee(Employee emp)
         {
             query = $"update Employees set " +
             $"EmployeeID = '{emp.EmployeeID}', " +
@@ -114,7 +114,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                     emp.Surname = row["EmployeeSurname"].ToString();
                     emp.Phone = row["Phone"].ToString();
                     emp.Department = row["EmployeeSurname"].ToString();
-                    emp.Password = row["Password"].ToString();
+                    emp.Password = row["EmployeePassword"].ToString();
                     emp.Email = row["Email"].ToString();
                     emp.JobTitle = row["JobTitle"].ToString();
                     emp.AddressID = row["AddressID"].ToString();
