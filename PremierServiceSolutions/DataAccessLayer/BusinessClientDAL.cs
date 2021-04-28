@@ -13,7 +13,43 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
-        
+
+        public List<BusinessClient> GetAllBusinessClients()
+        {
+            List<BusinessClient> businessClients = new List<BusinessClient>();
+
+            DataTable datatable = new DataTable();
+            string query = $"SELECT * FROM BusinessClients ";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    BusinessClient businessClient = new BusinessClient();
+
+                    businessClient.clientID = row["clientID"].ToString();
+                    businessClient.CompanyName = row["CompanyName"].ToString();
+                    businessClient.Phone = row["Phone"].ToString();
+                    businessClient.Email = row["Email"].ToString();
+                    businessClient.AddressID = row["AddressID"].ToString();
+                    businessClient.ContractID = row["ContractID"].ToString();
+                    businessClients.Add(businessClient);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return businessClients;
+        }
         public BusinessClient SearchBusinessClientByID(string id)
         {
 
@@ -115,27 +151,5 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        public DataTable GetAllBusinessClients()
-        {
-            DataTable datatable = new DataTable();
-            string query = $"SELECT * FROM BusinessClients ";
-
-            try
-            {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                adapter.Fill(datatable);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-
-            }
-            return datatable;
-        }
     }
 }

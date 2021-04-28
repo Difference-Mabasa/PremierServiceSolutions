@@ -13,14 +13,19 @@ namespace PremierServiceSolutions.BusinessLogicLayer
     class BusinessClientBLL
     {
 
-        public DataTable GetAllBusinessClients() 
+        public List<BusinessClient> GetAllBusinessClients()
         {
-            DataTable table;
-            BusinessClientDAL businessClientDAL = new BusinessClientDAL();
-            table = businessClientDAL.GetAllBusinessClients();
-
-            return table;
-           
+            List<BusinessClient> iClient = new List<BusinessClient>();
+            try
+            {
+                BusinessClientDAL getClients = new BusinessClientDAL();
+                iClient = getClients.GetAllBusinessClients();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on BusinessClientBusinessLayer {e.Message}");
+            }
+            return iClient;
         }
 
         public BusinessClient GetBusinessClientByID(string id)

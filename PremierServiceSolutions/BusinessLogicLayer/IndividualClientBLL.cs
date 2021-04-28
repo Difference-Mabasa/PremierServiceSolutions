@@ -12,6 +12,20 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class IndividualClientBLL
     {
+        public List<IndividualClient> GetAllIndividualClients()
+        {
+            List<IndividualClient> iClient = new List<IndividualClient>();
+            try
+            {
+                IndividualClientDAL getClients = new IndividualClientDAL();
+                iClient = getClients.GetAllIndividualClients();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on IndividulaClientBusinessLayer {e.Message}");
+            }
+            return iClient;
+        }
         public IndividualClient GetIndividualClientByID(string id)
         {
 
