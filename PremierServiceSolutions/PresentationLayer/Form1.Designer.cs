@@ -87,6 +87,7 @@ namespace PremierServiceSolutions.PresentationLayer
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 

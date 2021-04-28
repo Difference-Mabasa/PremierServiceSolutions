@@ -33,7 +33,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnAddIC = new System.Windows.Forms.Button();
             this.GbSCD = new System.Windows.Forms.GroupBox();
             this.txtContract = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -58,6 +58,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnAddBC.TabIndex = 42;
             this.btnAddBC.Text = "Add Bussiness Client";
             this.btnAddBC.UseVisualStyleBackColor = true;
+            this.btnAddBC.Click += new System.EventHandler(this.btnAddBC_Click);
             // 
             // btnAddIC
             // 
@@ -67,11 +68,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnAddIC.TabIndex = 41;
             this.btnAddIC.Text = "Add Individual Client";
             this.btnAddIC.UseVisualStyleBackColor = true;
+            this.btnAddIC.Click += new System.EventHandler(this.btnAddIC_Click);
             // 
             // GbSCD
             // 
             this.GbSCD.Controls.Add(this.txtContract);
-            this.GbSCD.Controls.Add(this.txtStatus);
+            this.GbSCD.Controls.Add(this.txtEmail);
             this.GbSCD.Controls.Add(this.txtName);
             this.GbSCD.Controls.Add(this.txtSurname);
             this.GbSCD.Controls.Add(this.txtAddress);
@@ -98,12 +100,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.txtContract.Size = new System.Drawing.Size(100, 20);
             this.txtContract.TabIndex = 18;
             // 
-            // txtStatus
+            // txtEmail
             // 
-            this.txtStatus.Location = new System.Drawing.Point(95, 160);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 17;
+            this.txtEmail.Location = new System.Drawing.Point(95, 160);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 17;
             // 
             // txtName
             // 
@@ -212,6 +214,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnExit.TabIndex = 44;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // AddClients
             // 
@@ -237,7 +240,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Button btnAddIC;
         private System.Windows.Forms.GroupBox GbSCD;
         private System.Windows.Forms.TextBox txtContract;
-        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtAddress;
