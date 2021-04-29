@@ -34,11 +34,8 @@ namespace PremierServiceSolutions.PresentationLayer
             this.lblPass = new System.Windows.Forms.Label();
             this.lblEmpID = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.btnEXIT = new System.Windows.Forms.Button();
-=======
             this.btnexit = new System.Windows.Forms.Button();
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             this.SuspendLayout();
             // 
             // txtPassword
@@ -76,11 +73,8 @@ namespace PremierServiceSolutions.PresentationLayer
             // 
             // btnLogin
             // 
-<<<<<<< HEAD
             this.btnLogin.Location = new System.Drawing.Point(34, 208);
-=======
             this.btnLogin.Location = new System.Drawing.Point(34, 196);
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 34);
             this.btnLogin.TabIndex = 8;
@@ -88,7 +82,6 @@ namespace PremierServiceSolutions.PresentationLayer
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-<<<<<<< HEAD
             // btnEXIT
             // 
             this.btnEXIT.Location = new System.Drawing.Point(163, 208);
@@ -98,7 +91,6 @@ namespace PremierServiceSolutions.PresentationLayer
             this.btnEXIT.Text = "EXIT";
             this.btnEXIT.UseVisualStyleBackColor = true;
             this.btnEXIT.Click += new System.EventHandler(this.btnEXIT_Click);
-=======
             // btnexit
             // 
             this.btnexit.Location = new System.Drawing.Point(163, 196);
@@ -108,18 +100,14 @@ namespace PremierServiceSolutions.PresentationLayer
             this.btnexit.Text = "EXIT";
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 286);
-<<<<<<< HEAD
             this.Controls.Add(this.btnEXIT);
-=======
             this.Controls.Add(this.btnexit);
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblPass);
