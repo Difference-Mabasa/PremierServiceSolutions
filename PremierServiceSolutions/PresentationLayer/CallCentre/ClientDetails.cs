@@ -31,7 +31,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //drops the call
+            //Drops the call
 
             Call call = new Call();
 
@@ -42,6 +42,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //allows to search the database for a client
+
             string id = txtSearchClient.Text;
             IndividualClientBLL bll = new IndividualClientBLL();
 
@@ -66,6 +67,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //request update
+
+            this.Hide();
+
+            UpdateRequest requestupdate = new UpdateRequest();
+
+            requestupdate.Show();
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

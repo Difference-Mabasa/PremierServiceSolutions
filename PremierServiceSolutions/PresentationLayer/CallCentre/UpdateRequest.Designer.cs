@@ -46,12 +46,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
             this.lblPayment = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblClientID = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.GbStudDet.SuspendLayout();
             this.Gbnav.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.GbStudDet.Controls.Add(this.label6);
             this.GbStudDet.Controls.Add(this.label5);
             this.GbStudDet.Controls.Add(this.label4);
-            this.GbStudDet.Controls.Add(this.label3);
+            this.GbStudDet.Controls.Add(this.lblClientID);
             this.GbStudDet.Location = new System.Drawing.Point(12, 12);
             this.GbStudDet.Name = "GbStudDet";
             this.GbStudDet.Size = new System.Drawing.Size(659, 426);
@@ -158,6 +158,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update Request";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // rtbDetails
             // 
@@ -226,15 +227,6 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblPayment.TabIndex = 6;
             this.lblPayment.Text = "JobID";
             // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(18, 50);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 13);
-            this.lblID.TabIndex = 5;
-            this.lblID.Text = "label8";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -271,20 +263,29 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label4.TabIndex = 1;
             this.label4.Text = "Client Name";
             // 
-            // label3
+            // lblClientID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "ClientID";
+            this.lblClientID.AutoSize = true;
+            this.lblClientID.Location = new System.Drawing.Point(15, 25);
+            this.lblClientID.Name = "lblClientID";
+            this.lblClientID.Size = new System.Drawing.Size(44, 13);
+            this.lblClientID.TabIndex = 0;
+            this.lblClientID.Text = "ClientID";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(18, 50);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(35, 13);
+            this.lblID.TabIndex = 5;
+            this.lblID.Text = "label8";
             // 
             // UpdateRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 450);
+            this.ClientSize = new System.Drawing.Size(690, 467);
             this.Controls.Add(this.GbStudDet);
             this.Name = "UpdateRequest";
             this.Text = "UpdateRequest";
@@ -314,11 +315,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblFees;
         private System.Windows.Forms.Label lblPayment;
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblClientID;
+        private System.Windows.Forms.Label lblID;
     }
 }
