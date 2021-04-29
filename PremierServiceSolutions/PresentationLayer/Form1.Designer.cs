@@ -139,10 +139,8 @@ namespace PremierServiceSolutions.PresentationLayer
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblEmpID;
         private System.Windows.Forms.Button btnLogin;
-<<<<<<< HEAD
         private System.Windows.Forms.Button btnEXIT;
-=======
         private System.Windows.Forms.Button btnexit;
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
+
     }
 }

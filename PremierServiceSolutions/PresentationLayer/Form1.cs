@@ -24,10 +24,6 @@ namespace PremierServiceSolutions.PresentationLayer
             bool authenticationSuccessful = false;
             string id = txtID.Text;
             string pass = txtPassword.Text;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             //we need to verify if fields are empty or not
 
             if (String.IsNullOrEmpty(id) && String.IsNullOrEmpty(pass))
@@ -43,7 +39,6 @@ namespace PremierServiceSolutions.PresentationLayer
                 MessageBox.Show("Please enter password");
             }
 
->>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             EmployeeBLL bll = new EmployeeBLL();
             List<Employee> employees = bll.GetAllEmployees();
 
@@ -67,7 +62,6 @@ namespace PremierServiceSolutions.PresentationLayer
             {
                 MessageBox.Show("Incorrect username or password");
             }
-=======
             //checking for empty fields
 
             if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtPassword.Text))
@@ -101,7 +95,6 @@ namespace PremierServiceSolutions.PresentationLayer
             //exit
 
             Environment.Exit(0);
->>>>>>> develop
         }
 
         private void btnexit_Click(object sender, EventArgs e)
