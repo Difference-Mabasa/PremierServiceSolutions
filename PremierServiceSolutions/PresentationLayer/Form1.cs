@@ -25,6 +25,7 @@ namespace PremierServiceSolutions.PresentationLayer
             string id = txtID.Text;
             string pass = txtPassword.Text;
 
+<<<<<<< HEAD
             EmployeeBLL bll = new EmployeeBLL();
             List<Employee> employees = bll.GetAllEmployees();
 
@@ -48,6 +49,41 @@ namespace PremierServiceSolutions.PresentationLayer
             {
                 MessageBox.Show("Incorrect username or password");
             }
+=======
+            //checking for empty fields
+
+            if (String.IsNullOrEmpty(txtID.Text) && String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Fields cannot be left empty");
+            }
+            else if (String.IsNullOrEmpty(txtID.Text))
+            {
+                MessageBox.Show("Employee ID cannot be empty");
+                txtPassword.Clear();
+
+            }
+            else if (String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Password field cannot be left empty");
+                txtID.Clear();
+            }
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtPassword.Clear();
+        }
+
+        //need to have a forgot password and maybe a sign up with a hover effect
+
+        private void btnEXIT_Click(object sender, EventArgs e)
+        {
+            //exit
+
+            Environment.Exit(0);
+>>>>>>> develop
         }
     }
 }

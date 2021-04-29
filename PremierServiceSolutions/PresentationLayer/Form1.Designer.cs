@@ -34,13 +34,14 @@ namespace PremierServiceSolutions.PresentationLayer
             this.lblPass = new System.Windows.Forms.Label();
             this.lblEmpID = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnEXIT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(147, 115);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 12;
             // 
@@ -71,7 +72,7 @@ namespace PremierServiceSolutions.PresentationLayer
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(174, 202);
+            this.btnLogin.Location = new System.Drawing.Point(34, 208);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 34);
             this.btnLogin.TabIndex = 8;
@@ -79,26 +80,27 @@ namespace PremierServiceSolutions.PresentationLayer
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // btnClear
+            // btnEXIT
             // 
-            this.btnClear.Location = new System.Drawing.Point(38, 202);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(84, 34);
-            this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnEXIT.Location = new System.Drawing.Point(163, 208);
+            this.btnEXIT.Name = "btnEXIT";
+            this.btnEXIT.Size = new System.Drawing.Size(84, 34);
+            this.btnEXIT.TabIndex = 13;
+            this.btnEXIT.Text = "EXIT";
+            this.btnEXIT.UseVisualStyleBackColor = true;
+            this.btnEXIT.Click += new System.EventHandler(this.btnEXIT_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 286);
+            this.Controls.Add(this.btnEXIT);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblEmpID);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnClear);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -113,6 +115,6 @@ namespace PremierServiceSolutions.PresentationLayer
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.Label lblEmpID;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnEXIT;
     }
 }

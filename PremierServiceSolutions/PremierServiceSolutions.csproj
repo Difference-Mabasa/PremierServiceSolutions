@@ -57,10 +57,13 @@
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />
+<<<<<<< HEAD
     <Compile Include="DataAccessLayer\EmployeeDAL.cs" />
+=======
+    <Compile Include="DataAccessLayer\ContractDAL.cs" />
+>>>>>>> develop
     <Compile Include="DataAccessLayer\IndividualClientDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientJobsDAL.cs" />
-    <Compile Include="DataLayer\BasicContract.cs" />
     <Compile Include="DataLayer\BusinessClient.cs" />
     <Compile Include="DataLayer\Contract.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
@@ -124,12 +127,17 @@
     <Compile Include="DataLayer\Job.cs" />
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
-    <Compile Include="DataLayer\PremiumContract.cs" />
     <Compile Include="PresentationLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ServiceDapartment\Schedule.cs">
       <SubType>Form</SubType>
@@ -145,7 +153,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataLayer\StandardContract.cs" />
     <EmbeddedResource Include="PresentationLayer\CallCentre\AddRequest.resx">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>

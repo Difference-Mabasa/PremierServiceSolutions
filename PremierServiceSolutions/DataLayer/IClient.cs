@@ -9,8 +9,6 @@ namespace PremierServiceSolutions
     interface IClient
     {
         string clientID { get; set; }
-        string serviceLevel { get; set; }
-
         void sendRequest();
     }
 }

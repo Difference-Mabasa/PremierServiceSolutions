@@ -13,14 +13,12 @@ namespace PremierServiceSolutions
 
         public IndividualClient() { }
 
-        public IndividualClient(string clientID, string serviceLevel) : base()
+        public IndividualClient(string clientID) : base()
         {
             this.clientID = clientID;
-            this.serviceLevel = serviceLevel;
         }
 
         public string clientID { get; set; }
-        public string serviceLevel { get;set; }
 
         public override void Regiter()
         {
