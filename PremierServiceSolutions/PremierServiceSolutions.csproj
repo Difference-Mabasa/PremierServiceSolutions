@@ -57,11 +57,8 @@
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />
-<<<<<<< HEAD
     <Compile Include="DataAccessLayer\EmployeeDAL.cs" />
-=======
     <Compile Include="DataAccessLayer\ContractDAL.cs" />
->>>>>>> develop
     <Compile Include="DataAccessLayer\IndividualClientDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientJobsDAL.cs" />
     <Compile Include="DataLayer\BusinessClient.cs" />
