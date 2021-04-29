@@ -21,7 +21,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
 
         //just a variable
-        int counter;
+        int counter=0;
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
@@ -33,7 +33,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void Call_Load(object sender, EventArgs e)
         {
             //Randomize call
-            
+
+            //this is to initiate the call
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

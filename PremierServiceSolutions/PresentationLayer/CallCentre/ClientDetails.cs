@@ -31,11 +31,17 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-          
+            //drops the call
+
+            Call call = new Call();
+
+            this.Hide();
+            call.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //allows to search the database for a client
             string id = txtSearchClient.Text;
             IndividualClientBLL bll = new IndividualClientBLL();
 
@@ -55,6 +61,16 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void dgvPreviousRequest_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //request update
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //adding a request
         }
     }
 }

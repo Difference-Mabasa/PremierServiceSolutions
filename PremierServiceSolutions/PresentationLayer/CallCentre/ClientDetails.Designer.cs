@@ -70,6 +70,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnAdd.TabIndex = 53;
             this.btnAdd.Text = "Add Request";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -79,6 +80,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnUpdate.TabIndex = 52;
             this.btnUpdate.Text = "Update Request";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label3
             // 
