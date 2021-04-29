@@ -64,27 +64,28 @@ namespace PremierServiceSolutions
                 "Duration: {2}", clientName, employeeName, duration);
         }
 
-        public IndividualClient RandomizeCall()
-        {
-            IndividualClientDAL dal = new IndividualClientDAL();
-            Random ran = new Random();
-            int index = ran.Next(0, dal.CountIndividualClients());
+        // Check castings , from list to datatable
+        //public IndividualClient RandomizeCall()
+        //{
+        //    IndividualClientDAL dal = new IndividualClientDAL();
+        //    Random ran = new Random();
+        //    int index = ran.Next(0, dal.CountIndividualClients());
 
-            DataTable table = dal.GetAllIndividualClients();
-            DataRow row = table.Rows[index];
+        //    DataTable table = dal.GetAllIndividualClients();
+        //    DataRow row = table.Rows[index];
 
-            IndividualClient client = new IndividualClient();
+        //    IndividualClient client = new IndividualClient();
 
-            client.clientID = row[0].ToString();
-            client.Name = row[1].ToString();
-            client.Surname = row[2].ToString();
-            client.Phone = row[3].ToString();
-            client.Email = row[4].ToString();
+        //    client.clientID = row[0].ToString();
+        //    client.Name = row[1].ToString();
+        //    client.Surname = row[2].ToString();
+        //    client.Phone = row[3].ToString();
+        //    client.Email = row[4].ToString();
 
-            //The rest of the field will be added
+        //    //The rest of the field will be added
 
-            return client;
-        }
+        //    return client;
+        //}
         
     }
 }

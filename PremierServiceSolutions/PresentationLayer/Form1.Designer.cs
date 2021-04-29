@@ -35,7 +35,6 @@ namespace PremierServiceSolutions.PresentationLayer
             this.lblEmpID = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnEXIT = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -73,7 +72,6 @@ namespace PremierServiceSolutions.PresentationLayer
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(34, 208);
             this.btnLogin.Location = new System.Drawing.Point(34, 196);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 34);
@@ -84,22 +82,13 @@ namespace PremierServiceSolutions.PresentationLayer
             // 
             // btnEXIT
             // 
-            this.btnEXIT.Location = new System.Drawing.Point(163, 208);
+            this.btnEXIT.Location = new System.Drawing.Point(163, 196);
             this.btnEXIT.Name = "btnEXIT";
             this.btnEXIT.Size = new System.Drawing.Size(84, 34);
             this.btnEXIT.TabIndex = 13;
             this.btnEXIT.Text = "EXIT";
             this.btnEXIT.UseVisualStyleBackColor = true;
             this.btnEXIT.Click += new System.EventHandler(this.btnEXIT_Click);
-            // btnexit
-            // 
-            this.btnexit.Location = new System.Drawing.Point(163, 196);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(84, 34);
-            this.btnexit.TabIndex = 13;
-            this.btnexit.Text = "EXIT";
-            this.btnexit.UseVisualStyleBackColor = true;
-            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // Form1
             // 
@@ -107,7 +96,6 @@ namespace PremierServiceSolutions.PresentationLayer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 286);
             this.Controls.Add(this.btnEXIT);
-            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblPass);
@@ -128,7 +116,7 @@ namespace PremierServiceSolutions.PresentationLayer
         private System.Windows.Forms.Label lblEmpID;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnEXIT;
-        private System.Windows.Forms.Button btnexit;
+        //private System.Windows.Forms.Button btnexit;
 
     }
 }

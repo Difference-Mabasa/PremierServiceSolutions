@@ -35,14 +35,15 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return client;
         }
 
-        public DataTable GetAllIndividualClients()
-        {
-            IndividualClientDAL clientData = new IndividualClientDAL();
-            DataTable table;
-            table = clientData.GetAllIndividualClients();
+        // Lets discuss this in a meeting
+        //public DataTable GetAllIndividualClients()
+        //{
+        //    IndividualClientDAL clientData = new IndividualClientDAL();
+        //    DataTable table;
+        //    table = clientData.GetAllIndividualClients();
 
-            return table;
-        }
+        //    return table;
+        //}
 
         public void InsertIndividualClient(IndividualClient client)
         {
