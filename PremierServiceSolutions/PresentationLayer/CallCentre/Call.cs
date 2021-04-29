@@ -25,6 +25,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
+            counter = 0;
+
             this.Hide();
             ClientDetails frm = new ClientDetails();
             frm.Show();
