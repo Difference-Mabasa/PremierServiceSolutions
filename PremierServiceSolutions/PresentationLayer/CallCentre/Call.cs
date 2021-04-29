@@ -15,7 +15,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         public Call()
         {
             InitializeComponent();
+
+            //this is to initiate the call
+            timer1.Start();
         }
+
+        //just a variable
+        int counter;
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
@@ -28,7 +34,24 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Randomize call
             
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            counter++;
+
+            //a call will only come in after 3 seconds once you succesfully logged in
+            //you will only answer the call after 1 second
+            if (counter == 3)
+            {
+                lblCall.Visible = true;
+            }
+
+            //this will come after 1 second after the call notification
+            if (counter == 4)
+            {
+                btnAcceptCall.Enabled = true;
+            }
         }
     }
 }

@@ -26,9 +26,28 @@ namespace PremierServiceSolutions.PresentationLayer
             string pass = txtPassword.Text;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            //we need to verify if fields are empty or not
+
+            if (String.IsNullOrEmpty(id) && String.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Fields cannot be left empty!");
+            }
+            else if (String.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("Please enter employee ID");
+            }
+            else if (String.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Please enter password");
+            }
+
+>>>>>>> 988147847a7aba145285e418ef5c37e913eff339
             EmployeeBLL bll = new EmployeeBLL();
             List<Employee> employees = bll.GetAllEmployees();
 
+            //must iterate through the list of ALL employees to find the details
             foreach (Employee item in employees)
             {
                 if (item.EmployeeID == id && item.Password == pass)
@@ -38,14 +57,13 @@ namespace PremierServiceSolutions.PresentationLayer
                 }
             }
 
+            //once the employee has been found then we move onto receiving the call
             if (authenticationSuccessful)
             {
                 this.Hide();
                 CallCentre.Call frm = new CallCentre.Call();
                 frm.Show();
-            }
-
-            else
+            }else
             {
                 MessageBox.Show("Incorrect username or password");
             }
@@ -84,6 +102,12 @@ namespace PremierServiceSolutions.PresentationLayer
 
             Environment.Exit(0);
 >>>>>>> develop
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            //exit
+            Environment.Exit(0);
         }
     }
 }
