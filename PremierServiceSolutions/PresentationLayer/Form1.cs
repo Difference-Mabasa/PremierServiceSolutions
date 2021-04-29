@@ -64,5 +64,11 @@ namespace PremierServiceSolutions.PresentationLayer
                 MessageBox.Show("Incorrect username or password");
             }
         }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            //exit
+            Environment.Exit(0);
+        }
     }
 }
