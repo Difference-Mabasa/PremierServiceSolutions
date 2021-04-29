@@ -56,9 +56,9 @@
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />
+    <Compile Include="DataAccessLayer\ContractDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientJobsDAL.cs" />
-    <Compile Include="DataLayer\BasicContract.cs" />
     <Compile Include="DataLayer\BusinessClient.cs" />
     <Compile Include="DataLayer\Contract.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
@@ -122,7 +122,6 @@
     <Compile Include="DataLayer\Job.cs" />
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
-    <Compile Include="DataLayer\PremiumContract.cs" />
     <Compile Include="PresentationLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,7 +148,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataLayer\StandardContract.cs" />
     <EmbeddedResource Include="PresentationLayer\CallCentre\AddRequest.resx">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </EmbeddedResource>

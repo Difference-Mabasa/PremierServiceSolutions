@@ -6,34 +6,34 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
-    abstract class Contract
+    class Contract
     {
         string contractId,contractType, serviceLevel, contractDescription;
-        double price;
+        double individualPrice, businessPrice;
         bool available;
 
         public string ContractId { get => contractId; set => contractId = value; }
         public string ContractType { get => contractType; set => contractType = value; }
         public string ServiceLevel { get => serviceLevel; set => serviceLevel = value; }
         public string ContractDescription { get => contractDescription; set => contractDescription = value; }
-        public double Price { get => price; set => price = value; }
+        public double IndividualPrice { get => individualPrice; set => individualPrice = value; }
+        public double BusinessPrice { get => businessPrice; set => businessPrice = value; }
         public bool Available { get => available; set => available = value; }
 
-        protected Contract(string contractId, string contractType, string serviceLevel, string contractDescription, double price, bool available)
+        public Contract(string contractId, string contractType, string contractDescription, double individualPrice, double businessPrice, string serviceLevel, bool available)
         {
-            ContractId = contractId;
-            ContractType = contractType;
-            ServiceLevel = serviceLevel;
-            ContractDescription = contractDescription;
-            Price = price;
-            Available = available;
+            this.ContractId = contractId;
+            this.ContractType = contractType;
+            this.ServiceLevel = serviceLevel;
+            this.ContractDescription = contractDescription;
+            this.IndividualPrice = individualPrice;
+            this.BusinessPrice = businessPrice;
+            this.Available = available;
         }
-        protected Contract()
+        public Contract()
         {
 
         }
-
-        //anything
 
 
     }
