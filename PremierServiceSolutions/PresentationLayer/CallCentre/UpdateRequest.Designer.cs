@@ -149,6 +149,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnEnd.TabIndex = 18;
             this.btnEnd.Text = "End";
             this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnUpdate
             // 

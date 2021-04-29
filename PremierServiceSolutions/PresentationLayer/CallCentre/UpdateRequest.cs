@@ -22,5 +22,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             //this goes to the database
 
         }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            //Drops the call
+
+            Call call = new Call();
+
+            this.Hide();
+            call.Show();
+        }
     }
 }
