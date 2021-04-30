@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -75,6 +78,12 @@
     <Compile Include="PresentationLayer\CallCentre\Call.Designer.cs">
       <DependentUpon>Call.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\CallCentre\CallCentre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\CallCentre\CallCentre.Designer.cs">
+      <DependentUpon>CallCentre.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\CallCentre\ClientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +102,17 @@
     <Compile Include="PresentationLayer\ClientMaintanance\AddClients.Designer.cs">
       <DependentUpon>AddClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintanance.cs">
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintanance.Designer.cs">
-      <DependentUpon>ClientMaintanance.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientDetails.Designer.cs">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ClientMaintanance\ClientMaintenance.Designer.cs">
+      <DependentUpon>ClientMaintenance.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ClientMaintanance\UpdateClient.cs">
       <SubType>Form</SubType>
@@ -123,6 +138,18 @@
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
     <Compile Include="DataLayer\PremiumContract.cs" />
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanence.Designer.cs">
+      <DependentUpon>ContractMaintanence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\UpdateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\UpdateContract.Designer.cs">
+      <DependentUpon>UpdateContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +162,17 @@
     <Compile Include="PresentationLayer\ServiceDapartment\Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDepartment.cs">
+    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDapartment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDepartment.Designer.cs">
-      <DependentUpon>ServiceDepartment.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ServiceDapartment\ServiceDapartment.Designer.cs">
+      <DependentUpon>ServiceDapartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\Technicians.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\Technicians.Designer.cs">
+      <DependentUpon>Technicians.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +183,9 @@
     <EmbeddedResource Include="PresentationLayer\CallCentre\Call.resx">
       <DependentUpon>Call.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\CallCentre.resx">
+      <DependentUpon>CallCentre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\CallCentre\ClientDetails.resx">
       <DependentUpon>ClientDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,8 +195,11 @@
     <EmbeddedResource Include="PresentationLayer\ClientMaintanance\AddClients.resx">
       <DependentUpon>AddClients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ClientMaintanance\ClientMaintanance.resx">
-      <DependentUpon>ClientMaintanance.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ClientMaintanance\ClientDetails.resx">
+      <DependentUpon>ClientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ClientMaintanance\ClientMaintenance.resx">
+      <DependentUpon>ClientMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ClientMaintanance\UpdateClient.resx">
       <DependentUpon>UpdateClient.cs</DependentUpon>
@@ -171,14 +210,23 @@
     <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintanance.resx">
       <DependentUpon>ContractMaintanance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintanence.resx">
+      <DependentUpon>ContractMaintanence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\UpdateContract.resx">
+      <DependentUpon>UpdateContract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\ServiceDepartment.resx">
-      <DependentUpon>ServiceDepartment.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\ServiceDapartment.resx">
+      <DependentUpon>ServiceDapartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Technicians.resx">
+      <DependentUpon>Technicians.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,6 +239,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -203,6 +252,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decline1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acceptCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

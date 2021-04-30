@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
+namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 {
-    public partial class ServiceDepartment : Form
+    public partial class ClientDetails : Form
     {
-        public ServiceDepartment()
+        public ClientDetails()
         {
             InitializeComponent();
         }

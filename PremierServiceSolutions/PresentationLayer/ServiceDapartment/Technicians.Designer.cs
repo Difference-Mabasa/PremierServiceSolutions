@@ -1,7 +1,7 @@
 ﻿
 namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
-    partial class ServiceDepartment
+    partial class Technicians
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         /// </summary>
         private void InitializeComponent()
         {
-            this.Gbnav = new System.Windows.Forms.GroupBox();
-            this.btnLast = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnFirst = new System.Windows.Forms.Button();
             this.btnJobCompleted = new System.Windows.Forms.Button();
             this.btnAllTech = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,63 +37,15 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.cbTech = new System.Windows.Forms.ComboBox();
             this.btnAssign = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Gbnav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GbDisplayButtons.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Gbnav
-            // 
-            this.Gbnav.Controls.Add(this.btnLast);
-            this.Gbnav.Controls.Add(this.btnNext);
-            this.Gbnav.Controls.Add(this.btnPrevious);
-            this.Gbnav.Controls.Add(this.btnFirst);
-            this.Gbnav.Location = new System.Drawing.Point(28, 430);
-            this.Gbnav.Name = "Gbnav";
-            this.Gbnav.Size = new System.Drawing.Size(397, 47);
-            this.Gbnav.TabIndex = 43;
-            this.Gbnav.TabStop = false;
-            this.Gbnav.Text = "Navigation";
-            // 
-            // btnLast
-            // 
-            this.btnLast.Location = new System.Drawing.Point(303, 18);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
-            this.btnLast.TabIndex = 3;
-            this.btnLast.Text = ">|";
-            this.btnLast.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(108, 19);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = ">>";
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Location = new System.Drawing.Point(204, 19);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 1;
-            this.btnPrevious.Text = "<<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.Location = new System.Drawing.Point(15, 18);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(75, 23);
-            this.btnFirst.TabIndex = 0;
-            this.btnFirst.Text = "|<";
-            this.btnFirst.UseVisualStyleBackColor = true;
-            // 
             // btnJobCompleted
             // 
+            this.btnJobCompleted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJobCompleted.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJobCompleted.ForeColor = System.Drawing.Color.White;
             this.btnJobCompleted.Location = new System.Drawing.Point(259, 285);
             this.btnJobCompleted.Name = "btnJobCompleted";
             this.btnJobCompleted.Size = new System.Drawing.Size(207, 33);
@@ -108,6 +55,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             // btnAllTech
             // 
+            this.btnAllTech.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllTech.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllTech.ForeColor = System.Drawing.Color.White;
             this.btnAllTech.Location = new System.Drawing.Point(32, 285);
             this.btnAllTech.Name = "btnAllTech";
             this.btnAllTech.Size = new System.Drawing.Size(207, 33);
@@ -129,6 +79,8 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.GbDisplayButtons.Controls.Add(this.cbTech);
             this.GbDisplayButtons.Controls.Add(this.btnAssign);
             this.GbDisplayButtons.Controls.Add(this.btnViewSchedule);
+            this.GbDisplayButtons.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GbDisplayButtons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GbDisplayButtons.Location = new System.Drawing.Point(605, 51);
             this.GbDisplayButtons.Name = "GbDisplayButtons";
             this.GbDisplayButtons.Size = new System.Drawing.Size(168, 152);
@@ -145,15 +97,19 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             // cbTech
             // 
+            this.cbTech.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTech.FormattingEnabled = true;
             this.cbTech.Location = new System.Drawing.Point(6, 19);
             this.cbTech.Name = "cbTech";
-            this.cbTech.Size = new System.Drawing.Size(153, 21);
+            this.cbTech.Size = new System.Drawing.Size(153, 23);
             this.cbTech.TabIndex = 29;
             this.cbTech.Text = "Available Technicians";
             // 
             // btnAssign
             // 
+            this.btnAssign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAssign.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.ForeColor = System.Drawing.Color.White;
             this.btnAssign.Location = new System.Drawing.Point(6, 106);
             this.btnAssign.Name = "btnAssign";
             this.btnAssign.Size = new System.Drawing.Size(153, 33);
@@ -163,6 +119,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             // btnViewSchedule
             // 
+            this.btnViewSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewSchedule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewSchedule.ForeColor = System.Drawing.Color.White;
             this.btnViewSchedule.Location = new System.Drawing.Point(6, 67);
             this.btnViewSchedule.Name = "btnViewSchedule";
             this.btnViewSchedule.Size = new System.Drawing.Size(153, 33);
@@ -170,45 +129,26 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnViewSchedule.Text = "View Schedule";
             this.btnViewSchedule.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 24);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Service Department";
-            // 
-            // ServiceDepartment
+            // Technicians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 483);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Gbnav);
             this.Controls.Add(this.btnJobCompleted);
             this.Controls.Add(this.btnAllTech);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GbDisplayButtons);
-            this.Name = "ServiceDepartment";
-            this.Text = "ServiceDepartment";
-            this.Gbnav.ResumeLayout(false);
+            this.Name = "Technicians";
+            this.Text = "Technicians";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GbDisplayButtons.ResumeLayout(false);
             this.GbDisplayButtons.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox Gbnav;
-        private System.Windows.Forms.Button btnLast;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Button btnJobCompleted;
         private System.Windows.Forms.Button btnAllTech;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -217,6 +157,5 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         private System.Windows.Forms.ComboBox cbTech;
         private System.Windows.Forms.Button btnAssign;
         private System.Windows.Forms.Button btnViewSchedule;
-        private System.Windows.Forms.Label label5;
     }
 }

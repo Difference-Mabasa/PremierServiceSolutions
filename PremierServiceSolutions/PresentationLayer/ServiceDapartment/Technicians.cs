@@ -4,17 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
 
-namespace PremierServiceSolutions.PresentationLayer.CallCentre
+namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
-    public partial class UpdateRequest : Form
+    public partial class Technicians : Form
     {
-        public UpdateRequest()
+        public Technicians()
         {
             InitializeComponent();
         }

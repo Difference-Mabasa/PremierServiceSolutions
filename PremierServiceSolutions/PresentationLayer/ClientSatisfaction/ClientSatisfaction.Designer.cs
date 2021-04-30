@@ -36,15 +36,9 @@ namespace PremierServiceSolutions.PresentationLayer.ClientSatisfaction
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnReopen = new System.Windows.Forms.Button();
-            this.Gbnav = new System.Windows.Forms.GroupBox();
-            this.btnLast = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnFirst = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.GbDisplayButtons.SuspendLayout();
-            this.Gbnav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,55 +106,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientSatisfaction
             this.btnReopen.Text = "Re-open";
             this.btnReopen.UseVisualStyleBackColor = true;
             // 
-            // Gbnav
-            // 
-            this.Gbnav.Controls.Add(this.btnLast);
-            this.Gbnav.Controls.Add(this.btnNext);
-            this.Gbnav.Controls.Add(this.btnPrevious);
-            this.Gbnav.Controls.Add(this.btnFirst);
-            this.Gbnav.Location = new System.Drawing.Point(7, 422);
-            this.Gbnav.Name = "Gbnav";
-            this.Gbnav.Size = new System.Drawing.Size(397, 47);
-            this.Gbnav.TabIndex = 51;
-            this.Gbnav.TabStop = false;
-            this.Gbnav.Text = "Navigation";
-            // 
-            // btnLast
-            // 
-            this.btnLast.Location = new System.Drawing.Point(303, 18);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
-            this.btnLast.TabIndex = 3;
-            this.btnLast.Text = ">|";
-            this.btnLast.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(108, 19);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = ">>";
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Location = new System.Drawing.Point(204, 19);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 1;
-            this.btnPrevious.Text = "<<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.Location = new System.Drawing.Point(15, 18);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(75, 23);
-            this.btnFirst.TabIndex = 0;
-            this.btnFirst.Text = "|<";
-            this.btnFirst.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -189,12 +134,10 @@ namespace PremierServiceSolutions.PresentationLayer.ClientSatisfaction
             this.Controls.Add(this.btnAnswer);
             this.Controls.Add(this.btnEndCall);
             this.Controls.Add(this.GbDisplayButtons);
-            this.Controls.Add(this.Gbnav);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ClientSatisfaction";
             this.Text = "ClientSatisfaction";
             this.GbDisplayButtons.ResumeLayout(false);
-            this.Gbnav.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,11 +153,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientSatisfaction
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnReopen;
-        private System.Windows.Forms.GroupBox Gbnav;
-        private System.Windows.Forms.Button btnLast;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
     }

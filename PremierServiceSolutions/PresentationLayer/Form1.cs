@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
 using PremierServiceSolutions.BusinessLogicLayer;
 
@@ -23,15 +25,33 @@ namespace PremierServiceSolutions.PresentationLayer
         {
             string id = txtID.Text;
             string pass = txtPassword.Text;
-
-            
-
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        
+
+        private void txtID_Click(object sender, EventArgs e)
         {
             txtID.Clear();
+            pictureBox2.BackgroundImage = Properties.Resources.user2;
+            panel2.ForeColor = Color.FromArgb(78, 184, 206);
+            txtID.ForeColor = Color.FromArgb(78, 184, 206);
+
+            
+            
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
             txtPassword.Clear();
+            txtPassword.PasswordChar = '*';
+            pictureBox2.BackgroundImage = Properties.Resources.pass1;
+            panel3.ForeColor = Color.FromArgb(78, 184, 206);
+            txtPassword.ForeColor = Color.FromArgb(78, 184, 206);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
