@@ -23,24 +23,15 @@ namespace PremierServiceSolutions.PresentationLayer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            bool authenticationSuccessful = false;
             string id = txtID.Text;
             string pass = txtPassword.Text;
-        }
-
-        
-
-        private void txtID_Click(object sender, EventArgs e)
-        {
-            txtID.Clear();
-            pictureBox2.BackgroundImage = Properties.Resources.user2;
-            panel2.ForeColor = Color.FromArgb(78, 184, 206);
-            txtID.ForeColor = Color.FromArgb(78, 184, 206);
 
             
-            
+
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtPassword.Clear();
             txtPassword.PasswordChar = '*';
@@ -52,6 +43,15 @@ namespace PremierServiceSolutions.PresentationLayer
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //need to have a forgot password and maybe a sign up with a hover effect
+
+        private void btnEXIT_Click(object sender, EventArgs e)
+        {
+            //exit
+
+            Environment.Exit(0);
         }
     }
 }

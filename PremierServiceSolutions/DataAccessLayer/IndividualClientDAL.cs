@@ -122,8 +122,10 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
         
-        public DataTable GetAllIndividualClients()
+        public List<IndividualClient> GetAllIndividualClients()
         {
+            List<IndividualClient> individualClients = new List<IndividualClient>();
+
             DataTable datatable = new DataTable();
             string query = $"SELECT * FROM IndividualClients ";
 
@@ -132,6 +134,18 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    IndividualClient individualClient = new IndividualClient();
+
+                    individualClient.clientID = row["ClientID"].ToString();
+                    individualClient.Name = row["EmployeeName"].ToString();
+                    individualClient.Surname = row["EmployeeSurname"].ToString();
+                    individualClient.Phone = row["Phone"].ToString();
+                    individualClient.Email = row["Email"].ToString();
+                    individualClient.AddressID = row["AddressID"].ToString();
+                    individualClients.Add(individualClient);
+                }
             }
             catch (Exception ex)
             {
@@ -142,7 +156,33 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
 
             }
-            return datatable;
+            return individualClients;
+        }
+
+        public int CountIndividualClients()
+        {
+            string query = $"SELECT COUNT(ClientID) FROM IndividualClients";
+            int total=0;
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                
+                total = (int)cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            return total;
         }
 
     }

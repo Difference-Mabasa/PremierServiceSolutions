@@ -29,15 +29,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCall = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeclineCall = new System.Windows.Forms.PictureBox();
-            this.btnAcceptCall = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeclineCall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAcceptCall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAcceptCall = new System.Windows.Forms.Button();
+            this.lblCall = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCall
@@ -73,8 +66,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             // btnAcceptCall
             // 
-            this.btnAcceptCall.Image = global::PremierServiceSolutions.Properties.Resources.acceptCall;
-            this.btnAcceptCall.Location = new System.Drawing.Point(330, 230);
+            this.btnAcceptCall.Location = new System.Drawing.Point(291, 230);
             this.btnAcceptCall.Name = "btnAcceptCall";
             this.btnAcceptCall.Size = new System.Drawing.Size(70, 70);
             this.btnAcceptCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,41 +75,41 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.call;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblCall.AutoSize = true;
+            this.lblCall.Location = new System.Drawing.Point(357, 154);
+            this.lblCall.Name = "lblCall";
+            this.lblCall.Size = new System.Drawing.Size(86, 13);
+            this.lblCall.TabIndex = 4;
+            this.lblCall.Text = "Incomming call...";
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(259, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(308, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Premier Service Solution Call center";
+            this.label1.Visible = false;
             // 
             // Call
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(660, 449);
-            this.Controls.Add(this.btnDeclineCall);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAcceptCall);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCall);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Call";
             this.Text = "Call";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeclineCall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAcceptCall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox lblCall;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox btnAcceptCall;
-        private System.Windows.Forms.PictureBox btnDeclineCall;
+
+        private System.Windows.Forms.Button btnAcceptCall;
+        private System.Windows.Forms.Label lblCall;
     }
 }

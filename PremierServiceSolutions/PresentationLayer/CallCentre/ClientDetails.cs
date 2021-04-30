@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
+using PremierServiceSolutions.BusinessLogicLayer;
+
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
     public partial class ClientDetails : Form
@@ -31,12 +33,27 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-          
+            //Drops the call
+
+            Call call = new Call();
+
+            this.Hide();
+            call.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            //allows to search the database for a client
+
+            string id = txtSearchClient.Text;
+            IndividualClientBLL bll = new IndividualClientBLL();
+
+            IndividualClient ic = bll.GetIndividualClientByID(id);
+
+            BindingSource source = new BindingSource();
+            source.Add(ic);
+
+            dgvClientDetails.DataSource = source;
         }
 
         private void dgvClientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,6 +64,23 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void dgvPreviousRequest_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //request update
+
+            this.Hide();
+
+            UpdateRequest requestupdate = new UpdateRequest();
+
+            requestupdate.Show();
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //adding a request
         }
     }
 }

@@ -39,44 +39,41 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
             this.lblPayment = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.gbUpdate.SuspendLayout();
+            this.GbStudDet.SuspendLayout();
+            this.Gbnav.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbUpdate
             // 
-            this.gbUpdate.Controls.Add(this.iconButton1);
-            this.gbUpdate.Controls.Add(this.btnAdd);
-            this.gbUpdate.Controls.Add(this.lblJobID);
-            this.gbUpdate.Controls.Add(this.rtbDetails);
-            this.gbUpdate.Controls.Add(this.txtDate);
-            this.gbUpdate.Controls.Add(this.txtJobType);
-            this.gbUpdate.Controls.Add(this.label1);
-            this.gbUpdate.Controls.Add(this.lblName);
-            this.gbUpdate.Controls.Add(this.lblAddress);
-            this.gbUpdate.Controls.Add(this.lblFees);
-            this.gbUpdate.Controls.Add(this.lblPayment);
-            this.gbUpdate.Controls.Add(this.lblID);
-            this.gbUpdate.Controls.Add(this.label7);
-            this.gbUpdate.Controls.Add(this.label6);
-            this.gbUpdate.Controls.Add(this.label5);
-            this.gbUpdate.Controls.Add(this.label4);
-            this.gbUpdate.Controls.Add(this.label3);
-            this.gbUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUpdate.ForeColor = System.Drawing.Color.White;
-            this.gbUpdate.Location = new System.Drawing.Point(12, 12);
-            this.gbUpdate.Name = "gbUpdate";
-            this.gbUpdate.Size = new System.Drawing.Size(767, 513);
-            this.gbUpdate.TabIndex = 19;
-            this.gbUpdate.TabStop = false;
-            this.gbUpdate.Text = "Update Request";
+            this.GbStudDet.Controls.Add(this.lblJobID);
+            this.GbStudDet.Controls.Add(this.Gbnav);
+            this.GbStudDet.Controls.Add(this.btnEnd);
+            this.GbStudDet.Controls.Add(this.btnUpdate);
+            this.GbStudDet.Controls.Add(this.rtbDetails);
+            this.GbStudDet.Controls.Add(this.txtDate);
+            this.GbStudDet.Controls.Add(this.txtJobType);
+            this.GbStudDet.Controls.Add(this.label1);
+            this.GbStudDet.Controls.Add(this.lblName);
+            this.GbStudDet.Controls.Add(this.lblAddress);
+            this.GbStudDet.Controls.Add(this.lblFees);
+            this.GbStudDet.Controls.Add(this.lblPayment);
+            this.GbStudDet.Controls.Add(this.lblID);
+            this.GbStudDet.Controls.Add(this.label7);
+            this.GbStudDet.Controls.Add(this.label6);
+            this.GbStudDet.Controls.Add(this.label5);
+            this.GbStudDet.Controls.Add(this.label4);
+            this.GbStudDet.Controls.Add(this.label3);
+            this.GbStudDet.Location = new System.Drawing.Point(12, 12);
+            this.GbStudDet.Name = "GbStudDet";
+            this.GbStudDet.Size = new System.Drawing.Size(659, 426);
+            this.GbStudDet.TabIndex = 19;
+            this.GbStudDet.TabStop = false;
+            this.GbStudDet.Text = "Student Details";
             // 
             // lblJobID
             // 
@@ -86,6 +83,73 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblJobID.Size = new System.Drawing.Size(56, 18);
             this.lblJobID.TabIndex = 25;
             this.lblJobID.Text = "label2";
+            // 
+            // Gbnav
+            // 
+            this.Gbnav.Controls.Add(this.btnLast);
+            this.Gbnav.Controls.Add(this.btnNext);
+            this.Gbnav.Controls.Add(this.btnPrevious);
+            this.Gbnav.Controls.Add(this.btnFirst);
+            this.Gbnav.Location = new System.Drawing.Point(18, 362);
+            this.Gbnav.Name = "Gbnav";
+            this.Gbnav.Size = new System.Drawing.Size(397, 47);
+            this.Gbnav.TabIndex = 24;
+            this.Gbnav.TabStop = false;
+            this.Gbnav.Text = "Navigation";
+            // 
+            // btnLast
+            // 
+            this.btnLast.Location = new System.Drawing.Point(303, 18);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(75, 23);
+            this.btnLast.TabIndex = 3;
+            this.btnLast.Text = ">|";
+            this.btnLast.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(108, 19);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 2;
+            this.btnNext.Text = ">>";
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(204, 19);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.TabIndex = 1;
+            this.btnPrevious.Text = "<<";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.Location = new System.Drawing.Point(15, 18);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(75, 23);
+            this.btnFirst.TabIndex = 0;
+            this.btnFirst.Text = "|<";
+            this.btnFirst.UseVisualStyleBackColor = true;
+            // 
+            // btnEnd
+            // 
+            this.btnEnd.Location = new System.Drawing.Point(179, 262);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(118, 52);
+            this.btnEnd.TabIndex = 18;
+            this.btnEnd.Text = "End";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(21, 262);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(118, 52);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update Request";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // rtbDetails
             // 
@@ -157,9 +221,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(18, 71);
+            this.lblID.Location = new System.Drawing.Point(18, 50);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(56, 18);
+            this.lblID.Size = new System.Drawing.Size(35, 13);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "label8";
             // 
@@ -199,12 +263,21 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label4.TabIndex = 1;
             this.label4.Text = "Client Name";
             // 
-            // label3
+            // lblClientID
+            // 
+            this.lblClientID.AutoSize = true;
+            this.lblClientID.Location = new System.Drawing.Point(15, 25);
+            this.lblClientID.Name = "lblClientID";
+            this.lblClientID.Size = new System.Drawing.Size(44, 13);
+            this.lblClientID.TabIndex = 0;
+            this.lblClientID.Text = "ClientID";
+            // 
+            // lblID
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 46);
+            this.label3.Location = new System.Drawing.Point(15, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 18);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "ClientID";
             // 
@@ -248,9 +321,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(781, 529);
-            this.Controls.Add(this.gbUpdate);
+            this.ClientSize = new System.Drawing.Size(690, 450);
+            this.Controls.Add(this.GbStudDet);
             this.Name = "UpdateRequest";
             this.Text = "UpdateRequest";
             this.gbUpdate.ResumeLayout(false);
@@ -271,13 +343,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblFees;
         private System.Windows.Forms.Label lblPayment;
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btnAdd;
     }
 }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PremierServiceSolutions.DataAccessLayer;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
+using PremierServiceSolutions.DataAccessLayer;
 
 namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class EmployeeBLL
     {
-        public List<Employee> GetEmployees()
+        public List<Employee> GetAllEmployees()
         {
             List<Employee> data = new List<Employee>();
             try
@@ -25,24 +28,24 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return data;
         }
         public void InsertEmployee(Employee emp)
-        {   
+        {
             try
             {
                 EmployeeDAL employeeData = new EmployeeDAL();
                 employeeData.InsertEmployee(emp);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show($"Error EmployeeBLL {e.Message}");
             }
         }
-        
+
         public void UpdateEmployee(Employee emp)
         {
             try
             {
                 EmployeeDAL employeeData = new EmployeeDAL();
-                employeeData.UpdateEmployees(emp);
+                employeeData.UpdateEmployee(emp);
             }
             catch (Exception e)
             {
