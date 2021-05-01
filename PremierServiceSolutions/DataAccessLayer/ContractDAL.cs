@@ -10,7 +10,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class ContractDAL
     {
-        SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
         public List<Contract> GetAllContracts()
         {
             List<Contract> allContracts = new List<Contract>();
