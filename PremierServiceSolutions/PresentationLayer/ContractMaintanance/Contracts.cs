@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
 {
-    public partial class ContractMaintanance : Form
+    public partial class Contracts : Form
     {
-        public ContractMaintanance()
+        public Contracts()
         {
             InitializeComponent();
         }

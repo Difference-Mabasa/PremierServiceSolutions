@@ -1,7 +1,7 @@
 ﻿
 namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
 {
-    partial class ContractMaintanance
+    partial class Contracts
     {
         /// <summary>
         /// Required designer variable.
@@ -238,7 +238,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnIndividual.Text = "Individual";
             this.btnIndividual.UseVisualStyleBackColor = false;
             // 
-            // ContractMaintanance
+            // Contracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -255,8 +255,8 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.GbDisplayButtons);
-            this.Name = "ContractMaintanance";
-            this.Text = "ContractMaintanance";
+            this.Name = "Contracts";
+            this.Text = "Contract";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GbDisplayButtons.ResumeLayout(false);

@@ -131,7 +131,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 111);
+            this.pnlLogo.Size = new System.Drawing.Size(188, 146);
             this.pnlLogo.TabIndex = 0;
             // 
             // timer1
@@ -164,7 +164,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // 
             // ibtnLogOout
             // 
-            this.ibtnLogOout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnLogOout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ibtnLogOout.FlatAppearance.BorderSize = 0;
             this.ibtnLogOout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnLogOout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,7 +174,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ibtnLogOout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogOout.IconSize = 40;
             this.ibtnLogOout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogOout.Location = new System.Drawing.Point(0, 291);
+            this.ibtnLogOout.Location = new System.Drawing.Point(0, 601);
             this.ibtnLogOout.Name = "ibtnLogOout";
             this.ibtnLogOout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnLogOout.Size = new System.Drawing.Size(188, 60);
@@ -197,7 +197,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ibtnUpdateClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnUpdateClients.IconSize = 35;
             this.ibtnUpdateClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnUpdateClients.Location = new System.Drawing.Point(0, 231);
+            this.ibtnUpdateClients.Location = new System.Drawing.Point(0, 266);
             this.ibtnUpdateClients.Name = "ibtnUpdateClients";
             this.ibtnUpdateClients.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnUpdateClients.Size = new System.Drawing.Size(188, 60);
@@ -220,7 +220,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ibtnAddClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAddClients.IconSize = 40;
             this.ibtnAddClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnAddClients.Location = new System.Drawing.Point(0, 171);
+            this.ibtnAddClients.Location = new System.Drawing.Point(0, 206);
             this.ibtnAddClients.Name = "ibtnAddClients";
             this.ibtnAddClients.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnAddClients.Size = new System.Drawing.Size(188, 60);
@@ -243,7 +243,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.ibtnClientDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnClientDetails.IconSize = 40;
             this.ibtnClientDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnClientDetails.Location = new System.Drawing.Point(0, 111);
+            this.ibtnClientDetails.Location = new System.Drawing.Point(0, 146);
             this.ibtnClientDetails.Name = "ibtnClientDetails";
             this.ibtnClientDetails.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnClientDetails.Size = new System.Drawing.Size(188, 60);
@@ -257,10 +257,10 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.call1;
+            this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.pss2;
             this.btnHome.Location = new System.Drawing.Point(10, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(168, 111);
+            this.btnHome.Size = new System.Drawing.Size(168, 146);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;

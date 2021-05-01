@@ -128,18 +128,29 @@
     <Compile Include="PresentationLayer\ClientSatisfaction\ClientSatisfaction.Designer.cs">
       <DependentUpon>ClientSatisfaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanance.cs">
+    <Compile Include="PresentationLayer\ContractMaintanance\Contracts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintanance.Designer.cs">
-      <DependentUpon>ContractMaintanance.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ContractMaintanance\Contracts.Designer.cs">
+      <DependentUpon>Contracts.cs</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\IClient.cs" />
     <Compile Include="DataLayer\IndividualClient.cs" />
     <Compile Include="DataLayer\Job.cs" />
     <Compile Include="DataLayer\JobRequest.cs" />
     <Compile Include="DataLayer\Person.cs" />
-    <Compile Include="DataLayer\PremiumContract.cs" />
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\ContractMaintenance.Designer.cs">
+      <DependentUpon>ContractMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\UpdateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ContractMaintanance\UpdateContract.Designer.cs">
+      <DependentUpon>UpdateContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,11 +213,11 @@
     <EmbeddedResource Include="PresentationLayer\ClientSatisfaction\ClientSatisfaction.resx">
       <DependentUpon>ClientSatisfaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintanance.resx">
-      <DependentUpon>ContractMaintanance.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\Contracts.resx">
+      <DependentUpon>Contracts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintanence.resx">
-      <DependentUpon>ContractMaintanence.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ContractMaintanance\ContractMaintenance.resx">
+      <DependentUpon>ContractMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ContractMaintanance\UpdateContract.resx">
       <DependentUpon>UpdateContract.cs</DependentUpon>
@@ -307,6 +318,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pss2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\service.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

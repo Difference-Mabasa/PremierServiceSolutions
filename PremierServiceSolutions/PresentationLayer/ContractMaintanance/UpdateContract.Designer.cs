@@ -1,5 +1,4 @@
-﻿
-namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
+﻿namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
 {
     partial class UpdateContract
     {
@@ -30,18 +29,22 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         private void InitializeComponent()
         {
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnAddIC = new FontAwesome.Sharp.IconButton();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.GbCD = new System.Windows.Forms.GroupBox();
-            this.txtBusinessPrice = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
-            this.txtDes = new System.Windows.Forms.TextBox();
-            this.txtnIndividualPrice = new System.Windows.Forms.TextBox();
+            this.txtContract = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.lblBusinessPrice = new System.Windows.Forms.Label();
-            this.lblIPrice = new System.Windows.Forms.Label();
+            this.lblBP = new System.Windows.Forms.Label();
+            this.lblContract = new System.Windows.Forms.Label();
+            this.lblIP = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
-            this.lbltype = new System.Windows.Forms.Label();
-            this.lblContractID = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.ContractID = new System.Windows.Forms.Label();
             this.GbCD.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +58,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.IconSize = 30;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(296, 103);
+            this.btnBack.Location = new System.Drawing.Point(305, 114);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(203, 42);
             this.btnBack.TabIndex = 66;
@@ -63,98 +66,134 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // btnAddIC
+            // btnUpdate
             // 
-            this.btnAddIC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddIC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddIC.ForeColor = System.Drawing.Color.White;
-            this.btnAddIC.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.btnAddIC.IconColor = System.Drawing.Color.White;
-            this.btnAddIC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddIC.IconSize = 30;
-            this.btnAddIC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddIC.Location = new System.Drawing.Point(297, 47);
-            this.btnAddIC.Name = "btnAddIC";
-            this.btnAddIC.Size = new System.Drawing.Size(202, 42);
-            this.btnAddIC.TabIndex = 64;
-            this.btnAddIC.Text = "Add Individual Client";
-            this.btnAddIC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddIC.UseVisualStyleBackColor = true;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnUpdate.IconColor = System.Drawing.Color.White;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.IconSize = 30;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(305, 51);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(202, 42);
+            this.btnUpdate.TabIndex = 64;
+            this.btnUpdate.Text = "Update Contract";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // GbCD
             // 
-            this.GbCD.Controls.Add(this.txtBusinessPrice);
-            this.GbCD.Controls.Add(this.txtType);
-            this.GbCD.Controls.Add(this.txtDes);
-            this.GbCD.Controls.Add(this.txtnIndividualPrice);
+            this.GbCD.Controls.Add(this.txtContract);
+            this.GbCD.Controls.Add(this.txtEmail);
+            this.GbCD.Controls.Add(this.txtName);
+            this.GbCD.Controls.Add(this.txtSurname);
+            this.GbCD.Controls.Add(this.txtAddress);
+            this.GbCD.Controls.Add(this.txtPhone);
             this.GbCD.Controls.Add(this.txtID);
-            this.GbCD.Controls.Add(this.lblBusinessPrice);
-            this.GbCD.Controls.Add(this.lblIPrice);
+            this.GbCD.Controls.Add(this.lblBP);
+            this.GbCD.Controls.Add(this.lblContract);
+            this.GbCD.Controls.Add(this.lblIP);
+            this.GbCD.Controls.Add(this.lblAddress);
             this.GbCD.Controls.Add(this.lblDes);
-            this.GbCD.Controls.Add(this.lbltype);
-            this.GbCD.Controls.Add(this.lblContractID);
+            this.GbCD.Controls.Add(this.lblType);
+            this.GbCD.Controls.Add(this.ContractID);
             this.GbCD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbCD.ForeColor = System.Drawing.Color.White;
-            this.GbCD.Location = new System.Drawing.Point(25, 37);
+            this.GbCD.Location = new System.Drawing.Point(34, 41);
             this.GbCD.Name = "GbCD";
-            this.GbCD.Size = new System.Drawing.Size(237, 204);
+            this.GbCD.Size = new System.Drawing.Size(265, 284);
             this.GbCD.TabIndex = 63;
             this.GbCD.TabStop = false;
             this.GbCD.Text = "Contract Details";
             // 
-            // txtBusinessPrice
+            // txtContract
             // 
-            this.txtBusinessPrice.Location = new System.Drawing.Point(114, 160);
-            this.txtBusinessPrice.Name = "txtBusinessPrice";
-            this.txtBusinessPrice.Size = new System.Drawing.Size(100, 23);
-            this.txtBusinessPrice.TabIndex = 17;
+            this.txtContract.Location = new System.Drawing.Point(134, 230);
+            this.txtContract.Name = "txtContract";
+            this.txtContract.Size = new System.Drawing.Size(100, 23);
+            this.txtContract.TabIndex = 18;
             // 
-            // txtType
+            // txtEmail
             // 
-            this.txtType.Location = new System.Drawing.Point(114, 56);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(100, 23);
-            this.txtType.TabIndex = 16;
+            this.txtEmail.Location = new System.Drawing.Point(134, 160);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 23);
+            this.txtEmail.TabIndex = 17;
             // 
-            // txtDes
+            // txtName
             // 
-            this.txtDes.Location = new System.Drawing.Point(114, 85);
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(100, 23);
-            this.txtDes.TabIndex = 15;
+            this.txtName.Location = new System.Drawing.Point(134, 56);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 16;
             // 
-            // txtnIndividualPrice
+            // txtSurname
             // 
-            this.txtnIndividualPrice.Location = new System.Drawing.Point(114, 122);
-            this.txtnIndividualPrice.Name = "txtnIndividualPrice";
-            this.txtnIndividualPrice.Size = new System.Drawing.Size(100, 23);
-            this.txtnIndividualPrice.TabIndex = 13;
+            this.txtSurname.Location = new System.Drawing.Point(134, 85);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(100, 23);
+            this.txtSurname.TabIndex = 15;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(134, 194);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(100, 23);
+            this.txtAddress.TabIndex = 14;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(134, 122);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(100, 23);
+            this.txtPhone.TabIndex = 13;
             // 
             // txtID
             // 
             this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtID.Location = new System.Drawing.Point(114, 22);
+            this.txtID.Location = new System.Drawing.Point(134, 22);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 23);
             this.txtID.TabIndex = 12;
             // 
-            // lblBusinessPrice
+            // lblBP
             // 
-            this.lblBusinessPrice.AutoSize = true;
-            this.lblBusinessPrice.Location = new System.Drawing.Point(15, 160);
-            this.lblBusinessPrice.Name = "lblBusinessPrice";
-            this.lblBusinessPrice.Size = new System.Drawing.Size(42, 15);
-            this.lblBusinessPrice.TabIndex = 11;
-            this.lblBusinessPrice.Text = "Price";
+            this.lblBP.AutoSize = true;
+            this.lblBP.Location = new System.Drawing.Point(15, 160);
+            this.lblBP.Name = "lblBP";
+            this.lblBP.Size = new System.Drawing.Size(103, 15);
+            this.lblBP.TabIndex = 11;
+            this.lblBP.Text = "Business Price";
             // 
-            // lblIPrice
+            // lblContract
             // 
-            this.lblIPrice.AutoSize = true;
-            this.lblIPrice.Location = new System.Drawing.Point(15, 122);
-            this.lblIPrice.Name = "lblIPrice";
-            this.lblIPrice.Size = new System.Drawing.Size(42, 15);
-            this.lblIPrice.TabIndex = 4;
-            this.lblIPrice.Text = "Price";
+            this.lblContract.AutoSize = true;
+            this.lblContract.Location = new System.Drawing.Point(14, 230);
+            this.lblContract.Name = "lblContract";
+            this.lblContract.Size = new System.Drawing.Size(65, 15);
+            this.lblContract.TabIndex = 10;
+            this.lblContract.Text = "Contract";
+            // 
+            // lblIP
+            // 
+            this.lblIP.AutoSize = true;
+            this.lblIP.Location = new System.Drawing.Point(15, 122);
+            this.lblIP.Name = "lblIP";
+            this.lblIP.Size = new System.Drawing.Size(108, 15);
+            this.lblIP.TabIndex = 4;
+            this.lblIP.Text = "Individual Price";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(14, 197);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(60, 15);
+            this.lblAddress.TabIndex = 3;
+            this.lblAddress.Text = "Address";
             // 
             // lblDes
             // 
@@ -165,38 +204,35 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.lblDes.TabIndex = 2;
             this.lblDes.Text = "Description";
             // 
-            // lbltype
+            // lblType
             // 
-            this.lbltype.AutoSize = true;
-            this.lbltype.Location = new System.Drawing.Point(15, 56);
-            this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(99, 15);
-            this.lbltype.TabIndex = 1;
-            this.lbltype.Text = "Contract Type";
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(15, 56);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(99, 15);
+            this.lblType.TabIndex = 1;
+            this.lblType.Text = "Contract Type";
             // 
-            // lblContractID
+            // ContractID
             // 
-            this.lblContractID.AutoSize = true;
-            this.lblContractID.Location = new System.Drawing.Point(14, 29);
-            this.lblContractID.Name = "lblContractID";
-            this.lblContractID.Size = new System.Drawing.Size(80, 15);
-            this.lblContractID.TabIndex = 0;
-            this.lblContractID.Text = "contract ID";
+            this.ContractID.AutoSize = true;
+            this.ContractID.Location = new System.Drawing.Point(14, 29);
+            this.ContractID.Name = "ContractID";
+            this.ContractID.Size = new System.Drawing.Size(79, 15);
+            this.ContractID.TabIndex = 0;
+            this.ContractID.Text = "ContractID";
             // 
             // UpdateContract
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(781, 529);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnAddIC);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.GbCD);
-            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "UpdateContract";
-            this.Text = "Update Contract";
+            this.Text = "UpdateContract";
             this.GbCD.ResumeLayout(false);
             this.GbCD.PerformLayout();
             this.ResumeLayout(false);
@@ -206,17 +242,21 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         #endregion
 
         private FontAwesome.Sharp.IconButton btnBack;
-        private FontAwesome.Sharp.IconButton btnAddIC;
+        private FontAwesome.Sharp.IconButton btnUpdate;
         private System.Windows.Forms.GroupBox GbCD;
-        private System.Windows.Forms.TextBox txtBusinessPrice;
-        private System.Windows.Forms.TextBox txtType;
-        private System.Windows.Forms.TextBox txtDes;
-        private System.Windows.Forms.TextBox txtnIndividualPrice;
+        private System.Windows.Forms.TextBox txtContract;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label lblBusinessPrice;
-        private System.Windows.Forms.Label lblIPrice;
+        private System.Windows.Forms.Label lblBP;
+        private System.Windows.Forms.Label lblContract;
+        private System.Windows.Forms.Label lblIP;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblDes;
-        private System.Windows.Forms.Label lbltype;
-        private System.Windows.Forms.Label lblContractID;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label ContractID;
     }
 }

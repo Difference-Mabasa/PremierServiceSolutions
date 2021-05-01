@@ -42,9 +42,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.ipbChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -67,7 +67,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(188, 761);
+            this.pnlMenu.Size = new System.Drawing.Size(188, 749);
             this.pnlMenu.TabIndex = 0;
             // 
             // ibtnLogOout
@@ -82,7 +82,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnLogOout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogOout.IconSize = 40;
             this.ibtnLogOout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogOout.Location = new System.Drawing.Point(0, 701);
+            this.ibtnLogOout.Location = new System.Drawing.Point(0, 689);
             this.ibtnLogOout.Name = "ibtnLogOout";
             this.ibtnLogOout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnLogOout.Size = new System.Drawing.Size(188, 60);
@@ -105,7 +105,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnUpdateRequest.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnUpdateRequest.IconSize = 35;
             this.ibtnUpdateRequest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnUpdateRequest.Location = new System.Drawing.Point(0, 291);
+            this.ibtnUpdateRequest.Location = new System.Drawing.Point(0, 333);
             this.ibtnUpdateRequest.Name = "ibtnUpdateRequest";
             this.ibtnUpdateRequest.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnUpdateRequest.Size = new System.Drawing.Size(188, 60);
@@ -128,7 +128,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnAddRequest.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAddRequest.IconSize = 40;
             this.ibtnAddRequest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnAddRequest.Location = new System.Drawing.Point(0, 231);
+            this.ibtnAddRequest.Location = new System.Drawing.Point(0, 273);
             this.ibtnAddRequest.Name = "ibtnAddRequest";
             this.ibtnAddRequest.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnAddRequest.Size = new System.Drawing.Size(188, 60);
@@ -151,7 +151,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnClientDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnClientDetails.IconSize = 40;
             this.ibtnClientDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnClientDetails.Location = new System.Drawing.Point(0, 171);
+            this.ibtnClientDetails.Location = new System.Drawing.Point(0, 213);
             this.ibtnClientDetails.Name = "ibtnClientDetails";
             this.ibtnClientDetails.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnClientDetails.Size = new System.Drawing.Size(188, 60);
@@ -174,7 +174,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnCall.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnCall.IconSize = 40;
             this.ibtnCall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnCall.Location = new System.Drawing.Point(0, 111);
+            this.ibtnCall.Location = new System.Drawing.Point(0, 153);
             this.ibtnCall.Name = "ibtnCall";
             this.ibtnCall.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ibtnCall.Size = new System.Drawing.Size(188, 60);
@@ -192,16 +192,16 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 111);
+            this.pnlLogo.Size = new System.Drawing.Size(188, 153);
             this.pnlLogo.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.call1;
+            this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.pss2;
             this.btnHome.Location = new System.Drawing.Point(10, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(168, 111);
+            this.btnHome.Size = new System.Drawing.Size(168, 153);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -252,28 +252,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDesktop.Location = new System.Drawing.Point(188, 80);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(796, 681);
+            this.pnlDesktop.Size = new System.Drawing.Size(796, 669);
             this.pnlDesktop.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.download__4_;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 113);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 158);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(280, 289);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(79, 32);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "Time";
             // 
             // lblDate
             // 
@@ -286,6 +266,26 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date";
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(280, 289);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(79, 32);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "Time";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.download__4_;
+            this.pictureBox1.Location = new System.Drawing.Point(253, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 158);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -295,7 +295,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);

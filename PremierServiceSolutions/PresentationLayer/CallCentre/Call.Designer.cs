@@ -1,5 +1,4 @@
-﻿
-namespace PremierServiceSolutions.PresentationLayer.CallCentre
+﻿namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
     partial class Call
     {
@@ -29,79 +28,104 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAcceptCall = new System.Windows.Forms.Button();
-            this.lblCall = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label lblCall;
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnAcceptCall = new System.Windows.Forms.PictureBox();
+            this.btnDeclineCall = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            lblCall = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAcceptCall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeclineCall)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCall
             // 
-            this.lblCall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.lblCall.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblCall.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCall.ForeColor = System.Drawing.Color.White;
-            this.lblCall.Location = new System.Drawing.Point(238, 158);
-            this.lblCall.Name = "lblCall";
-            this.lblCall.Size = new System.Drawing.Size(190, 18);
-            this.lblCall.TabIndex = 13;
-            this.lblCall.Text = "Incomming Call...";
+            lblCall.AutoSize = true;
+            lblCall.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblCall.Location = new System.Drawing.Point(278, 168);
+            lblCall.Name = "lblCall";
+            lblCall.Size = new System.Drawing.Size(180, 22);
+            lblCall.TabIndex = 0;
+            lblCall.Text = "Incomoming Call...";
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
-            this.panel1.TabIndex = 15;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(289, 261);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Decline";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(358, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Accept";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::PremierServiceSolutions.Properties.Resources.user1;
+            this.pictureBox3.Location = new System.Drawing.Point(310, 75);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnAcceptCall
+            // 
+            this.btnAcceptCall.Image = global::PremierServiceSolutions.Properties.Resources.acceptCall;
+            this.btnAcceptCall.Location = new System.Drawing.Point(359, 209);
+            this.btnAcceptCall.Name = "btnAcceptCall";
+            this.btnAcceptCall.Size = new System.Drawing.Size(40, 40);
+            this.btnAcceptCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAcceptCall.TabIndex = 2;
+            this.btnAcceptCall.TabStop = false;
+            this.btnAcceptCall.Click += new System.EventHandler(this.btnAcceptCall_Click);
             // 
             // btnDeclineCall
             // 
             this.btnDeclineCall.Image = global::PremierServiceSolutions.Properties.Resources.endCall;
-            this.btnDeclineCall.Location = new System.Drawing.Point(225, 230);
+            this.btnDeclineCall.Location = new System.Drawing.Point(292, 209);
             this.btnDeclineCall.Name = "btnDeclineCall";
-            this.btnDeclineCall.Size = new System.Drawing.Size(70, 70);
+            this.btnDeclineCall.Size = new System.Drawing.Size(40, 40);
             this.btnDeclineCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDeclineCall.TabIndex = 20;
+            this.btnDeclineCall.TabIndex = 1;
             this.btnDeclineCall.TabStop = false;
             // 
-            // btnAcceptCall
+            // timer1
             // 
-            this.btnAcceptCall.Location = new System.Drawing.Point(291, 230);
-            this.btnAcceptCall.Name = "btnAcceptCall";
-            this.btnAcceptCall.Size = new System.Drawing.Size(70, 70);
-            this.btnAcceptCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAcceptCall.TabIndex = 19;
-            this.btnAcceptCall.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.lblCall.AutoSize = true;
-            this.lblCall.Location = new System.Drawing.Point(357, 154);
-            this.lblCall.Name = "lblCall";
-            this.lblCall.Size = new System.Drawing.Size(86, 13);
-            this.lblCall.TabIndex = 4;
-            this.lblCall.Text = "Incomming call...";
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(259, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Premier Service Solution Call center";
-            this.label1.Visible = false;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Call
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnAcceptCall);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblCall);
+            this.Controls.Add(this.btnDeclineCall);
+            this.Controls.Add(lblCall);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Call";
             this.Text = "Call";
+            this.Load += new System.EventHandler(this.Call_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAcceptCall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeclineCall)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,7 +133,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         #endregion
 
-        private System.Windows.Forms.Button btnAcceptCall;
-        private System.Windows.Forms.Label lblCall;
+        private System.Windows.Forms.PictureBox btnDeclineCall;
+        private System.Windows.Forms.PictureBox btnAcceptCall;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

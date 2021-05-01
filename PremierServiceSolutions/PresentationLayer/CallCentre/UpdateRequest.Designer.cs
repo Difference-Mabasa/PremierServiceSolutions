@@ -29,305 +29,229 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbUpdate = new System.Windows.Forms.GroupBox();
-            this.lblJobID = new System.Windows.Forms.Label();
-            this.rtbDetails = new System.Windows.Forms.RichTextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.txtJobType = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblFees = new System.Windows.Forms.Label();
-            this.lblPayment = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.GbStudDet.SuspendLayout();
-            this.Gbnav.SuspendLayout();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblClientID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnEnd = new FontAwesome.Sharp.IconButton();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
-            // 
-            // gbUpdate
-            // 
-            this.GbStudDet.Controls.Add(this.lblJobID);
-            this.GbStudDet.Controls.Add(this.Gbnav);
-            this.GbStudDet.Controls.Add(this.btnEnd);
-            this.GbStudDet.Controls.Add(this.btnUpdate);
-            this.GbStudDet.Controls.Add(this.rtbDetails);
-            this.GbStudDet.Controls.Add(this.txtDate);
-            this.GbStudDet.Controls.Add(this.txtJobType);
-            this.GbStudDet.Controls.Add(this.label1);
-            this.GbStudDet.Controls.Add(this.lblName);
-            this.GbStudDet.Controls.Add(this.lblAddress);
-            this.GbStudDet.Controls.Add(this.lblFees);
-            this.GbStudDet.Controls.Add(this.lblPayment);
-            this.GbStudDet.Controls.Add(this.lblID);
-            this.GbStudDet.Controls.Add(this.label7);
-            this.GbStudDet.Controls.Add(this.label6);
-            this.GbStudDet.Controls.Add(this.label5);
-            this.GbStudDet.Controls.Add(this.label4);
-            this.GbStudDet.Controls.Add(this.label3);
-            this.GbStudDet.Location = new System.Drawing.Point(12, 12);
-            this.GbStudDet.Name = "GbStudDet";
-            this.GbStudDet.Size = new System.Drawing.Size(659, 426);
-            this.GbStudDet.TabIndex = 19;
-            this.GbStudDet.TabStop = false;
-            this.GbStudDet.Text = "Student Details";
-            // 
-            // lblJobID
-            // 
-            this.lblJobID.AutoSize = true;
-            this.lblJobID.Location = new System.Drawing.Point(478, 71);
-            this.lblJobID.Name = "lblJobID";
-            this.lblJobID.Size = new System.Drawing.Size(56, 18);
-            this.lblJobID.TabIndex = 25;
-            this.lblJobID.Text = "label2";
-            // 
-            // Gbnav
-            // 
-            this.Gbnav.Controls.Add(this.btnLast);
-            this.Gbnav.Controls.Add(this.btnNext);
-            this.Gbnav.Controls.Add(this.btnPrevious);
-            this.Gbnav.Controls.Add(this.btnFirst);
-            this.Gbnav.Location = new System.Drawing.Point(18, 362);
-            this.Gbnav.Name = "Gbnav";
-            this.Gbnav.Size = new System.Drawing.Size(397, 47);
-            this.Gbnav.TabIndex = 24;
-            this.Gbnav.TabStop = false;
-            this.Gbnav.Text = "Navigation";
-            // 
-            // btnLast
-            // 
-            this.btnLast.Location = new System.Drawing.Point(303, 18);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
-            this.btnLast.TabIndex = 3;
-            this.btnLast.Text = ">|";
-            this.btnLast.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(108, 19);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 2;
-            this.btnNext.Text = ">>";
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Location = new System.Drawing.Point(204, 19);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevious.TabIndex = 1;
-            this.btnPrevious.Text = "<<";
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.Location = new System.Drawing.Point(15, 18);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(75, 23);
-            this.btnFirst.TabIndex = 0;
-            this.btnFirst.Text = "|<";
-            this.btnFirst.UseVisualStyleBackColor = true;
-            // 
-            // btnEnd
-            // 
-            this.btnEnd.Location = new System.Drawing.Point(179, 262);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(118, 52);
-            this.btnEnd.TabIndex = 18;
-            this.btnEnd.Text = "End";
-            this.btnEnd.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(21, 262);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(118, 52);
-            this.btnUpdate.TabIndex = 16;
-            this.btnUpdate.Text = "Update Request";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // rtbDetails
-            // 
-            this.rtbDetails.Location = new System.Drawing.Point(478, 191);
-            this.rtbDetails.Name = "rtbDetails";
-            this.rtbDetails.Size = new System.Drawing.Size(175, 66);
-            this.rtbDetails.TabIndex = 15;
-            this.rtbDetails.Text = "";
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(478, 111);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(175, 26);
-            this.txtDate.TabIndex = 14;
-            // 
-            // txtJobType
-            // 
-            this.txtJobType.Location = new System.Drawing.Point(478, 148);
-            this.txtJobType.Name = "txtJobType";
-            this.txtJobType.Size = new System.Drawing.Size(175, 26);
-            this.txtJobType.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(357, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Details";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(18, 136);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(66, 18);
-            this.lblName.TabIndex = 9;
-            this.lblName.Text = "label12";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(18, 191);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(66, 18);
-            this.lblAddress.TabIndex = 8;
-            this.lblAddress.Text = "label11";
-            // 
-            // lblFees
-            // 
-            this.lblFees.AutoSize = true;
-            this.lblFees.Location = new System.Drawing.Point(357, 148);
-            this.lblFees.Name = "lblFees";
-            this.lblFees.Size = new System.Drawing.Size(76, 18);
-            this.lblFees.TabIndex = 7;
-            this.lblFees.Text = "JobType";
-            // 
-            // lblPayment
-            // 
-            this.lblPayment.AutoSize = true;
-            this.lblPayment.Location = new System.Drawing.Point(357, 71);
-            this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(54, 18);
-            this.lblPayment.TabIndex = 6;
-            this.lblPayment.Text = "JobID";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(18, 50);
+            this.lblID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(43, 100);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 13);
-            this.lblID.TabIndex = 5;
+            this.lblID.Size = new System.Drawing.Size(56, 18);
+            this.lblID.TabIndex = 7;
             this.lblID.Text = "label8";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(357, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 18);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Job Request";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(357, 111);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Date/Time";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 18);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Address";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 18);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Client Name";
             // 
             // lblClientID
             // 
             this.lblClientID.AutoSize = true;
-            this.lblClientID.Location = new System.Drawing.Point(15, 25);
+            this.lblClientID.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientID.ForeColor = System.Drawing.Color.White;
+            this.lblClientID.Location = new System.Drawing.Point(40, 75);
             this.lblClientID.Name = "lblClientID";
-            this.lblClientID.Size = new System.Drawing.Size(44, 13);
-            this.lblClientID.TabIndex = 0;
+            this.lblClientID.Size = new System.Drawing.Size(71, 18);
+            this.lblClientID.TabIndex = 6;
             this.lblClientID.Text = "ClientID";
             // 
-            // lblID
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "ClientID";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label8";
             // 
-            // iconButton1
+            // label8
             // 
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Mixer;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(207, 307);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(171, 52);
-            this.iconButton1.TabIndex = 42;
-            this.iconButton1.Text = "End Call";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(43, 148);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 18);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Client Name";
             // 
-            // btnAdd
+            // label9
             // 
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.btnAdd.IconColor = System.Drawing.Color.White;
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 35;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(21, 307);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(171, 52);
-            this.btnAdd.TabIndex = 41;
-            this.btnAdd.Text = "Update Request";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(46, 241);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 18);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "label8";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(43, 216);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 18);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "ClientID";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(350, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 18);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "JobID";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(350, 50);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 18);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Job Request";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(350, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 18);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Date/Time";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(350, 194);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 18);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Date/Time";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(350, 241);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 18);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Details";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(472, 148);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(159, 26);
+            this.textBox1.TabIndex = 17;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(472, 186);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 26);
+            this.textBox2.TabIndex = 18;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(472, 253);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(159, 96);
+            this.richTextBox1.TabIndex = 19;
+            this.richTextBox1.Text = "";
+            // 
+            // btnEnd
+            // 
+            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnd.ForeColor = System.Drawing.Color.White;
+            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.Mixer;
+            this.btnEnd.IconColor = System.Drawing.Color.White;
+            this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEnd.IconSize = 35;
+            this.btnEnd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnd.Location = new System.Drawing.Point(215, 389);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(160, 52);
+            this.btnEnd.TabIndex = 42;
+            this.btnEnd.Text = "End Call";
+            this.btnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEnd.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnUpdate.IconColor = System.Drawing.Color.White;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.IconSize = 35;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(49, 389);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(160, 52);
+            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.Text = "Update Request";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // UpdateRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 450);
-            this.Controls.Add(this.GbStudDet);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.ClientSize = new System.Drawing.Size(781, 529);
+            this.Controls.Add(this.btnEnd);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblClientID);
+            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateRequest";
-            this.Text = "UpdateRequest";
-            this.gbUpdate.ResumeLayout(false);
-            this.gbUpdate.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -348,5 +272,21 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblClientID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private FontAwesome.Sharp.IconButton btnEnd;
+        private FontAwesome.Sharp.IconButton btnUpdate;
     }
 }

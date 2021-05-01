@@ -1,7 +1,7 @@
 ﻿
-namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
+namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
 {
-    partial class ServiceDapartment
+    partial class ContractMaintenance
     {
         /// <summary>
         /// Required designer variable.
@@ -39,8 +39,8 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ipbChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.ibtnLogOout = new FontAwesome.Sharp.IconButton();
-            this.ibtnSchedule = new FontAwesome.Sharp.IconButton();
-            this.ibtnTechnicians = new FontAwesome.Sharp.IconButton();
+            this.ibtnUpdateContracts = new FontAwesome.Sharp.IconButton();
+            this.ibtnContracts = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -60,20 +60,20 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlDesktop.Controls.Add(this.lblTime);
             this.pnlDesktop.Controls.Add(this.pictureBox1);
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(188, 80);
+            this.pnlDesktop.Location = new System.Drawing.Point(188, 74);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(796, 669);
-            this.pnlDesktop.TabIndex = 6;
+            this.pnlDesktop.Size = new System.Drawing.Size(796, 675);
+            this.pnlDesktop.TabIndex = 9;
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(230, 314);
+            this.lblDate.Location = new System.Drawing.Point(258, 336);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(77, 32);
-            this.lblDate.TabIndex = 8;
+            this.lblDate.TabIndex = 5;
             this.lblDate.Text = "Date";
             // 
             // lblTime
@@ -81,20 +81,21 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(230, 267);
+            this.lblTime.Location = new System.Drawing.Point(258, 289);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(79, 32);
-            this.lblTime.TabIndex = 7;
+            this.lblTime.TabIndex = 4;
             this.lblTime.Text = "Time";
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.service;
-            this.pictureBox1.Location = new System.Drawing.Point(203, 91);
+            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.contract1;
+            this.pictureBox1.Location = new System.Drawing.Point(231, 113);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pnlTitle
@@ -105,8 +106,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(188, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(796, 80);
-            this.pnlTitle.TabIndex = 5;
+            this.pnlTitle.Size = new System.Drawing.Size(796, 74);
+            this.pnlTitle.TabIndex = 8;
+            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
             // lblTitleChildForm
             // 
@@ -136,14 +138,14 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.pnlMenu.Controls.Add(this.ibtnLogOout);
-            this.pnlMenu.Controls.Add(this.ibtnSchedule);
-            this.pnlMenu.Controls.Add(this.ibtnTechnicians);
+            this.pnlMenu.Controls.Add(this.ibtnUpdateContracts);
+            this.pnlMenu.Controls.Add(this.ibtnContracts);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(188, 749);
-            this.pnlMenu.TabIndex = 4;
+            this.pnlMenu.TabIndex = 7;
             // 
             // ibtnLogOout
             // 
@@ -168,51 +170,51 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnLogOout.UseVisualStyleBackColor = true;
             this.ibtnLogOout.Click += new System.EventHandler(this.ibtnLogOout_Click);
             // 
-            // ibtnSchedule
+            // ibtnUpdateContracts
             // 
-            this.ibtnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnSchedule.FlatAppearance.BorderSize = 0;
-            this.ibtnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnSchedule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnSchedule.ForeColor = System.Drawing.Color.White;
-            this.ibtnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
-            this.ibtnSchedule.IconColor = System.Drawing.Color.White;
-            this.ibtnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnSchedule.IconSize = 40;
-            this.ibtnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnSchedule.Location = new System.Drawing.Point(0, 219);
-            this.ibtnSchedule.Name = "ibtnSchedule";
-            this.ibtnSchedule.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnSchedule.Size = new System.Drawing.Size(188, 60);
-            this.ibtnSchedule.TabIndex = 2;
-            this.ibtnSchedule.Text = "Client Details";
-            this.ibtnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnSchedule.UseVisualStyleBackColor = true;
-            this.ibtnSchedule.Click += new System.EventHandler(this.ibtnSchedule_Click);
+            this.ibtnUpdateContracts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnUpdateContracts.FlatAppearance.BorderSize = 0;
+            this.ibtnUpdateContracts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnUpdateContracts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnUpdateContracts.ForeColor = System.Drawing.Color.White;
+            this.ibtnUpdateContracts.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.ibtnUpdateContracts.IconColor = System.Drawing.Color.White;
+            this.ibtnUpdateContracts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnUpdateContracts.IconSize = 35;
+            this.ibtnUpdateContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnUpdateContracts.Location = new System.Drawing.Point(0, 206);
+            this.ibtnUpdateContracts.Name = "ibtnUpdateContracts";
+            this.ibtnUpdateContracts.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnUpdateContracts.Size = new System.Drawing.Size(188, 60);
+            this.ibtnUpdateContracts.TabIndex = 4;
+            this.ibtnUpdateContracts.Text = "Update Clients";
+            this.ibtnUpdateContracts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnUpdateContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnUpdateContracts.UseVisualStyleBackColor = true;
+            this.ibtnUpdateContracts.Click += new System.EventHandler(this.ibtnUpdateContracts_Click);
             // 
-            // ibtnTechnicians
+            // ibtnContracts
             // 
-            this.ibtnTechnicians.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnTechnicians.FlatAppearance.BorderSize = 0;
-            this.ibtnTechnicians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnTechnicians.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnTechnicians.ForeColor = System.Drawing.Color.White;
-            this.ibtnTechnicians.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.ibtnTechnicians.IconColor = System.Drawing.Color.White;
-            this.ibtnTechnicians.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnTechnicians.IconSize = 40;
-            this.ibtnTechnicians.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnTechnicians.Location = new System.Drawing.Point(0, 159);
-            this.ibtnTechnicians.Name = "ibtnTechnicians";
-            this.ibtnTechnicians.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnTechnicians.Size = new System.Drawing.Size(188, 60);
-            this.ibtnTechnicians.TabIndex = 1;
-            this.ibtnTechnicians.Text = "Technicians";
-            this.ibtnTechnicians.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnTechnicians.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnTechnicians.UseVisualStyleBackColor = true;
-            this.ibtnTechnicians.Click += new System.EventHandler(this.ibtnTechnicians_Click);
+            this.ibtnContracts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnContracts.FlatAppearance.BorderSize = 0;
+            this.ibtnContracts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnContracts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnContracts.ForeColor = System.Drawing.Color.White;
+            this.ibtnContracts.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.ibtnContracts.IconColor = System.Drawing.Color.White;
+            this.ibtnContracts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnContracts.IconSize = 40;
+            this.ibtnContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnContracts.Location = new System.Drawing.Point(0, 146);
+            this.ibtnContracts.Name = "ibtnContracts";
+            this.ibtnContracts.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnContracts.Size = new System.Drawing.Size(188, 60);
+            this.ibtnContracts.TabIndex = 2;
+            this.ibtnContracts.Text = "Contracts";
+            this.ibtnContracts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnContracts.UseVisualStyleBackColor = true;
+            this.ibtnContracts.Click += new System.EventHandler(this.ibtnContracts_Click);
             // 
             // pnlLogo
             // 
@@ -221,7 +223,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 159);
+            this.pnlLogo.Size = new System.Drawing.Size(188, 146);
             this.pnlLogo.TabIndex = 0;
             // 
             // btnHome
@@ -230,7 +232,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.pss2;
             this.btnHome.Location = new System.Drawing.Point(10, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(168, 159);
+            this.btnHome.Size = new System.Drawing.Size(168, 146);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -241,17 +243,19 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ServiceDapartment
+            // ContractMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
-            this.Name = "ServiceDapartment";
-            this.Text = "ServiceDapartment";
-            this.Load += new System.EventHandler(this.ServiceDapartment_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "ContractMaintenance";
+            this.Text = "ContractMaintenance";
+            this.Load += new System.EventHandler(this.ContractMaintenance_Load);
             this.pnlDesktop.ResumeLayout(false);
             this.pnlDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -268,18 +272,18 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         #endregion
 
         private System.Windows.Forms.Panel pnlDesktop;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lblTitleChildForm;
         private FontAwesome.Sharp.IconPictureBox ipbChildForm;
         private System.Windows.Forms.Panel pnlMenu;
         private FontAwesome.Sharp.IconButton ibtnLogOout;
-        private FontAwesome.Sharp.IconButton ibtnSchedule;
-        private FontAwesome.Sharp.IconButton ibtnTechnicians;
+        private FontAwesome.Sharp.IconButton ibtnUpdateContracts;
+        private FontAwesome.Sharp.IconButton ibtnContracts;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
     }
 }
