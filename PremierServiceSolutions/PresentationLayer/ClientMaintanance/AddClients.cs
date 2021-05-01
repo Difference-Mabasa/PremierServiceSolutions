@@ -22,12 +22,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
 
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        
         private void btnAddIC_Click(object sender, EventArgs e)
         {
             try
@@ -43,7 +38,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 client.ContractID = txtContract.Text;
                 clientData.InsertIndividualClient(client);
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
                 MessageBox.Show($"Error AddClient Form {exp.Message}");
             }
@@ -56,7 +51,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 BusinessClientBLL clientData = new BusinessClientBLL();
                 BusinessClient client = new BusinessClient();
                 client.clientID = txtID.Text;
-                client.CompanyName = txtName.Text;
+                client.CompanyName = txtName.Text+txtSurname.Text;
                 client.Phone = txtPhone.Text;
                 client.Email = txtEmail.Text;
                 client.AddressID = txtAddress.Text;
@@ -67,6 +62,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             {
                 MessageBox.Show($"Error AddClient Form {exp.Message}");
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
         }
     }
 }
