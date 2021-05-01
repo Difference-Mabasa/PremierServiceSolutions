@@ -51,7 +51,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 BusinessClientBLL clientData = new BusinessClientBLL();
                 BusinessClient client = new BusinessClient();
                 client.clientID = txtID.Text;
-                client.CompanyName = txtName.Text+txtSurname.Text;
+                client.CompanyName = txtName.Text;
                 client.Phone = txtPhone.Text;
                 client.Email = txtEmail.Text;
                 client.AddressID = txtAddress.Text;

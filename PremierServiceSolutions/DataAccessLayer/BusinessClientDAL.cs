@@ -103,6 +103,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 $"'{client.AddressID}', " +
                 $"'{client.ContractID}')";
 
+
             try
             {
                 conn.Open();

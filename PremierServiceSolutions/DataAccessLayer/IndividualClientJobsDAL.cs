@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PremierServiceSolutions.DataAccessLayer
 {
@@ -117,6 +118,43 @@ namespace PremierServiceSolutions.DataAccessLayer
             {
                 conn.Close();
             }
+        }
+
+        public List<Job> GetAllJobs()
+        {
+            List<Job> ICJobs = new List<Job>();
+
+            DataTable datatable = new DataTable();
+            string query = $"select * from IndividualClientJobs"; 
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    Job ICjob = new Job();
+
+                    ICjob.JobID = row["JobID"].ToString();
+                    ICjob.Description = row["JobDescription"].ToString();
+                    ICjob.Status = row["JobStatus"].ToString();
+                    ICjob.Duration = int.Parse(row["JobDuration"].ToString());
+                    ICjob.ClientID = row["ClientID"].ToString();
+                    ICjob.EmployeeID = row["EmployeeID"].ToString();
+                    ICJobs.Add(ICjob);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return ICJobs;
         }
     }
 }
