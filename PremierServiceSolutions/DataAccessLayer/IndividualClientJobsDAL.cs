@@ -120,7 +120,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        public List<Job> GetAllJobs()
+        public List<Job> GetAllIndividualJobs()
         {
             List<Job> ICJobs = new List<Job>();
 
