@@ -99,7 +99,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 $"('{client.clientID}', " +
                 $"'{client.CompanyName}', " +
                 $"'{client.Phone}', " +
-                $"{client.Email}, " +
+                $"'{client.Email}', " +
                 $"'{client.AddressID}', " +
                 $"'{client.ContractID}')";
 
@@ -109,6 +109,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Registered " + client.CompanyName+" To Premier Service Solutions");
             }
             catch (Exception ex)
             {
@@ -171,8 +172,8 @@ namespace PremierServiceSolutions.DataAccessLayer
                     ICjob.JobID = row["JobID"].ToString();
                     ICjob.Description = row["JobDescription"].ToString();
                     ICjob.Status = row["JobStatus"].ToString();
+                    ICjob.Finished = bool.Parse(row["JobStatus"].ToString());
                     ICjob.Duration = int.Parse(row["JobDuration"].ToString());
-                    ICjob.ClientID = row["ClientID"].ToString();
                     ICjob.EmployeeID = row["EmployeeID"].ToString();
                     ICJobs.Add(ICjob);
                 }

@@ -12,7 +12,7 @@ namespace PremierServiceSolutions
 
         public BusinessClient() { }
 
-        public string clientID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string clientID { get; set ; }
         public string CompanyName { get => companyName; set => companyName = value; }
         public string Phone { get => phone; set => phone = value; }
         public string Email { get => email; set => email = value; }

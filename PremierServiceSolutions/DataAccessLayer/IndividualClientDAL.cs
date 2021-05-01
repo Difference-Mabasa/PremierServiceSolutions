@@ -80,6 +80,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Registered " + client.Name +" "+client.Surname + " To Premier Service Solutions");
             }
             catch (Exception ex)
             {
