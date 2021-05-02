@@ -32,7 +32,18 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             //
             EmployeeBLL workers = new EmployeeBLL();
 
-            dgbDisplay.DataSource = workers.GetAllEmployees();
+            List<Employee> technoguys = new List<Employee>();
+
+
+            foreach (var item in workers.GetAllEmployees())
+            {
+                if (item.JobTitle == "Technician" || item.JobTitle == "technician")
+                {
+                    technoguys.Add(item);
+                }
+            }
+            
+            dgbDisplay.DataSource = technoguys;
         }
     }
 }

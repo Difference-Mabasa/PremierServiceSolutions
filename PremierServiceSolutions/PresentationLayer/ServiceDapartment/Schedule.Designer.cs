@@ -37,7 +37,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // dgbDisplay
             // 
             this.dgbDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbDisplay.Location = new System.Drawing.Point(69, 13);
+            this.dgbDisplay.Location = new System.Drawing.Point(69, 63);
             this.dgbDisplay.Name = "dgbDisplay";
             this.dgbDisplay.Size = new System.Drawing.Size(700, 291);
             this.dgbDisplay.TabIndex = 45;
