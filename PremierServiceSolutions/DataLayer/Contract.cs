@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
-    abstract class Contract
+     class Contract
     {
         string contractID;
         string contractType;
         string contractDesc;
         double contractPrice;
         bool contractAvailable;
+        string serviceLevel;
 
         public string ContractID { get; set; }
         public string ContractType{ get; set;}
-        public string ContractDesc { get; set }
-        public string ContractPrice { get; set; }
-        public bool ContractAvailable { get; set; }
+        public string ContractDesc { get; set; }
+        public double ContractPrice { get; set; }
+        public string ServiceLevel { get; set; }
 
-        public Contract(string contractID, string contractType,  string contractDesc, double contractPrice, bool contractAvailable) 
+        public Contract(string contractID, string contractType,  string contractDesc, double contractPrice, string serviceLevel) 
         {
             this.ContractID = contractID;
             this.ContractType = contractType;
             this.ContractDesc = contractType;
             this.ContractPrice = contractPrice;
-            this.contractAvailable = contractAvailable;
+            this.ServiceLevel = serviceLevel;
         }
+
+        public Contract() { }
 
         //string contractId,contractType, serviceLevel, contractDescription;
         //double individualPrice, businessPrice;
