@@ -19,9 +19,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
             Technicians tec = new Technicians();
             tec.Show();
-            this.Hide();
+
         }
     }
 }
