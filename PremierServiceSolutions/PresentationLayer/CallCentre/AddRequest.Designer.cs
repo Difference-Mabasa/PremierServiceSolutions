@@ -29,10 +29,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClientID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.rtbdescrip = new System.Windows.Forms.RichTextBox();
+            this.txtdur = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -40,47 +40,52 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnEnd = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtClientID
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtClientID.Location = new System.Drawing.Point(213, 65);
+            this.txtClientID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClientID.Name = "txtClientID";
+            this.txtClientID.Size = new System.Drawing.Size(241, 22);
+            this.txtClientID.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 56);
+            this.label3.Location = new System.Drawing.Point(57, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 18);
+            this.label3.Size = new System.Drawing.Size(74, 24);
             this.label3.TabIndex = 35;
             this.label3.Text = "ClientID";
             // 
-            // richTextBox1
+            // rtbdescrip
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(160, 130);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(182, 66);
-            this.richTextBox1.TabIndex = 34;
-            this.richTextBox1.Text = "";
+            this.rtbdescrip.Location = new System.Drawing.Point(213, 160);
+            this.rtbdescrip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbdescrip.Name = "rtbdescrip";
+            this.rtbdescrip.Size = new System.Drawing.Size(241, 80);
+            this.rtbdescrip.TabIndex = 34;
+            this.rtbdescrip.Text = "";
             // 
-            // textBox3
+            // txtdur
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 87);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 20);
-            this.textBox3.TabIndex = 33;
+            this.txtdur.Location = new System.Drawing.Point(213, 107);
+            this.txtdur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtdur.Name = "txtdur";
+            this.txtdur.Size = new System.Drawing.Size(241, 22);
+            this.txtdur.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 130);
+            this.label1.Location = new System.Drawing.Point(52, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(65, 24);
             this.label1.TabIndex = 32;
             this.label1.Text = "Details";
             // 
@@ -89,9 +94,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblFees.AutoSize = true;
             this.lblFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFees.ForeColor = System.Drawing.Color.White;
-            this.lblFees.Location = new System.Drawing.Point(39, 87);
+            this.lblFees.Location = new System.Drawing.Point(52, 107);
+            this.lblFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFees.Name = "lblFees";
-            this.lblFees.Size = new System.Drawing.Size(93, 18);
+            this.lblFees.Size = new System.Drawing.Size(116, 24);
             this.lblFees.TabIndex = 31;
             this.lblFees.Text = "Job Duration";
             // 
@@ -100,9 +106,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(39, 19);
+            this.label7.Location = new System.Drawing.Point(52, 23);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 18);
+            this.label7.Size = new System.Drawing.Size(116, 24);
             this.label7.TabIndex = 30;
             this.label7.Text = "Job Request";
             // 
@@ -116,13 +123,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 35;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(31, 243);
+            this.btnAdd.Location = new System.Drawing.Point(41, 299);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(160, 52);
+            this.btnAdd.Size = new System.Drawing.Size(213, 64);
             this.btnAdd.TabIndex = 39;
             this.btnAdd.Text = "Add Request";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEnd
             // 
@@ -134,9 +143,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEnd.IconSize = 35;
             this.btnEnd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnd.Location = new System.Drawing.Point(197, 243);
+            this.btnEnd.Location = new System.Drawing.Point(263, 299);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(160, 52);
+            this.btnEnd.Size = new System.Drawing.Size(213, 64);
             this.btnEnd.TabIndex = 40;
             this.btnEnd.Text = "End Call";
             this.btnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -144,19 +154,20 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             // AddRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(781, 529);
+            this.ClientSize = new System.Drawing.Size(1041, 651);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtClientID);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.rtbdescrip);
+            this.Controls.Add(this.txtdur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFees);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddRequest";
             this.Text = " ";
             this.Load += new System.EventHandler(this.AddRequest_Load);
@@ -166,10 +177,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RichTextBox rtbdescrip;
+        private System.Windows.Forms.TextBox txtdur;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFees;
         private System.Windows.Forms.Label label7;
