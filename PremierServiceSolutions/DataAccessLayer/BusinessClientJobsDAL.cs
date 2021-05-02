@@ -118,13 +118,12 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
             }
         }
-
         public List<Job> GetAllBusinessJobs()
         {
             List<Job> ICJobs = new List<Job>();
 
             DataTable datatable = new DataTable();
-            string query = $"select * from Technical";
+            string query = $"select * from BusinessClientJobs";
 
             try
             {
@@ -141,7 +140,6 @@ namespace PremierServiceSolutions.DataAccessLayer
                     ICjob.Duration = int.Parse(row["JobDuration"].ToString());
                     ICjob.ClientID = row["ClientID"].ToString();
                     ICjob.EmployeeID = row["EmployeeID"].ToString();
-                    ICjob.Technician=  row["EmployeeName"].ToString();
                     ICJobs.Add(ICjob);
                 }
             }
@@ -156,6 +154,5 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return ICJobs;
         }
-
     }
 }

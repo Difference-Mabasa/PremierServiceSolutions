@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PremierServiceSolutions.BusinessLogicLayer;
+
 namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
     public partial class Technicians : Form
@@ -19,7 +20,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void Technicians_Load(object sender, EventArgs e)
         {
-            BusinessClientBLL business = new BusinessClientBLL();
+            BusinessClientJobsBLL business = new BusinessClientJobsBLL();
             BindingSource source = new BindingSource();
             source.DataSource = business.GetAllBusinessClientsJobs();
             dataGridView1.DataSource = source;
