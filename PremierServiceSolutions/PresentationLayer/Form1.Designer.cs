@@ -36,6 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbPass = new System.Windows.Forms.PictureBox();
             this.pbID = new System.Windows.Forms.PictureBox();
+            this.btnMin = new FontAwesome.Sharp.IconButton();
+            this.btnMax = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbID)).BeginInit();
@@ -126,12 +129,72 @@
             this.pbID.TabIndex = 8;
             this.pbID.TabStop = false;
             // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMin.IconColor = System.Drawing.Color.White;
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMin.IconSize = 15;
+            this.btnMin.Location = new System.Drawing.Point(713, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(39, 15);
+            this.btnMin.TabIndex = 58;
+            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMax.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btnMax.IconColor = System.Drawing.Color.White;
+            this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMax.IconSize = 15;
+            this.btnMax.Location = new System.Drawing.Point(742, 3);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(39, 15);
+            this.btnMax.TabIndex = 59;
+            this.btnMax.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 15;
+            this.btnClose.Location = new System.Drawing.Point(768, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(39, 15);
+            this.btnClose.TabIndex = 60;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnMax);
+            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -161,5 +224,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbPass;
         private System.Windows.Forms.PictureBox pbID;
+        private FontAwesome.Sharp.IconButton btnMin;
+        private FontAwesome.Sharp.IconButton btnMax;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

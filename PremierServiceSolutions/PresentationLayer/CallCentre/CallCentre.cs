@@ -149,7 +149,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private void ibtnLogOout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new Form1());
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.Show();
+            
+            
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -191,6 +195,22 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 

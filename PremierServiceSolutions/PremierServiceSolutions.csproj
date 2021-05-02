@@ -332,5 +332,8 @@
   <ItemGroup>
     <None Include="Resources\service.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

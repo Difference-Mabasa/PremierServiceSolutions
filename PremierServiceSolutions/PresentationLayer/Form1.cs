@@ -105,5 +105,21 @@ namespace PremierServiceSolutions.PresentationLayer
                 txtEmployeeID.Clear();
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+           
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

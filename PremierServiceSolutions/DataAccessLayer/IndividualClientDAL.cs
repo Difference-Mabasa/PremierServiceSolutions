@@ -140,8 +140,8 @@ namespace PremierServiceSolutions.DataAccessLayer
                     IndividualClient individualClient = new IndividualClient();
 
                     individualClient.clientID = row["ClientID"].ToString();
-                    individualClient.Name = row["EmployeeName"].ToString();
-                    individualClient.Surname = row["EmployeeSurname"].ToString();
+                    individualClient.Name = row["ClientName"].ToString();
+                    individualClient.Surname = row["ClientSurname"].ToString();
                     individualClient.Phone = row["Phone"].ToString();
                     individualClient.Email = row["Email"].ToString();
                     individualClient.AddressID = row["AddressID"].ToString();

@@ -31,7 +31,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
             this.GbCD = new System.Windows.Forms.GroupBox();
             this.txtContract = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // GbCD
             // 
             this.GbCD.Controls.Add(this.txtContract);
-            this.GbCD.Controls.Add(this.txtStatus);
+            this.GbCD.Controls.Add(this.txtEmail);
             this.GbCD.Controls.Add(this.txtName);
             this.GbCD.Controls.Add(this.txtSurname);
             this.GbCD.Controls.Add(this.txtAddress);
@@ -70,7 +70,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.GbCD.ForeColor = System.Drawing.Color.White;
             this.GbCD.Location = new System.Drawing.Point(32, 45);
             this.GbCD.Name = "GbCD";
-            this.GbCD.Size = new System.Drawing.Size(220, 284);
+            this.GbCD.Size = new System.Drawing.Size(351, 284);
             this.GbCD.TabIndex = 46;
             this.GbCD.TabStop = false;
             this.GbCD.Text = "Client Details";
@@ -79,42 +79,43 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // 
             this.txtContract.Location = new System.Drawing.Point(95, 230);
             this.txtContract.Name = "txtContract";
-            this.txtContract.Size = new System.Drawing.Size(100, 23);
+            this.txtContract.Size = new System.Drawing.Size(239, 23);
             this.txtContract.TabIndex = 18;
             // 
-            // txtStatus
+            // txtEmail
             // 
-            this.txtStatus.Location = new System.Drawing.Point(95, 160);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 23);
-            this.txtStatus.TabIndex = 17;
+            this.txtEmail.Location = new System.Drawing.Point(95, 160);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(239, 23);
+            this.txtEmail.TabIndex = 17;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(95, 56);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.Size = new System.Drawing.Size(239, 23);
             this.txtName.TabIndex = 16;
             // 
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(95, 85);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 23);
+            this.txtSurname.Size = new System.Drawing.Size(239, 23);
             this.txtSurname.TabIndex = 15;
+            this.txtSurname.Text = "For Individual Clients";
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(95, 194);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 23);
+            this.txtAddress.Size = new System.Drawing.Size(239, 23);
             this.txtAddress.TabIndex = 14;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(95, 122);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 23);
+            this.txtPhone.Size = new System.Drawing.Size(239, 23);
             this.txtPhone.TabIndex = 13;
             // 
             // txtID
@@ -122,7 +123,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtID.Location = new System.Drawing.Point(95, 22);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 23);
+            this.txtID.Size = new System.Drawing.Size(239, 23);
             this.txtID.TabIndex = 12;
             // 
             // lblEmail
@@ -198,13 +199,14 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnUpdateIC.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUpdateIC.IconSize = 30;
             this.btnUpdateIC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateIC.Location = new System.Drawing.Point(276, 55);
+            this.btnUpdateIC.Location = new System.Drawing.Point(389, 55);
             this.btnUpdateIC.Name = "btnUpdateIC";
             this.btnUpdateIC.Size = new System.Drawing.Size(223, 42);
             this.btnUpdateIC.TabIndex = 56;
             this.btnUpdateIC.Text = "Update Individual Client";
             this.btnUpdateIC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdateIC.UseVisualStyleBackColor = true;
+            this.btnUpdateIC.Click += new System.EventHandler(this.btnUpdateIC_Click);
             // 
             // btnUpdateBC
             // 
@@ -216,13 +218,14 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnUpdateBC.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUpdateBC.IconSize = 30;
             this.btnUpdateBC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateBC.Location = new System.Drawing.Point(275, 103);
+            this.btnUpdateBC.Location = new System.Drawing.Point(388, 103);
             this.btnUpdateBC.Name = "btnUpdateBC";
             this.btnUpdateBC.Size = new System.Drawing.Size(224, 42);
             this.btnUpdateBC.TabIndex = 57;
             this.btnUpdateBC.Text = "Update Business Client";
             this.btnUpdateBC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdateBC.UseVisualStyleBackColor = true;
+            this.btnUpdateBC.Click += new System.EventHandler(this.btnUpdateBC_Click);
             // 
             // btnBack
             // 
@@ -234,13 +237,14 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.IconSize = 30;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(275, 151);
+            this.btnBack.Location = new System.Drawing.Point(388, 151);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(224, 42);
             this.btnBack.TabIndex = 58;
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // UpdateClient
             // 
@@ -264,7 +268,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private System.Windows.Forms.GroupBox GbCD;
         private System.Windows.Forms.TextBox txtContract;
-        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtAddress;

@@ -37,6 +37,8 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 client.AddressID = txtAddress.Text;
                 client.ContractID = txtContract.Text;
                 clientData.InsertIndividualClient(client);
+
+                MessageBox.Show("Individual Client Saved");
             }
             catch (Exception exp)
             {
@@ -57,6 +59,8 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 client.AddressID = txtAddress.Text;
                 client.ContractID = txtContract.Text;
                 clientData.InsertBusinessClient(client);
+
+                MessageBox.Show("Business Client Saved");
             }
             catch (Exception exp)
             {
