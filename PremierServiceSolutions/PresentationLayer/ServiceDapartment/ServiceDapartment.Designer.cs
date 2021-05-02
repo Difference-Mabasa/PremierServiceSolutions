@@ -68,22 +68,22 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Location = new System.Drawing.Point(230, 314);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(77, 32);
+            this.lblDate.Size = new System.Drawing.Size(72, 31);
             this.lblDate.TabIndex = 8;
             this.lblDate.Text = "Date";
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
             this.lblTime.Location = new System.Drawing.Point(230, 267);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(79, 32);
+            this.lblTime.Size = new System.Drawing.Size(74, 31);
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "Time";
             // 
@@ -111,11 +111,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // lblTitleChildForm
             // 
             this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
             this.lblTitleChildForm.Location = new System.Drawing.Point(40, 33);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(54, 18);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(52, 20);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -150,7 +150,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnLogOout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ibtnLogOout.FlatAppearance.BorderSize = 0;
             this.ibtnLogOout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnLogOout.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnLogOout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnLogOout.ForeColor = System.Drawing.Color.White;
             this.ibtnLogOout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.ibtnLogOout.IconColor = System.Drawing.Color.White;
@@ -173,7 +173,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
             this.ibtnSchedule.FlatAppearance.BorderSize = 0;
             this.ibtnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnSchedule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnSchedule.ForeColor = System.Drawing.Color.White;
             this.ibtnSchedule.IconChar = FontAwesome.Sharp.IconChar.Calendar;
             this.ibtnSchedule.IconColor = System.Drawing.Color.White;
@@ -196,7 +196,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnTechnicians.Dock = System.Windows.Forms.DockStyle.Top;
             this.ibtnTechnicians.FlatAppearance.BorderSize = 0;
             this.ibtnTechnicians.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnTechnicians.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnTechnicians.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnTechnicians.ForeColor = System.Drawing.Color.White;
             this.ibtnTechnicians.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.ibtnTechnicians.IconColor = System.Drawing.Color.White;
