@@ -132,5 +132,33 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return employees;
         }
+
+        public List<string> GetTechnicians()
+        {
+            DataTable datatable = new DataTable();
+            List<string> lst = new List<string>();
+            string query = $"SELECT EmployeeName FROM Employees where JobTitle = 'Technician'";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow item in datatable.Rows)
+                {
+                    lst.Add(item["EmployeeName"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return lst;
+        }
     }
 }

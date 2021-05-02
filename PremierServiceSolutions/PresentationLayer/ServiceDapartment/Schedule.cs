@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
@@ -22,6 +23,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             Technicians tec = new Technicians();
             tec.Show();
             this.Hide();
+        }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
