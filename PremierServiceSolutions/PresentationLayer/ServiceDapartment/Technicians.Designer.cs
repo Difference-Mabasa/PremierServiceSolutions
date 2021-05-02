@@ -76,6 +76,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(739, 266);
             this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // GbDisplayButtons
             // 
@@ -125,6 +126,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnAssign.TabIndex = 1;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // btnViewSchedule
             // 
