@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PremierServiceSolutions.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,9 +21,30 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
             Technicians tec = new Technicians();
             tec.Show();
-            this.Hide();
+
+        }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+            //
+            EmployeeBLL workers = new EmployeeBLL();
+
+            List<Employee> technoguys = new List<Employee>();
+
+
+            foreach (var item in workers.GetAllEmployees())
+            {
+                if (item.JobTitle == "Technician" || item.JobTitle == "technician")
+                {
+                    technoguys.Add(item);
+                }
+            }
+            
+            dgbDisplay.DataSource = technoguys;
         }
 
         private void Schedule_Load(object sender, EventArgs e)
