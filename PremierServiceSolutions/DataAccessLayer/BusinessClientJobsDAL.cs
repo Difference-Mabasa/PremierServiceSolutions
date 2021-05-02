@@ -93,13 +93,13 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public void UpdateBusinessClientJob(Job job)
         {
-            string query = $"update IndividualClientJobs set" +
+            string query = $"update BusinessClientJobs set " +
                 $"JobID = '{job.JobID}', " +
                 $"JobDescription = '{job.Description}', " +
                 $"JobStatus = '{job.Status}', " +
                 $"JobDuration = '{job.Duration}', " +
-                $"CompanyID = {job.ClientID}, " +
-                $"EmployeeID = '{job.EmployeeID}'" +
+                $"CompanyID = '{job.ClientID}', " +
+                $"EmployeeID = '{job.EmployeeID}' " +
                 $"where JobID = '{job.JobID}'";
             try
             {
@@ -118,13 +118,38 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
             }
         }
+        public void UpdateBusinessClientJobTech(Job job)
+        {
+            string query = $"update BusinessClientJobs set " +
+                $"JobDescription = '{job.Description}', " +
+                $"JobStatus = '{job.Status}', " +
+                $"JobDuration = '{job.Duration}', " +
+                $"CompanyID = '{job.ClientID}', " +
+                $"EmployeeID = ( select EmployeeID from Employees where EmployeeName = '{job.Technician}') " +
+                $"where JobID = '{job.JobID}' ";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
 
+            finally
+            {
+                conn.Close();
+            }
+        }
         public List<Job> GetAllBusinessJobs()
         {
             List<Job> ICJobs = new List<Job>();
 
             DataTable datatable = new DataTable();
-            string query = $"select * from Technical";
+            string query = $"select * from BusinessClientJobs";
 
             try
             {
@@ -141,7 +166,6 @@ namespace PremierServiceSolutions.DataAccessLayer
                     ICjob.Duration = int.Parse(row["JobDuration"].ToString());
                     ICjob.ClientID = row["ClientID"].ToString();
                     ICjob.EmployeeID = row["EmployeeID"].ToString();
-                    ICjob.Technician=  row["EmployeeName"].ToString();
                     ICJobs.Add(ICjob);
                 }
             }
@@ -156,6 +180,5 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return ICJobs;
         }
-
     }
 }

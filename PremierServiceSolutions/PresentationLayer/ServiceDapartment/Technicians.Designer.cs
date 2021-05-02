@@ -47,7 +47,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnJobCompleted.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobCompleted.ForeColor = System.Drawing.Color.White;
             this.btnJobCompleted.Location = new System.Drawing.Point(345, 351);
-            this.btnJobCompleted.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnJobCompleted.Margin = new System.Windows.Forms.Padding(4);
             this.btnJobCompleted.Name = "btnJobCompleted";
             this.btnJobCompleted.Size = new System.Drawing.Size(276, 41);
             this.btnJobCompleted.TabIndex = 42;
@@ -60,7 +60,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnAllTech.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllTech.ForeColor = System.Drawing.Color.White;
             this.btnAllTech.Location = new System.Drawing.Point(43, 351);
-            this.btnAllTech.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAllTech.Margin = new System.Windows.Forms.Padding(4);
             this.btnAllTech.Name = "btnAllTech";
             this.btnAllTech.Size = new System.Drawing.Size(276, 41);
             this.btnAllTech.TabIndex = 40;
@@ -72,10 +72,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(37, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(739, 266);
             this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // GbDisplayButtons
@@ -87,9 +88,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.GbDisplayButtons.Cursor = System.Windows.Forms.Cursors.Default;
             this.GbDisplayButtons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GbDisplayButtons.Location = new System.Drawing.Point(807, 63);
-            this.GbDisplayButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GbDisplayButtons.Margin = new System.Windows.Forms.Padding(4);
             this.GbDisplayButtons.Name = "GbDisplayButtons";
-            this.GbDisplayButtons.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GbDisplayButtons.Padding = new System.Windows.Forms.Padding(4);
             this.GbDisplayButtons.Size = new System.Drawing.Size(224, 187);
             this.GbDisplayButtons.TabIndex = 39;
             this.GbDisplayButtons.TabStop = false;
@@ -108,7 +109,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.cbTech.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTech.FormattingEnabled = true;
             this.cbTech.Location = new System.Drawing.Point(8, 23);
-            this.cbTech.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTech.Margin = new System.Windows.Forms.Padding(4);
             this.cbTech.Name = "cbTech";
             this.cbTech.Size = new System.Drawing.Size(203, 26);
             this.cbTech.TabIndex = 29;
@@ -120,7 +121,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnAssign.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssign.ForeColor = System.Drawing.Color.White;
             this.btnAssign.Location = new System.Drawing.Point(8, 130);
-            this.btnAssign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAssign.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssign.Name = "btnAssign";
             this.btnAssign.Size = new System.Drawing.Size(204, 41);
             this.btnAssign.TabIndex = 1;
@@ -134,7 +135,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnViewSchedule.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewSchedule.ForeColor = System.Drawing.Color.White;
             this.btnViewSchedule.Location = new System.Drawing.Point(8, 82);
-            this.btnViewSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewSchedule.Name = "btnViewSchedule";
             this.btnViewSchedule.Size = new System.Drawing.Size(204, 41);
             this.btnViewSchedule.TabIndex = 0;
@@ -151,7 +152,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.Controls.Add(this.btnAllTech);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GbDisplayButtons);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Technicians";
             this.Text = "Technicians";
             this.Load += new System.EventHandler(this.Technicians_Load);

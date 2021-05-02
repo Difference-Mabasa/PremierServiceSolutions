@@ -13,7 +13,6 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
-
         public List<BusinessClient> GetAllBusinessClients()
         {
             List<BusinessClient> businessClients = new List<BusinessClient>();

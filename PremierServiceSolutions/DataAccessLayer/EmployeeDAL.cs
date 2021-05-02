@@ -96,6 +96,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public List<Employee> GetAllEmployees()
         {
+            //here we are returning the employees list which will contain all the emplyee records that we have
             List<Employee> employees = new List<Employee>();
 
             DataTable datatable = new DataTable();
@@ -131,6 +132,34 @@ namespace PremierServiceSolutions.DataAccessLayer
 
             }
             return employees;
+        }
+
+        public List<string> GetTechnicians()
+        {
+            DataTable datatable = new DataTable();
+            List<string> lst = new List<string>();
+            string query = $"SELECT EmployeeName FROM Employees where JobTitle = 'Technician'";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow item in datatable.Rows)
+                {
+                    lst.Add(item["EmployeeName"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return lst;
         }
     }
 }

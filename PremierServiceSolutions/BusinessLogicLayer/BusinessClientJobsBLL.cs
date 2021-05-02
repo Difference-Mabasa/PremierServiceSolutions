@@ -51,5 +51,34 @@ namespace PremierServiceSolutions.BusinessLogicLayer
                 MessageBox.Show($"Error: {e.Message}");
             }
         }
+
+        public void UpdateBusinessClientJobTech(Job job)
+        {
+            try
+            {
+                BusinessClientJobsDAL clientData = new BusinessClientJobsDAL();
+                clientData.UpdateBusinessClientJobTech(job);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error: {e.Message}");
+            }
+        }
+
+
+        public List<Job> GetAllBusinessClientsJobs()
+        {
+            List<Job> jobs = new List<Job>();
+            try
+            {
+                BusinessClientDAL getClients = new BusinessClientDAL();
+                jobs = getClients.GetAllBusinessJobs();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on Business Client Jobs {e.Message}");
+            }
+            return jobs;
+        }
     }
 }

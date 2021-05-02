@@ -64,5 +64,20 @@ namespace PremierServiceSolutions.BusinessLogicLayer
                 MessageBox.Show($"Error on EmployeeBLL {e.Message}");
             }
         }
+
+        public List<string> GetTechnicians()
+        {
+            List<string> data = new List<string>();
+            try
+            {
+                EmployeeDAL employeeData = new EmployeeDAL();
+                data = employeeData.GetTechnicians();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on EmployeeBLL {e.Message}");
+            }
+            return data;
+        }
     }
 }
