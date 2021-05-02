@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
@@ -33,6 +34,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             this.Hide();
             call.Show();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
