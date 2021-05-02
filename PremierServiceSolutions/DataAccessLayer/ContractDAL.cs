@@ -25,13 +25,11 @@ namespace PremierServiceSolutions.DataAccessLayer
                     while (rdr.Read())
                     {
                         Contract c = new Contract();
-                        c.ContractId = rdr.GetString(0);
+                        c.ContractID = rdr.GetString(0);
                         c.ContractType = rdr.GetString(1);
-                        c.ContractDescription = rdr.GetString(2);
-                        c.IndividualPrice = rdr.GetDouble(3);
-                        c.BusinessPrice = rdr.GetDouble(4);
+                        c.ContractDesc = rdr.GetString(2);
+                        c.ContractPrice = rdr.GetDouble(3);
                         c.ServiceLevel = rdr.GetString(5);
-                        c.Available = rdr.GetBoolean(6);
                         allContracts.Add(c);
                     }
                 }
