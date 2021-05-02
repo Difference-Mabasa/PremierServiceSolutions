@@ -13,6 +13,7 @@ namespace PremierServiceSolutions.DataAccessLayer
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
         public List<Contract> GetAllContracts()
         {
+            //hhh
             List<Contract> allContracts = new List<Contract>();
             try
             {
