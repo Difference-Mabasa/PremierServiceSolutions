@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
@@ -47,9 +46,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             dgbDisplay.DataSource = technoguys;
         }
 
-        private void Schedule_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }
