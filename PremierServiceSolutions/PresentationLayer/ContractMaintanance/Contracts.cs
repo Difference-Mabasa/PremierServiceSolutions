@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
 {
     public partial class Contracts : Form
     {
+       
         public Contracts()
         {
             InitializeComponent();
+        }
+       
+
+        private void Contracts_Load(object sender, EventArgs e)
+        {           
+            
         }
     }
 }

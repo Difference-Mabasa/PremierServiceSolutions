@@ -44,6 +44,9 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnMax = new FontAwesome.Sharp.IconButton();
+            this.btnMin = new FontAwesome.Sharp.IconButton();
             this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
@@ -101,6 +104,9 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlTitle.Controls.Add(this.btnClose);
+            this.pnlTitle.Controls.Add(this.btnMax);
+            this.pnlTitle.Controls.Add(this.btnMin);
             this.pnlTitle.Controls.Add(this.lblTitleChildForm);
             this.pnlTitle.Controls.Add(this.ipbChildForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -243,6 +249,63 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 15;
+            this.btnClose.Location = new System.Drawing.Point(757, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(39, 15);
+            this.btnClose.TabIndex = 63;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMax.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btnMax.IconColor = System.Drawing.Color.White;
+            this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMax.IconSize = 15;
+            this.btnMax.Location = new System.Drawing.Point(731, 0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(39, 15);
+            this.btnMax.TabIndex = 62;
+            this.btnMax.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMin.IconColor = System.Drawing.Color.White;
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMin.IconSize = 15;
+            this.btnMin.Location = new System.Drawing.Point(702, 0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(39, 15);
+            this.btnMin.TabIndex = 61;
+            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
             // ContractMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +348,8 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton btnMax;
+        private FontAwesome.Sharp.IconButton btnMin;
     }
 }

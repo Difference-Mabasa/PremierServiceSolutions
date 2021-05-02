@@ -257,6 +257,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.Controls.Add(this.GbDisplayButtons);
             this.Name = "Contracts";
             this.Text = "Contract";
+            this.Load += new System.EventHandler(this.Contracts_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GbDisplayButtons.ResumeLayout(false);

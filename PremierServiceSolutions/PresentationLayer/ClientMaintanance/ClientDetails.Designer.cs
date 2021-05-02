@@ -40,7 +40,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnViewIndividual = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.dgvDisplay = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnFirst = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -48,7 +47,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.Gbnav = new System.Windows.Forms.GroupBox();
             this.GbCD = new System.Windows.Forms.GroupBox();
             this.txtContract = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -61,8 +60,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblClientID = new System.Windows.Forms.Label();
-            this.btnUpdateBC = new FontAwesome.Sharp.IconButton();
-            this.btnUpdateIC = new FontAwesome.Sharp.IconButton();
             this.GbSearchStud.SuspendLayout();
             this.GbDisplayButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
@@ -166,16 +163,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.dgvDisplay.Size = new System.Drawing.Size(534, 256);
             this.dgvDisplay.TabIndex = 31;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 24);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Client Details";
-            // 
             // btnFirst
             // 
             this.btnFirst.Location = new System.Drawing.Point(15, 18);
@@ -228,7 +215,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // GbCD
             // 
             this.GbCD.Controls.Add(this.txtContract);
-            this.GbCD.Controls.Add(this.txtStatus);
+            this.GbCD.Controls.Add(this.txtEmail);
             this.GbCD.Controls.Add(this.txtName);
             this.GbCD.Controls.Add(this.txtSurname);
             this.GbCD.Controls.Add(this.txtAddress);
@@ -257,12 +244,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.txtContract.Size = new System.Drawing.Size(100, 23);
             this.txtContract.TabIndex = 18;
             // 
-            // txtStatus
+            // txtEmail
             // 
-            this.txtStatus.Location = new System.Drawing.Point(95, 160);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 23);
-            this.txtStatus.TabIndex = 17;
+            this.txtEmail.Location = new System.Drawing.Point(95, 160);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 23);
+            this.txtEmail.TabIndex = 17;
             // 
             // txtName
             // 
@@ -363,58 +350,20 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblClientID.TabIndex = 0;
             this.lblClientID.Text = "clientID";
             // 
-            // btnUpdateBC
-            // 
-            this.btnUpdateBC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateBC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateBC.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateBC.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.btnUpdateBC.IconColor = System.Drawing.Color.White;
-            this.btnUpdateBC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpdateBC.IconSize = 30;
-            this.btnUpdateBC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateBC.Location = new System.Drawing.Point(273, 433);
-            this.btnUpdateBC.Name = "btnUpdateBC";
-            this.btnUpdateBC.Size = new System.Drawing.Size(224, 42);
-            this.btnUpdateBC.TabIndex = 59;
-            this.btnUpdateBC.Text = "Update Business Client";
-            this.btnUpdateBC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdateBC.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateIC
-            // 
-            this.btnUpdateIC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateIC.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateIC.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateIC.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.btnUpdateIC.IconColor = System.Drawing.Color.White;
-            this.btnUpdateIC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpdateIC.IconSize = 30;
-            this.btnUpdateIC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateIC.Location = new System.Drawing.Point(274, 385);
-            this.btnUpdateIC.Name = "btnUpdateIC";
-            this.btnUpdateIC.Size = new System.Drawing.Size(223, 42);
-            this.btnUpdateIC.TabIndex = 58;
-            this.btnUpdateIC.Text = "Update Individual Client";
-            this.btnUpdateIC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdateIC.UseVisualStyleBackColor = true;
-            // 
             // ClientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 701);
-            this.Controls.Add(this.btnUpdateBC);
-            this.Controls.Add(this.btnUpdateIC);
             this.Controls.Add(this.GbCD);
             this.Controls.Add(this.GbSearchStud);
             this.Controls.Add(this.GbDisplayButtons);
             this.Controls.Add(this.Gbnav);
             this.Controls.Add(this.dgvDisplay);
-            this.Controls.Add(this.label1);
             this.Name = "ClientDetails";
             this.Text = "ClientDetails";
+            this.Load += new System.EventHandler(this.ClientDetails_Load);
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
             this.GbDisplayButtons.ResumeLayout(false);
@@ -423,23 +372,42 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.GbCD.ResumeLayout(false);
             this.GbCD.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         private void btnViewIndividual_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            source.DataSource = individual.GetAllIndividualClients();
+            dgvDisplay.DataSource = source;
         }
 
         private void btnViewBusiness_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            source.DataSource = business.GetAllBusinessClients();
+            dgvDisplay.DataSource = source;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+                
+                bc = business.GetBusinessClientByID(txtSearchClient.Text);
+                txtID.Text = bc.clientID;
+                txtName.Text = bc.CompanyName;
+                txtPhone.Text = bc.Phone;
+                txtEmail.Text = bc.Email;
+                txtAddress.Text = bc.AddressID;
+                txtContract.Text = bc.ContractID;
+
+                ic = individual.GetIndividualClientByID(txtSearchClient.Text);
+                txtID.Text = ic.clientID;
+                txtName.Text = ic.Name;
+                txtSurname.Text = ic.Surname;
+                txtPhone.Text = ic.Phone;
+                txtEmail.Text = ic.Email;
+                txtAddress.Text = ic.AddressID;
+                txtContract.Text = ic.ContractID;
+
+
         }
 
         #endregion
@@ -452,7 +420,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Button btnViewIndividual;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.DataGridView dgvDisplay;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
@@ -460,7 +427,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.GroupBox Gbnav;
         private System.Windows.Forms.GroupBox GbCD;
         private System.Windows.Forms.TextBox txtContract;
-        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtAddress;
@@ -473,7 +440,5 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblClientID;
-        private FontAwesome.Sharp.IconButton btnUpdateBC;
-        private FontAwesome.Sharp.IconButton btnUpdateIC;
     }
 }
