@@ -96,6 +96,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public List<Employee> GetAllEmployees()
         {
+            //here we are returning the employees list which will contain all the emplyee records that we have
             List<Employee> employees = new List<Employee>();
 
             DataTable datatable = new DataTable();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PremierServiceSolutions.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,14 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             Technicians tec = new Technicians();
             tec.Show();
 
+        }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+            //
+            EmployeeBLL workers = new EmployeeBLL();
+
+            dgbDisplay.DataSource = workers.GetAllEmployees();
         }
     }
 }
