@@ -11,6 +11,29 @@ namespace PremierServiceSolutions.DataAccessLayer
     class ContractDAL
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+
+        public void ViewServices()
+        {
+            List<string> services = new List<string>();
+            try
+            {
+                string query = "SELECT * FROM ServicesOff";
+                SqlCommand cmd = new SqlCommand(query, conn);   
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+                    while (rdr.Read())
+                    {
+                        services.Add(rdr.ToString());
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Unable to view services");
+            }
+        }
         public void InserctConract(string contractID, string contractType, string contractDesc, double contractPrice, string serviceLevel) 
         {
             string id = contractID;
