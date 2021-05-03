@@ -32,8 +32,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             if (cAvail > 0 && cAvail < 50)
             {
                 contractAvailable = true;
-                //contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-                contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
+                contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
+                //contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
             }
             else 
             {
@@ -58,8 +58,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             if (cAvail > 0 && cAvail < 50)
             {
                 contractAvailable = true;
-                //contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-                contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
+                contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
+                //contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
             }
             else
             {

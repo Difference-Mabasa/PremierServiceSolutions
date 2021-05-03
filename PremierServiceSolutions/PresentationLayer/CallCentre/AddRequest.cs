@@ -32,14 +32,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //needs Job ID
-            BusinessClientJobsBLL add = new BusinessClientJobsBLL();
-            Job job = new Job();
-            job.ClientID = txtClientID.Text;
-            job.Description = rtbdescrip.Text;
-            job.Duration = int.Parse(txtdur.Text);
-            job.Status = "0";
-            //add.InsertBusinessClientJob(j);
+            ////Needs to cater for both business and Individual Clients
+            //BusinessClientJobsBLL add = new BusinessClientJobsBLL();
+            //Job job = new Job();
+            //job.ClientID = txtClientID.Text;
+            //job.Description = rtbdescrip.Text;
+            //job.Duration = int.Parse(txtdur.Text);
+            //job.Status = "0";
+            //job.JobID = txtJobId.Text;
+            //add.InsertBusinessClientJob(job);
         }
     }
 }
