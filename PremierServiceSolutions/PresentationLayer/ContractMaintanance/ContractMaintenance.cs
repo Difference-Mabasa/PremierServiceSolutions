@@ -70,7 +70,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             }
             catch (Exception x)
             {
-                MessageBox.Show(x.ToString());
+                //MessageBox.Show(x.ToString());
             }
 
         }

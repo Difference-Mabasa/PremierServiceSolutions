@@ -75,7 +75,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             }
             catch(Exception x)
             {
-                MessageBox.Show(x.ToString());
+                //MessageBox.Show(x.ToString());
             }
             
         }

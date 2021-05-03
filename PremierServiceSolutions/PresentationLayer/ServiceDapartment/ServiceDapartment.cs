@@ -69,7 +69,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             }
             catch (Exception x)
             {
-                MessageBox.Show(x.ToString());
+                //MessageBox.Show(x.ToString());
             }
 
         }
