@@ -11,6 +11,26 @@ namespace PremierServiceSolutions.DataAccessLayer
     class ContractDAL
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        public void InserctConract(string contractID, string contractType, string contractDesc, double contractPrice, string serviceLevel) 
+        {
+            string id = contractID;
+            string type = contractType;
+            double price = contractPrice;
+            string level = serviceLevel;
+
+            try
+            {
+                string query = $"Insert Into Contracts(ontractID, ContractType, ContractDesc, ContractPrice, ServiceLevel) Values({0}, {1}, {2}, {3}, {4});, id, type, price, level";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Contract not inserted");
+            }
+
+        }
+
         public List<Contract> GetAllContracts()
         {
             List<Contract> allContracts = new List<Contract>();
