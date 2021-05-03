@@ -27,6 +27,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             //this is to initiate the call
             timer1.Start();
+
         }
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
@@ -46,8 +47,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             //you will only answer the call after 1 second
             if (counter == 3)
             {
+                btnAcceptCall.Visible = true;
+                btnDeclineCall.Visible = true;
+                pictureBox3.Visible = true;
                 label1.Visible = true;
-
+                label2.Visible = true;
+                label4.Visible = true;
+                
             }
 
             //this will come after 1 second after the call notification
@@ -55,6 +61,16 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             {
                 btnAcceptCall.Enabled = true;
             }
+        }
+
+        private void btnDeclineCall_Click(object sender, EventArgs e)
+        {
+            //declines call
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

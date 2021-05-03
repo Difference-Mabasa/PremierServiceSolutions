@@ -29,28 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label lblCall;
+            System.Windows.Forms.Label label3;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAcceptCall = new System.Windows.Forms.PictureBox();
             this.btnDeclineCall = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            lblCall = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAcceptCall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeclineCall)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCall
-            // 
-            lblCall.AutoSize = true;
-            lblCall.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblCall.Location = new System.Drawing.Point(278, 168);
-            lblCall.Name = "lblCall";
-            lblCall.Size = new System.Drawing.Size(180, 22);
-            lblCall.TabIndex = 0;
-            lblCall.Text = "Incomoming Call...";
             // 
             // label1
             // 
@@ -60,6 +51,7 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Decline";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -69,6 +61,7 @@
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Accept";
+            this.label2.Visible = false;
             // 
             // pictureBox3
             // 
@@ -79,6 +72,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // btnAcceptCall
             // 
@@ -89,6 +83,7 @@
             this.btnAcceptCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAcceptCall.TabIndex = 2;
             this.btnAcceptCall.TabStop = false;
+            this.btnAcceptCall.Visible = false;
             this.btnAcceptCall.Click += new System.EventHandler(this.btnAcceptCall_Click);
             // 
             // btnDeclineCall
@@ -100,11 +95,35 @@
             this.btnDeclineCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDeclineCall.TabIndex = 1;
             this.btnDeclineCall.TabStop = false;
+            this.btnDeclineCall.Visible = false;
+            this.btnDeclineCall.Click += new System.EventHandler(this.btnDeclineCall_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(235, 25);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(248, 24);
+            label3.TabIndex = 6;
+            label3.Text = "Premium Service Call centre";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(301, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Incoming Call...";
+            this.label4.Visible = false;
             // 
             // Call
             // 
@@ -112,12 +131,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnAcceptCall);
             this.Controls.Add(this.btnDeclineCall);
-            this.Controls.Add(lblCall);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Call";
@@ -139,5 +159,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
     }
 }
