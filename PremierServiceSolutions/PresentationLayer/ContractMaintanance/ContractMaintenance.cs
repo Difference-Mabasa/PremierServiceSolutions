@@ -88,7 +88,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             }
         }
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             // open only form
             if (currentChildForm != null)

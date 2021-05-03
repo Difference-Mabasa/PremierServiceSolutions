@@ -65,7 +65,9 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ClientMaintenance maintanance = new ClientMaintenance();
+            maintanance.Show();
+            maintanance.OpenChildForm(new ClientDetails());
         }
     }
 }

@@ -13,6 +13,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 {
     public partial class Schedule : Form
     {
+        
         public Schedule()
         {
             InitializeComponent();
@@ -20,11 +21,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            Technicians tec = new Technicians();
-            tec.Show();
-
+            ServiceDapartment service = new ServiceDapartment();
+            service.Show();
+            service.OpenChildForm(new Technicians());
         }
 
         private void Schedule_Load(object sender, EventArgs e)

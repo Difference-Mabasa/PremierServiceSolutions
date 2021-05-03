@@ -32,9 +32,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void btnAllTech_Click(object sender, EventArgs e)
         {
-            Schedule ss = new Schedule();
-            ss.Show();
-            this.Hide();
+            ServiceDapartment service = new ServiceDapartment();
+            service.Show();
+            service.OpenChildForm(new Schedule());
         }
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -86,6 +86,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update Contract";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
