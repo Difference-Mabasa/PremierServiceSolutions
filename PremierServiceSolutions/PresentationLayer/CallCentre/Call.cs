@@ -24,6 +24,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
         //just a variable
         int counter = 0;
+        public string caller;
 
         private void Call_Load(object sender, EventArgs e)
         {
@@ -31,10 +32,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             CallBLL call = new CallBLL();
             IndividualClient client = call.RandomizeCall();
+            caller = client.Name;
 
-            //lblCall.Text = $"Incoming cass from {client.Name}";
             //label1.Text
-            label4.Text = $"Incoming cass from {client.Name}";
 
 
             //this is to initiate the call
@@ -47,16 +47,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             CallCentre call = new CallCentre();
             call.ibtnClientDetails.PerformClick();
-
-
-
-
-
-
-
-
-
-
+            
 
             //ClientDetails frm = new ClientDetails();
             //frm.Show();
@@ -70,8 +61,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             //you will only answer the call after 1 second
             if (counter == 3)
             {
+                pictureBox3.Visible = true;
+                label4.Visible = true;
+                label4.Text = $"Incoming call from {caller}";
+                btnDeclineCall.Visible = true;
+                btnAcceptCall.Visible = true;
+                label2.Visible = true;
                 label1.Visible = true;
-
             }
 
             //this will come after 1 second after the call notification
