@@ -162,5 +162,43 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return lst;
         }
+
+        public List<Employee> GetTechniciansDetails(Job job)
+        {
+            DataTable datatable = new DataTable();
+            List<Employee> lst = new List<Employee>();
+            string query = $"SELECT * FROM Employees where JobTitle = 'Technician' AND EmployeeID = '{job.EmployeeID}'";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    Employee emp = new Employee();
+                    emp.EmployeeID = row["EmployeeID"].ToString();
+                    emp.Name = row["EmployeeName"].ToString();
+                    emp.Surname = row["EmployeeSurname"].ToString();
+                    emp.Phone = row["Phone"].ToString();
+                    emp.Department = row["EmployeeSurname"].ToString();
+                    emp.Password = row["EmployeePassword"].ToString();
+                    emp.Email = row["Email"].ToString();
+                    emp.JobTitle = row["JobTitle"].ToString();
+                    emp.AddressID = row["AddressID"].ToString();
+                    lst.Add(emp);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return lst;
+        }
     }
 }
