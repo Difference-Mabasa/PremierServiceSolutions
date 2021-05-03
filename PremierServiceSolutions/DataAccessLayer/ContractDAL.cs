@@ -1,4 +1,5 @@
-﻿using System;
+﻿
++using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace PremierServiceSolutions.DataAccessLayer
     class ContractDAL
     {
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
-        
+        //non
         public List<String> ServicesOffered()
         {
            List<sstring> services = new List<string>();
