@@ -12,9 +12,14 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         bool contractAvailable;
         Contract contract = new Contract();
         DataAccessLayer.ContractDAL contractDAL = new DataAccessLayer.ContractDAL();
-        public void ViewServicesOffered() 
+
+
+       
+        //update contract method to connect to update contract form
+        public void UpdateContract(string contractID, string contractType,  string contractDesc, double contractPrice, bool contractAvailable)
         {
-            
+            DataAccessLayer.ContractDAL contractDAL = new DataAccessLayer.ContractDAL();
+            contractDAL.Update(contractID,contractType,contractDesc,contractPrice,contractAvailable);
         }
 
         public void NewIndividualContract(string contractID, string contractType, string contractDesc, double contractPrice, string serviceLevel)

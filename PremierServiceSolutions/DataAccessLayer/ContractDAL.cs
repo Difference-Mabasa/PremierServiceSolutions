@@ -12,6 +12,62 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
+        //list of all individual contracts
+        public List<Contract> IndividualContracts()
+        {
+            List<Contract> IContractList = new List<Contract>();
+            try
+            {
+                string query = "select ContractType, ContractDescription, IndividualPrice From Contracts";
+                SqlCommand cmd = new SqlCommand(query, conn);   
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+                    while (rdr.Read())
+                    {
+                        Contract c = new Contract();
+                        c.ContractType = rdr.GetString(0);
+                        c.ContractDesc = rdr.GetString(1);
+                        c.ContractPrice = rdr.GetDouble(2);
+                        IContractList.Add(c);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"cant get individual contract list {e.Message}");
+            }
+            return IContractList;
+        }
+        //list of all business contracts
+        public List<Contract> BusinessContracts()
+        {
+            List<Contract> BContractList = new List<Contract>();
+            try
+            {
+                string query = "select ContractType, ContractDescription, BusinessPrice From Contracts";
+                SqlCommand cmd = new SqlCommand(query, conn);   
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+                    while (rdr.Read())
+                    {
+                        Contract c = new Contract();
+                        c.ContractType = rdr.GetString(0);
+                        c.ContractDesc = rdr.GetString(1);
+                        c.ContractPrice = rdr.GetDouble(2);
+                        BContractList.Add(c);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"cant get business contract list {e.Message}");
+            }
+            return BContractList;
+        }
         
         public void Update(string contractID, string contractType,  string contractDesc, double contractPrice, bool contractAvailable)
         {
