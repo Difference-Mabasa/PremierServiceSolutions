@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 
 
-using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
+using PremierServiceSolutions.PresentationLayer.CallCentre;
 
 namespace PremierServiceSolutions
 {
@@ -26,7 +26,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ServiceDapartment()); 
+            Application.Run(new CallCentre()); 
         }
     }
 }

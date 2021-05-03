@@ -65,13 +65,12 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public void InsertBusinessClientJob(Job job)
         {
-            string query = $"insert into BusinessClientJobs values" +
+            string query = $"insert into BusinessClientJobs(jobid,jobdescription,jobstatus,jobduration,clientid) values" +
                 $"('{job.JobID}', " +
                 $"'{job.Description}', " +
                 $"'{job.Status}', " +
-                $"'{job.Duration}', " +
-                $"{job.ClientID}, " +
-                $"'{job.EmployeeID}')";
+                $"{job.Duration}, " +
+                $"'{job.ClientID}')";
 
             try
             {
@@ -118,6 +117,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Close();
             }
         }
+
         public void UpdateBusinessClientJobTech(Job job)
         {
             string query = $"update BusinessClientJobs set " +
@@ -179,6 +179,61 @@ namespace PremierServiceSolutions.DataAccessLayer
 
             }
             return ICJobs;
+        }
+
+        public List<Job> GetAllJobs()
+        {
+            List<Job> Jobs = new List<Job>();
+
+            DataTable dataBC = new DataTable();
+            string queryBC = $"select * from BusinessClientJobs";
+
+            DataTable dataIC = new DataTable();
+            string queryIC = $"select * from IndividualClientJobs";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(queryBC, conn);
+                adapter.Fill(dataBC);
+                foreach (DataRow row in dataBC.Rows)
+                {
+                    Job BCjob = new Job();
+
+                    BCjob.JobID = row["JobID"].ToString();
+                    BCjob.Description = row["JobDescription"].ToString();
+                    BCjob.Status = row["JobStatus"].ToString();
+                    BCjob.Duration = int.Parse(row["JobDuration"].ToString());
+                    BCjob.ClientID = row["CompanyID"].ToString();
+                    BCjob.EmployeeID = row["EmployeeID"].ToString();
+                    Jobs.Add(BCjob);
+                }
+
+                adapter = new SqlDataAdapter(queryIC, conn);
+                adapter.Fill(dataIC);
+                foreach (DataRow row in dataIC.Rows)
+                {
+                    Job ICjob = new Job();
+
+                    ICjob.JobID = row["JobID"].ToString();
+                    ICjob.Description = row["JobDescription"].ToString();
+                    ICjob.Status = row["JobStatus"].ToString();
+                    ICjob.Duration = int.Parse(row["JobDuration"].ToString());
+                    ICjob.ClientID = row["ClientID"].ToString();
+                    ICjob.EmployeeID = row["EmployeeID"].ToString();
+                    Jobs.Add(ICjob);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return Jobs;
         }
     }
 }

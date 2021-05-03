@@ -66,13 +66,12 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public void InsertIndividualClientJob(Job job)
         {
-            string query = $"insert into IndividualClientJobs values" +
+            string query = $"insert into IndividualClientJobs(jobid,jobdescription,jobstatus,jobduration,clientid) values" +
                 $"('{job.JobID}', " +
                 $"'{job.Description}', " +
                 $"'{job.Status}', " +
-                $"'{job.Duration}', " +
-                $"{job.ClientID}, " +
-                $"'{job.EmployeeID}')";
+                $"{job.Duration}, " +
+                $"'{job.ClientID}')";
 
             try
             {
@@ -155,6 +154,33 @@ namespace PremierServiceSolutions.DataAccessLayer
 
             }
             return ICJobs;
+        }
+
+        public void UpdateIndividualClientJobTech(Job job)
+        {
+            string query = $"update IndividualClientJobs set " +
+                $"JobDescription = '{job.Description}', " +
+                $"JobStatus = '{job.Status}', " +
+                $"JobDuration = '{job.Duration}', " +
+                $"ClientID = '{job.ClientID}', " +
+                $"EmployeeID = ( select EmployeeID from Employees where EmployeeName = '{job.Technician}') " +
+                $"where JobID = '{job.JobID}' ";
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

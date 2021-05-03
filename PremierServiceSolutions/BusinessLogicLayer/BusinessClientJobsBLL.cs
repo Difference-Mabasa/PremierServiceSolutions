@@ -80,5 +80,21 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
             return jobs;
         }
+
+        public List<Job> GetAllJobs()
+        {
+            List<Job> jobs = new List<Job>();
+            try
+            {
+                BusinessClientJobsDAL getClients = new BusinessClientJobsDAL();
+                jobs = getClients.GetAllJobs();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on Business Client Jobs {e.Message}");
+            }
+            return jobs;
+        }
+
     }
 }
