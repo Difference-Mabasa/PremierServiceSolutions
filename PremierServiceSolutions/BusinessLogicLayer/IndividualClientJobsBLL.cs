@@ -66,5 +66,18 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
             return jobs;
         }
+
+        public void UpdateIndividualClientJobTech(Job job)
+        {
+            try
+            {
+                IndividualClientJobsDAL clientData = new IndividualClientJobsDAL();
+                clientData.UpdateIndividualClientJobTech(job);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error: {e.Message}");
+            }
+        }
     }
 }

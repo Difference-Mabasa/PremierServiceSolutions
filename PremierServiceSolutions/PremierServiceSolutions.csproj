@@ -55,6 +55,7 @@
     <Compile Include="BusinessLogicLayer\CallBLL.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\ContractBLL.cs" />
+    <Compile Include="BusinessLogicLayer\DBOperations.cs" />
     <Compile Include="BusinessLogicLayer\EmployeeBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
