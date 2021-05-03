@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
+using static PremierServiceSolutions.PresentationLayer.CallCentre.CallCentre;
+using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
@@ -25,6 +29,14 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Randomize call
 
+            CallBLL call = new CallBLL();
+            IndividualClient client = call.RandomizeCall();
+
+            //lblCall.Text = $"Incoming cass from {client.Name}";
+            //label1.Text
+            label4.Text = $"Incoming cass from {client.Name}";
+
+
             //this is to initiate the call
             timer1.Start();
         }
@@ -33,9 +45,21 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             counter = 0;
 
-            this.Hide();
-            ClientDetails frm = new ClientDetails();
-            frm.Show();
+            CallCentre call = new CallCentre();
+            call.ibtnClientDetails.PerformClick();
+
+
+
+
+
+
+
+
+
+
+
+            //ClientDetails frm = new ClientDetails();
+            //frm.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -55,6 +79,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             {
                 btnAcceptCall.Enabled = true;
             }
+        }
+
+        private void lblCall_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

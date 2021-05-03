@@ -19,6 +19,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         IndividualClientBLL individual = new IndividualClientBLL();
         IndividualClient ic = new IndividualClient();
         BusinessClient bc = new BusinessClient();
+        DBOperations DB = new DBOperations();
         
         
         public ClientDetails()
@@ -32,5 +33,10 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             dgvDisplay.DataSource = source;
         }
 
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            source.DataSource = DB.AllClients();
+            dgvDisplay.DataSource = source;
+        }
     }
 }

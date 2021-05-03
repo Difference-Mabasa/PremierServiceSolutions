@@ -10,7 +10,7 @@ using PremierServiceSolutions.DataAccessLayer;
 
 namespace PremierServiceSolutions
 {
-    class Call
+    class CallBLL
     {
         
         string clientName, employeeName, time, duration;
@@ -21,7 +21,7 @@ namespace PremierServiceSolutions
         public string EndTime { get => time; set => time = value; }
         public string Duration { get => duration; set => duration = value; }
 
-        public Call(string clientName, string employeeName, string startTime, string endTime, string duration)
+        public CallBLL(string clientName, string employeeName, string startTime, string endTime, string duration)
         {
             ClientName = clientName;
             EmployeeName = employeeName;
@@ -29,7 +29,7 @@ namespace PremierServiceSolutions
             EndTime = endTime;
             Duration = duration;
         }
-        public Call() { }
+        public CallBLL() { }
         
         public void MakeCall(string ClientID)
         {
@@ -65,27 +65,27 @@ namespace PremierServiceSolutions
         }
 
         // Check castings , from list to datatable
-        //public IndividualClient RandomizeCall()
-        //{
-        //    IndividualClientDAL dal = new IndividualClientDAL();
-        //    Random ran = new Random();
-        //    int index = ran.Next(0, dal.CountIndividualClients());
+        public IndividualClient RandomizeCall()
+        {
+            IndividualClientDAL dal = new IndividualClientDAL();
+            Random ran = new Random();
+            int index = ran.Next(0, dal.CountIndividualClients());
 
-        //    DataTable table = dal.GetAllIndividualClients();
-        //    DataRow row = table.Rows[index];
+            List<IndividualClient> clients = dal.GetAllIndividualClients();
+            //DataRow row = table.Rows[index];
 
-        //    IndividualClient client = new IndividualClient();
+            IndividualClient client = clients[index];
 
-        //    client.clientID = row[0].ToString();
-        //    client.Name = row[1].ToString();
-        //    client.Surname = row[2].ToString();
-        //    client.Phone = row[3].ToString();
-        //    client.Email = row[4].ToString();
+            //client.clientID = row[0].ToString();
+            //client.Name = row[1].ToString();
+            //client.Surname = row[2].ToString();
+            //client.Phone = row[3].ToString();
+            //client.Email = row[4].ToString();
 
-        //    //The rest of the field will be added
+            //The rest of the field will be added
 
-        //    return client;
-        //}
-        
+            return client;
+        }
+
     }
 }

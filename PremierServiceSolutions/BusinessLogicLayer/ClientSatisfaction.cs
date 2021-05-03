@@ -10,7 +10,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
     {
         public void FollowUp(Job Job) 
         {
-            Call call = new Call();
+            CallBLL call = new CallBLL();
             call.MakeCall(Job.ClientID);
         }
     }

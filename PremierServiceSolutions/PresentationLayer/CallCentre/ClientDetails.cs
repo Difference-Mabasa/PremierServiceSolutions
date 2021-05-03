@@ -70,18 +70,20 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //request update
 
-            CallCentre call = new CallCentre();
-            call.Show();
-            call.OpenChildForm(new UpdateRequest());
+            CallCentre call = new CallCentre();           
+            call.ibtnUpdateRequest_Click(sender, e);
 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //adding a request
+            //adding a request           
             CallCentre call = new CallCentre();
+            this.Hide();
+            this.Close();
+            call.OpenChildForm(new AddRequest());            
             call.Show();
-            call.OpenChildForm(new AddRequest());
+            
         }
     }
 }

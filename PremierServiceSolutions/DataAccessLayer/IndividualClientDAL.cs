@@ -135,6 +135,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 adapter.Fill(datatable);
+
                 foreach (DataRow row in datatable.Rows)
                 {
                     IndividualClient individualClient = new IndividualClient();

@@ -36,7 +36,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         //struct
-        private struct RGBColors
+        public struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
@@ -47,7 +47,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
 
 
-        private void ActivateButton(object senderBtn, Color color)
+        public void ActivateButton(object senderBtn, Color color)
         {
             try
             {
@@ -122,25 +122,26 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             lblTitleChildForm.Text = "Home";
         }
-        private void ibtnCall_Click(object sender, EventArgs e)
+        public void ibtnCall_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Call());
+           
         }
 
-        private void ibtnClientDetails_Click(object sender, EventArgs e)
+        public void ibtnClientDetails_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new ClientDetails());
         }
 
-        private void ibtnAddRequest_Click(object sender, EventArgs e)
+        public void ibtnAddRequest_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new AddRequest());
         }
 
-        private void ibtnUpdateRequest_Click(object sender, EventArgs e)
+        public void ibtnUpdateRequest_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new UpdateRequest());
