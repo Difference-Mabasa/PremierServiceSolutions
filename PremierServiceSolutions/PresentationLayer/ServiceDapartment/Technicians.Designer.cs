@@ -37,8 +37,12 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.cbTech = new System.Windows.Forms.ComboBox();
             this.btnAssign = new System.Windows.Forms.Button();
             this.btnViewSchedule = new System.Windows.Forms.Button();
+            this.DGVTechDetails = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GbDisplayButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVTechDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // btnJobCompleted
@@ -142,12 +146,47 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnViewSchedule.Text = "View Schedule";
             this.btnViewSchedule.UseVisualStyleBackColor = true;
             // 
+            // DGVTechDetails
+            // 
+            this.DGVTechDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVTechDetails.Location = new System.Drawing.Point(37, 447);
+            this.DGVTechDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.DGVTechDetails.Name = "DGVTechDetails";
+            this.DGVTechDetails.Size = new System.Drawing.Size(739, 93);
+            this.DGVTechDetails.TabIndex = 43;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Location = new System.Drawing.Point(30, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 39);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Jobs ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.Location = new System.Drawing.Point(36, 404);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 32);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Technician Details";
+            // 
             // Technicians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(1067, 594);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DGVTechDetails);
             this.Controls.Add(this.btnJobCompleted);
             this.Controls.Add(this.btnAllTech);
             this.Controls.Add(this.dataGridView1);
@@ -159,7 +198,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GbDisplayButtons.ResumeLayout(false);
             this.GbDisplayButtons.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVTechDetails)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -172,5 +213,8 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         private System.Windows.Forms.ComboBox cbTech;
         private System.Windows.Forms.Button btnAssign;
         private System.Windows.Forms.Button btnViewSchedule;
+        private System.Windows.Forms.DataGridView DGVTechDetails;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

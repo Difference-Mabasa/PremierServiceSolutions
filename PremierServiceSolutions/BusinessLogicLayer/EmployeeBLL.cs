@@ -80,6 +80,21 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return data;
         }
 
-        
+        public List<Employee> GetTechnicianDetails(Job Tecjob)
+        {
+            List<Employee> data = new List<Employee>();
+            try
+            {
+                EmployeeDAL employeeData = new EmployeeDAL();
+                data = employeeData.GetTechniciansDetails(Tecjob);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on EmployeeBLL {e.Message}");
+            }
+            return data;
+        }
+
+
     }
 }
