@@ -12,6 +12,13 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
 
+        
+        public void Update(string contractID, string contractType,  string contractDesc, double contractPrice, bool contractAvailable)
+        {
+            string query = $"Update Contracts Set ContractID = {contractID}, ContractType = {contractType}, ContractDesc = {contractDesc}, IPrice = {iPrice}, BPrice = {bPrice}, ContractAvailable = {contractAvailable}";
+                SqlCommand cmd = new SqlCommand(query, conn); 
+        }
+
         public void ViewServices()
         {
             List<string> services = new List<string>();
