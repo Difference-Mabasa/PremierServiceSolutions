@@ -41,6 +41,23 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             //job.Status = "0";
             //job.JobID = txtJobId.Text;
             //add.InsertBusinessClientJob(job);
+            BusinessClientJobsBLL busiJob = new BusinessClientJobsBLL();
+            IndividualClientJobsBLL indiJob = new IndividualClientJobsBLL();
+            Job job = new Job();
+            job.ClientID = txtClientID.Text;
+            job.JobID = txtJobId.Text;
+            job.Duration = int.Parse(txtdur.Text);
+            job.Description = rtbdescrip.Text;
+            job.Status = "0";
+            //Checking if it is a business or individual client
+            if (job.ClientID.Contains('I'))
+            {
+                indiJob.InsertIndividualClientJob(job);
+            }
+            else
+            {
+                busiJob.InsertBusinessClientJob(job);
+            }
         }
     }
 }

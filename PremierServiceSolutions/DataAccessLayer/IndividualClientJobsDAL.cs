@@ -66,13 +66,12 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public void InsertIndividualClientJob(Job job)
         {
-            string query = $"insert into IndividualClientJobs values" +
+            string query = $"insert into IndividualClientJobs(jobid,jobdescription,jobstatus,jobduration,clientid) values" +
                 $"('{job.JobID}', " +
                 $"'{job.Description}', " +
                 $"'{job.Status}', " +
-                $"'{job.Duration}', " +
-                $"{job.ClientID}, " +
-                $"'{job.EmployeeID}')";
+                $"{job.Duration}, " +
+                $"'{job.ClientID}')";
 
             try
             {
