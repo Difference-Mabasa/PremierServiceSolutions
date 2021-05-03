@@ -11,6 +11,31 @@ namespace PremierServiceSolutions.DataAccessLayer
     class ContractDAL
     {
         SqlConnection conn = new SqlConnection("Server= BAVHU\\SQLEXPRESS; Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        
+        public List<String> ServicesOffered()
+        {
+           List<sstring> services = new List<string>();
+            try
+            {
+                string query = "SELECT * FROM ServicesOffered";
+                SqlCommand cmd = new SqlCommand(query, conn);   
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.HasRows)
+                {
+                    while (rdr.Read())
+                    {
+                        services.Add(rdr);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"no services found! {e.Message}");
+            }
+            return services;
+        }
+        
         public List<Contract> GetAllContracts()
         {
             //hhh
