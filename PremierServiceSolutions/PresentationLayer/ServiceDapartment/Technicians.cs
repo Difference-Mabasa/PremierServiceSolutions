@@ -59,12 +59,21 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
                 jb.EmployeeID = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
                 jb.Technician = cbTech.Text;
                 myjob = jb;
+                EmployeeBLL employee = new EmployeeBLL();
+                BindingSource source2 = new BindingSource();
+                source2.DataSource = employee.GetTechnicianDetails(jb);
+                DGVTechDetails.DataSource = source2;
             }
         }
         private void btnAssign_Click(object sender, EventArgs e)
         {
             DBOperations operations = new DBOperations();
             operations.AssignTechnician(myjob);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
