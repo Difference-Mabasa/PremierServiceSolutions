@@ -78,6 +78,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             
             try
             {
+                conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader rdr = cmd.ExecuteReader();
                 MessageBox.Show("Updated Contract Successfully");

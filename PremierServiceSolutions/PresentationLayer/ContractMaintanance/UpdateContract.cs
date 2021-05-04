@@ -23,5 +23,19 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             contracts.Show();
             contracts.OpenChildForm(new Contracts());
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Contract contract = new Contract();
+            BusinessLogicLayer.ContractBLL contractBLL = new BusinessLogicLayer.ContractBLL();
+
+            contract.ContractID = txtID.Text;
+            contract.ContractType = txtName.Text;
+            contract.ContractDesc = txtSurname.Text;
+            contract.IPrice = double.Parse(txtPhone.Text);
+            contract.BPrice = double.Parse(txtEmail.Text);
+            //contract.ContractAvailable = bool.Parse(txtContract.Text);
+            contractBLL.UpdateContract(contract);
+        }
     }
 }
