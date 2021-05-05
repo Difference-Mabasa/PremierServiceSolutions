@@ -62,6 +62,7 @@
     <Compile Include="BusinessLogicLayer\IndividualClientCallReportsBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ObjectSerializer.cs" />
     <Compile Include="DataAccessLayer\BusinessClientCallReportsDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />

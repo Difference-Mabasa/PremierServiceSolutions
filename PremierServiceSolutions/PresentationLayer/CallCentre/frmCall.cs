@@ -47,12 +47,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             counter = 0;
 
-            CallCentre call = new CallCentre();
-            call.ibtnClientDetails.PerformClick();
-            
+            //CallCentre call = new CallCentre();
+            //call.ibtnClientDetails.PerformClick();
 
-            //ClientDetails frm = new ClientDetails();
-            //frm.Show();
+
+            ClientDetails frm = new ClientDetails();
+            frm.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

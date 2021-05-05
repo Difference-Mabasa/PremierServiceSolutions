@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 using PremierServiceSolutions.DataAccessLayer;
 
 
 namespace PremierServiceSolutions
 {
+    [Serializable]
+
     class Call
     {
         
@@ -90,6 +95,8 @@ namespace PremierServiceSolutions
 
             return client;
         }
+
+        
 
     }
 }
