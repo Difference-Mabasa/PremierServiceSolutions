@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
+    <Compile Include="BusinessLogicLayer\BusinessClientCallReportsBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
     <Compile Include="BusinessLogicLayer\Call.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="BusinessLogicLayer\DBOperations.cs" />
     <Compile Include="BusinessLogicLayer\EmployeeBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
+    <Compile Include="BusinessLogicLayer\IndividualClientCallReportsBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientCallReportsDAL.cs" />
