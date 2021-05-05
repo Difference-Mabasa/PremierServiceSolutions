@@ -21,7 +21,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Error on EmployeeBLL {e.Message}");
+                MessageBox.Show($"Error on GetAllIndividualCallReports BLL : {e.Message}");
             }
             return data;
         }
@@ -35,7 +35,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Error EmployeeBLL {e.Message}");
+                MessageBox.Show($"Error on InsertIndividualCallReport BLL : {e.Message}");
             }
         }
     }
