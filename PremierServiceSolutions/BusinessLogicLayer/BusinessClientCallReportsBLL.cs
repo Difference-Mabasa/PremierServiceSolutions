@@ -38,5 +38,24 @@ namespace PremierServiceSolutions.BusinessLogicLayer
                 MessageBox.Show($"Error on InsertBusinessCallReport BLL : {e.Message}");
             }
         }
+
+        public int CountBusinessClientCallReports()
+        {
+            int total = 0;
+
+            try
+            {
+                BusinessClientCallReportsDAL dal = new BusinessClientCallReportsDAL();
+                total = dal.CountBusinessClientCallReports();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
+
+            return total;
+        }
     }
 }

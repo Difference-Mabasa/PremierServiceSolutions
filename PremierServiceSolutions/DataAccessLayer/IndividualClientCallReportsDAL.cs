@@ -77,5 +77,31 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return callreports;
         }
+
+        public int CountIndividualClientCallReports()
+        {
+            string query = $"SELECT COUNT(CallID) FROM IndividualClientCallReports";
+            int total = 0;
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                total = (int)cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+            return total;
+        }
     }
 }

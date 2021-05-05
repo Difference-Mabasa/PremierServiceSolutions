@@ -18,26 +18,19 @@ namespace PremierServiceSolutions
     class Call
     {
         
-        string clientID, employeeID, time, duration;
-        string callID;
-        string callDate;
+        string callID, clientID, employeeID;
+        int duration;
+        DateTime startTime, endTime, callDate;
 
         public string ClientID{ get => clientID; set => clientID = value; }
         public string EmployeeID { get => employeeID; set => employeeID = value; }
-        public string StartTime { get => time; set => time = value; }
-        public string EndTime { get => time; set => time = value; }
-        public string Duration { get => duration; set => duration = value; }
+        public DateTime StartTime { get => startTime; set => startTime = value; }
+        public DateTime EndTime { get => endTime; set => endTime = value; }
+        public int Duration { get => duration; set => duration = value; }
         public string CallID { get => callID; set => callID = value; }
-        public string CallDate { get => callDate; set => callDate = value; }
+        public DateTime CallDate { get => callDate; set => callDate = value; }
 
-        public Call(string clientName, string employeeName, string startTime, string endTime, string duration)
-        {
-            ClientID = clientName;
-            EmployeeID = employeeName;
-            StartTime = startTime;
-            EndTime = endTime;
-            Duration = duration;
-        }
+        
         public Call() { }
         
         public void MakeCall(string ClientID)
@@ -45,23 +38,52 @@ namespace PremierServiceSolutions
             //open outgoing call form
         }
 
-        public void AcceptCall()
+        public int GenerateCallID(IClient caller)
         {
-            StartTime = DateTime.Now.ToString();
-            //opens form to search client using client ID
-            PresentationLayer.CallCentre.ClientDetails clientDetails = new PresentationLayer.CallCentre.ClientDetails();
-            clientDetails.Show();
 
+            int total = 0, currentCallNumber = 0;
+
+            if (caller is IndividualClient)
+            {             
+
+                IndividualClientCallReportsDAL dal = new IndividualClientCallReportsDAL();
+                total = dal.CountIndividualClientCallReports();
+
+                currentCallNumber = total + 1;
+
+            }
+
+            else if(caller is BusinessClient)
+            {
+                BusinessClientCallReportsDAL dal = new BusinessClientCallReportsDAL();
+                total = dal.CountBusinessClientCallReports();
+
+                currentCallNumber = total + 1;
+
+            }
+
+            return currentCallNumber;
+        }
+
+        public void AcceptCall(IClient caller, Employee employee)
+        {
+            int callNumber = GenerateCallID(caller);
+
+            CallID = $"C{callNumber}";
+            StartTime = DateTime.Now;
+            ClientID = caller.clientID;
+            EmployeeID = employee.EmployeeID;
+            CallDate = DateTime.Now;
             
         }
 
         public void EndCall()
         {
-            string clientName = " ";
-            string employeeName = " ";
-            EndTime = DateTime.Now.ToString();
-            Duration = (int.Parse(EndTime) - int.Parse(StartTime)).ToString();
-            RecordCall(clientName, employeeName, Duration);
+            EndTime = DateTime.Now;
+            TimeSpan ts = EndTime - StartTime;
+
+            Duration = (int)ts.TotalMinutes;
+            
         }
 
         public void RecordCall(string clientName, string employeeName, string duration)
@@ -73,7 +95,7 @@ namespace PremierServiceSolutions
                 "Duration: {2}", clientName, employeeName, duration);
         }
 
-        // Check castings , from list to datatable
+        
         public IndividualClient RandomizeCall()
         {
             IndividualClientDAL dal = new IndividualClientDAL();
