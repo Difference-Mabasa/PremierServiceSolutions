@@ -11,7 +11,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class BusinessClientJobsDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = DBAccess.GetSQLConnection();
 
         public List<Job> GetBusinessClientJobsByClientID(string id)
         {
