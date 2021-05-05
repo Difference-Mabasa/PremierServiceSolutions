@@ -25,5 +25,18 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
             return data;
         }
+
+        public void InsertIndividualCallReport(Call call)
+        {
+            try
+            {
+                IndividualClientCallReportsDAL callreport = new IndividualClientCallReportsDAL();
+                callreport.InsertIndividualCallReport(call);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error EmployeeBLL {e.Message}");
+            }
+        }
     }
 }
