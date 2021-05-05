@@ -39,7 +39,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnViewBusiness = new System.Windows.Forms.Button();
             this.btnViewIndividual = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
-            this.dgvDisplay = new System.Windows.Forms.DataGridView();
+            this.dgvIndividualClients = new System.Windows.Forms.DataGridView();
             this.btnFirst = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -60,11 +60,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblClientID = new System.Windows.Forms.Label();
+            this.dgvBusinessClients = new System.Windows.Forms.DataGridView();
             this.GbSearchStud.SuspendLayout();
             this.GbDisplayButtons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).BeginInit();
             this.Gbnav.SuspendLayout();
             this.GbCD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).BeginInit();
             this.SuspendLayout();
             // 
             // GbSearchStud
@@ -156,13 +158,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnViewAll.UseVisualStyleBackColor = true;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
-            // dgvDisplay
+            // dgvIndividualClients
             // 
-            this.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDisplay.Location = new System.Drawing.Point(26, 37);
-            this.dgvDisplay.Name = "dgvDisplay";
-            this.dgvDisplay.Size = new System.Drawing.Size(534, 256);
-            this.dgvDisplay.TabIndex = 31;
+            this.dgvIndividualClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIndividualClients.Location = new System.Drawing.Point(26, 37);
+            this.dgvIndividualClients.Name = "dgvIndividualClients";
+            this.dgvIndividualClients.Size = new System.Drawing.Size(534, 256);
+            this.dgvIndividualClients.TabIndex = 31;
             // 
             // btnFirst
             // 
@@ -231,7 +233,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.GbCD.Controls.Add(this.lblClientID);
             this.GbCD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbCD.ForeColor = System.Drawing.Color.White;
-            this.GbCD.Location = new System.Drawing.Point(26, 375);
+            this.GbCD.Location = new System.Drawing.Point(566, 357);
             this.GbCD.Name = "GbCD";
             this.GbCD.Size = new System.Drawing.Size(220, 284);
             this.GbCD.TabIndex = 47;
@@ -351,27 +353,37 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblClientID.TabIndex = 0;
             this.lblClientID.Text = "clientID";
             // 
+            // dgvBusinessClients
+            // 
+            this.dgvBusinessClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBusinessClients.Location = new System.Drawing.Point(26, 357);
+            this.dgvBusinessClients.Name = "dgvBusinessClients";
+            this.dgvBusinessClients.Size = new System.Drawing.Size(534, 256);
+            this.dgvBusinessClients.TabIndex = 48;
+            // 
             // ClientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(800, 701);
+            this.Controls.Add(this.dgvBusinessClients);
             this.Controls.Add(this.GbCD);
             this.Controls.Add(this.GbSearchStud);
             this.Controls.Add(this.GbDisplayButtons);
             this.Controls.Add(this.Gbnav);
-            this.Controls.Add(this.dgvDisplay);
+            this.Controls.Add(this.dgvIndividualClients);
             this.Name = "ClientDetails";
             this.Text = "ClientDetails";
             this.Load += new System.EventHandler(this.ClientDetails_Load);
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
             this.GbDisplayButtons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).EndInit();
             this.Gbnav.ResumeLayout(false);
             this.GbCD.ResumeLayout(false);
             this.GbCD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBusinessClients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,13 +391,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private void btnViewIndividual_Click(object sender, EventArgs e)
         {
             source.DataSource = individual.GetAllIndividualClients();
-            dgvDisplay.DataSource = source;
+            dgvIndividualClients.DataSource = source;
         }
 
         private void btnViewBusiness_Click(object sender, EventArgs e)
         {
             source.DataSource = business.GetAllBusinessClients();
-            dgvDisplay.DataSource = source;
+            dgvIndividualClients.DataSource = source;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -420,7 +432,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Button btnViewBusiness;
         private System.Windows.Forms.Button btnViewIndividual;
         private System.Windows.Forms.Button btnViewAll;
-        private System.Windows.Forms.DataGridView dgvDisplay;
+        private System.Windows.Forms.DataGridView dgvIndividualClients;
         private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
@@ -441,5 +453,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblClientID;
+        private System.Windows.Forms.DataGridView dgvBusinessClients;
     }
 }

@@ -30,13 +30,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private void ClientDetails_Load(object sender, EventArgs e)
         {
             source.DataSource = individual.GetAllIndividualClients();
-            dgvDisplay.DataSource = source;
+            dgvIndividualClients.DataSource = source;
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            source.DataSource = DB.AllClients();
-            dgvDisplay.DataSource = source;
+            DBOperations db = new DBOperations();
+            db.ViewAllClients(dgvIndividualClients, dgvBusinessClients);
         }
     }
 }
