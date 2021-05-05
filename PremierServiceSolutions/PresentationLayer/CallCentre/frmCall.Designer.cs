@@ -1,6 +1,6 @@
 ﻿namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
-    partial class Call
+    partial class frmCall
     {
         /// <summary>
         /// Required designer variable.

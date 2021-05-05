@@ -15,15 +15,15 @@ namespace PremierServiceSolutions.DataAccessLayer
         SqlCommand cmd;
         string query;
 
-        public void InsertIndividualCallReport()
+        public void InsertIndividualCallReport(Call call)
         {
-            //string query = $"insert into IndividualClientCallReports(CallID,CallDuration,CallDate,CallStartTime,ClientID,EmployeeID) values" +
-            //$"('{}', " +
-            //$"'{}', " +
-            //$"'{}', " +
-            //$"'{}', " +
-            //$"'{}', " +
-            //$"'{}')";
+            string query = $"insert into IndividualClientCallReports(CallID,CallDuration,CallDate,CallStartTime,ClientID,EmployeeID) values" +
+            $"('{call.CallID}', " +
+            $"'{call.Duration}', " +
+            $"'{call.CallDate}', " +
+            $"'{call.StartTime}', " +
+            $"'{call.ClientID}', " +
+            $"'{call.EmployeeID}')";
 
             try
             {
@@ -42,38 +42,40 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        //public List<IndividualClientCallReport> GetAllBusinessCallReports()
-        //{
-        //    List<IndividualClientCallReport> callreports = new List<IndividualClientCallReport>();
-        //    DataTable datatable = new DataTable();
+        public List<Call> GetAllIndividualCallReports()
+        {
+            List<Call> callreports = new List<Call>();
+            DataTable datatable = new DataTable();
 
-        //    string query = $"SELECT * FROM IndividualClientCallReports ";
+            string query = $"SELECT * FROM IndividualClientCallReports ";
 
-        //    try
-        //    {
-        //        conn.Open();
-        //        SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-        //        adapter.Fill(datatable);
-        //        foreach (DataRow row in datatable.Rows)
-        //        {
-        //            callreports = row["CallID"].ToString();
-        //            callreports = row["CallDuration"].ToString();
-        //            callreports = row["CallDate"].ToString();
-        //            callreports = row["CallStartTime"].ToString();
-        //            callreports = row["ClientID"].ToString();
-        //            callreports = row["EmployeeID"].ToString();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("ERROR: " + ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(datatable);
+                foreach (DataRow row in datatable.Rows)
+                {
+                    Call details = new Call();
+                    details.CallID = row["CallID"].ToString();
+                    details.Duration = row["CallDuration"].ToString();
+                    details.CallDate = row["CallDate"].ToString();
+                    details.StartTime = row["CallStartTime"].ToString();
+                    details.ClientID = row["ClientID"].ToString();
+                    details.EmployeeID = row["EmployeeID"].ToString();
+                    callreports.Add(details);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
 
-        //    }
-        //    return callreports;
-        //}
+            }
+            return callreports;
+        }
     }
 }

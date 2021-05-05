@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
-    <Compile Include="BusinessLogicLayer\CallBLL.cs" />
+    <Compile Include="BusinessLogicLayer\Call.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\ContractBLL.cs" />
     <Compile Include="BusinessLogicLayer\DBOperations.cs" />
@@ -79,11 +79,11 @@
     <Compile Include="PresentationLayer\CallCentre\AddRequest.Designer.cs">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\CallCentre\Call.cs">
+    <Compile Include="PresentationLayer\CallCentre\frmCall.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\CallCentre\Call.Designer.cs">
-      <DependentUpon>Call.cs</DependentUpon>
+    <Compile Include="PresentationLayer\CallCentre\frmCall.Designer.cs">
+      <DependentUpon>frmCall.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\CallCentre\CallCentre.cs">
       <SubType>Form</SubType>
@@ -191,8 +191,8 @@
     <EmbeddedResource Include="PresentationLayer\CallCentre\AddRequest.resx">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\CallCentre\Call.resx">
-      <DependentUpon>Call.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\frmCall.resx">
+      <DependentUpon>frmCall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\CallCentre\CallCentre.resx">
       <DependentUpon>CallCentre.cs</DependentUpon>

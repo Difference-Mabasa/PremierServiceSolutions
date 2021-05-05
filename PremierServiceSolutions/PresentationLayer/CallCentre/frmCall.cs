@@ -14,9 +14,9 @@ using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
-    public partial class Call: Form
+    public partial class frmCall: Form
     {
-        public Call()
+        public frmCall()
         {
             InitializeComponent();
             //this is to initiate the call
@@ -30,10 +30,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Randomize call
 
-            CallBLL call = new CallBLL();
-            IndividualClient client = call.RandomizeCall();
+            Call c = new Call();
+            IndividualClient client = c.RandomizeCall();
             caller = client.Name;
 
+
+            
             //label1.Text
 
 

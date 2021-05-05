@@ -10,26 +10,30 @@ using PremierServiceSolutions.DataAccessLayer;
 
 namespace PremierServiceSolutions
 {
-    class CallBLL
+    class Call
     {
         
-        string clientName, employeeName, time, duration;
+        string clientID, employeeID, time, duration;
+        string callID;
+        string callDate;
 
-        public string ClientName { get => clientName; set => clientName = value; }
-        public string EmployeeName { get => employeeName; set => employeeName = value; }
+        public string ClientID{ get => clientID; set => clientID = value; }
+        public string EmployeeID { get => employeeID; set => employeeID = value; }
         public string StartTime { get => time; set => time = value; }
         public string EndTime { get => time; set => time = value; }
         public string Duration { get => duration; set => duration = value; }
+        public string CallID { get => callID; set => callID = value; }
+        public string CallDate { get => callDate; set => callDate = value; }
 
-        public CallBLL(string clientName, string employeeName, string startTime, string endTime, string duration)
+        public Call(string clientName, string employeeName, string startTime, string endTime, string duration)
         {
-            ClientName = clientName;
-            EmployeeName = employeeName;
+            ClientID = clientName;
+            EmployeeID = employeeName;
             StartTime = startTime;
             EndTime = endTime;
             Duration = duration;
         }
-        public CallBLL() { }
+        public Call() { }
         
         public void MakeCall(string ClientID)
         {
