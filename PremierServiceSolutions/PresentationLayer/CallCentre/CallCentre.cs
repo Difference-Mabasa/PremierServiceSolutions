@@ -125,7 +125,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         public void ibtnCall_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new Call());
+            OpenChildForm(new frmCall());
            
         }
 
