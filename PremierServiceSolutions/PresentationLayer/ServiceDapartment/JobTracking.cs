@@ -35,18 +35,20 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             {
                 button1.Text = "Business";
                 //call method
+                Individual();
 
             }
             else if (button1.Text == "Business")
             {
                 button1.Text = "All";
                 //call method
-
+                Business();
             }
             else
             {
                 button1.Text = "Individuals";
                 //call method
+                ALL();
 
             }
         }
@@ -81,6 +83,22 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         //below will be 2 methods that will populate datagrid according to a buton call
 
+        public void ALL()
+        {
+            //method populates the datagrid to have all jobs
+            lblStatus.Text = "ALL";
+        }
 
+        public void Business()
+        {
+            //method populates the datagrid to have ONLY business related jobs
+            lblStatus.Text = "Business";
+        }
+
+        public void Individual()
+        {
+            //method populates the datagrid to have ONLY Individual related jobs
+            lblStatus.Text = "Individual";
+        }
     }
 }
