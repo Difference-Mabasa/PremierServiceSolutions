@@ -34,7 +34,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             IndividualClient client = c.RandomizeCall();
             caller = client.Name;
 
-
+            ObjectSerializer serializer = new ObjectSerializer();
+            serializer.SerializeIndividualClient(client);
             
             //label1.Text
 
@@ -45,11 +46,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
-            counter = 0;
+            ObjectSerializer serializer = new ObjectSerializer();
 
-            //CallCentre call = new CallCentre();
-            //call.ibtnClientDetails.PerformClick();
+            Call call = new Call();
+            call.AcceptCall(serializer.DeSerializeIndividualClient(), serializer.DeSerializeEmployee());
 
+            serializer.SerializeCall(call);
 
             ClientDetails frm = new ClientDetails();
             frm.Show();

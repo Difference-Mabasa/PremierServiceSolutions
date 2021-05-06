@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
+    [Serializable]
+
     class BusinessClient : IClient
     {
         String companyName, phone, email, addressID, contractID;

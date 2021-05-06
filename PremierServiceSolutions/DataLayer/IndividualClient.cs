@@ -8,6 +8,8 @@ using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions
 {
+    [Serializable]
+
     class IndividualClient : Person, IClient
     {
 

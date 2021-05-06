@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
-     class Contract
+    [Serializable]
+
+    class Contract
     {
         string contractID;
         string contractType;

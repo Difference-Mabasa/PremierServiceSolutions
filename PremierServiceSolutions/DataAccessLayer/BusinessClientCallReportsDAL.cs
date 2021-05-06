@@ -58,9 +58,9 @@ namespace PremierServiceSolutions.DataAccessLayer
                 {
                     Call details = new Call();
                     details.CallID = row["CallID"].ToString();
-                    details.Duration = row["CallDuration"].ToString();
-                    details.CallDate = row["CallDate"].ToString();
-                    details.StartTime = row["CallStartTime"].ToString();
+                    details.Duration = (int)row["CallDuration"];
+                    details.CallDate = (DateTime)row["CallDate"];
+                    details.StartTime = (DateTime)row["CallStartTime"];
                     details.ClientID = row["ClientID"].ToString();
                     details.EmployeeID = row["EmployeeID"].ToString();
                     callreports.Add(details);

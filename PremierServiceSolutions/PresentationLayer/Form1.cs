@@ -65,6 +65,7 @@ namespace PremierServiceSolutions.PresentationLayer
 
             EmployeeBLL bll = new EmployeeBLL();
             List<Employee> employees = bll.GetAllEmployees();
+            Employee currentEmployee = new Employee();
 
             //must iterate through the list of ALL employees to find the details
             foreach (Employee item in employees)
@@ -72,6 +73,10 @@ namespace PremierServiceSolutions.PresentationLayer
                 if (item.EmployeeID == id && item.Password == pass)
                 {
                     authenticationSuccessful = true;
+                    currentEmployee = item;
+
+                    ObjectSerializer serializer = new ObjectSerializer();
+                    serializer.SerializeEmployee(currentEmployee);
                     break;
                 }
             }

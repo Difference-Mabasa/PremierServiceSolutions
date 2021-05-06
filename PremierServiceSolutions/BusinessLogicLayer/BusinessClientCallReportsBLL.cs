@@ -26,7 +26,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             return data;
         }
 
-        public void InsertIndividualCallReport(Call call)
+        public void InsertBusinessCallReport(Call call)
         {
             try
             {
