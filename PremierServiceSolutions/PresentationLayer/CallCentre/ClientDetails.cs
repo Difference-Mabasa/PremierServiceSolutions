@@ -54,6 +54,30 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             source.Add(ic);
 
             dgvClientDetails.DataSource = source;
+
+            //Search for client's previous job requests
+
+            //ObjectSerializer serializer = new ObjectSerializer();
+            //IndividualClient client = serializer.DeSerializeIndividualClient();
+
+            IndividualClientJobsBLL data = new IndividualClientJobsBLL();
+            List <Job> clientJobs = data.GetIndividualClientJobByClientID(id);
+
+            BindingSource source2 = new BindingSource();
+            source2.DataSource = clientJobs;
+
+            dgvPreviousRequests.DataSource = source2;
+
+            ////Search for client's previous call history
+
+            IndividualClientCallReportsBLL callData = new IndividualClientCallReportsBLL();
+            List<Call> clientCalls = callData.GetIndividualCallReportsByClientID(id);
+
+            BindingSource source3 = new BindingSource();
+            source3.DataSource = clientCalls;
+
+            dgvCallHistory.DataSource = source3;
+
         }
 
         private void dgvClientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,6 +108,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             call.OpenChildForm(new AddRequest());            
             call.Show();
             
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

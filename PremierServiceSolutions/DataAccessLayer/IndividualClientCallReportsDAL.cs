@@ -15,6 +15,57 @@ namespace PremierServiceSolutions.DataAccessLayer
         SqlCommand cmd;
         string query;
 
+        public List<Call> GetIndividualClientCallReportsByClientID(string id)
+        {
+            List<Call> calls = new List<Call>();
+            Call clientCall = new Call();
+            string query = $"SELECT * FROM IndividualClientCallReports WHERE ClientID = '{id}'";
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        clientCall.CallID = reader.GetString(0);
+                        clientCall.Duration = reader.GetInt32(1);
+                        clientCall.StartTime = Convert.ToDateTime(reader.GetString(2));
+                        clientCall.CallDate = Convert.ToDateTime(reader.GetString(3));
+                        clientCall.ClientID = reader.GetString(4);
+                        clientCall.EmployeeID = reader.GetString(5);
+
+                        calls.Add(clientCall);
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("No previous jobs found");
+                }
+
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+
+
+
+            return calls;
+        }
+
         public void InsertIndividualCallReport(Call call)
         {
             string query = $"insert into IndividualClientCallReports(CallID,CallDuration,CallDateDate,CallStartTime,ClientID,EmployeeID) values" +

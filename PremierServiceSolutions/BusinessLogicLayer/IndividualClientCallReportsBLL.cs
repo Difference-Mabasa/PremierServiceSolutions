@@ -11,6 +11,15 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class IndividualClientCallReportsBLL
     {
+
+        public List<Call> GetIndividualCallReportsByClientID(String id)
+        {
+            IndividualClientCallReportsDAL data = new IndividualClientCallReportsDAL();
+            List<Call> calls = data.GetIndividualClientCallReportsByClientID(id);
+
+            return calls;
+        }
+
         public List<Call> GetAllIndividualCallReports()
         {
             List<Call> data = new List<Call>();
