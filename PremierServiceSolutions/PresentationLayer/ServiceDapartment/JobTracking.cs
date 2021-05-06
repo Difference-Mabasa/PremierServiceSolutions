@@ -63,6 +63,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
                 MessageBox.Show("Please select a job status from the dropdown menu");
             }
         }
+        DBOperations data = new DBOperations();
 
         private void JobTracking_Load(object sender, EventArgs e)
         {
@@ -75,10 +76,9 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
             //populating the datagrid
 
-            DBOperations alljobs = new DBOperations();
-            
 
-            //dataGridView1.DataSource = alljobs.GetAllJobs();
+
+            dataGridView1.DataSource = data.GetAllJobs();
         }
 
         //below will be 2 methods that will populate datagrid according to a buton call
@@ -87,18 +87,37 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             //method populates the datagrid to have all jobs
             lblStatus.Text = "ALL";
+
+            dataGridView1.DataSource = data.GetAllJobs();
         }
 
         public void Business()
         {
+            
             //method populates the datagrid to have ONLY business related jobs
             lblStatus.Text = "Business";
+
+            dataGridView1.DataSource = data.Bjobs;
+
         }
 
         public void Individual()
         {
             //method populates the datagrid to have ONLY Individual related jobs
             lblStatus.Text = "Individual";
+
+            List<Job> Individualjobs = new List<Job>();
+
+            foreach (var item in data.GetAllJobs())
+            {
+                
+                if (item.ToString().Contains("IC"))
+                {
+                    Individualjobs.Add(item);
+                }
+            }
+
+            dataGridView1.DataSource = data.Ijobs;
         }
     }
 }

@@ -54,19 +54,28 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         }
 
+        //individually
+        public List<Job> Bjobs = new List<Job>();
+        public List<Job> Ijobs = new List<Job>();
+
         public List<Job> GetAllJobs()
         {
+            //for all clients
             List<Job> jobs = new List<Job>();
+
+
             try
             {
                 BusinessClientJobsDAL getbus = new BusinessClientJobsDAL();
                 IndividualClientJobsDAL getindividual = new IndividualClientJobsDAL();
                 foreach (Job item in getindividual.GetAllIndividualJobs())
                 {
+                    Ijobs.Add(item);
                     jobs.Add(item);
                 }
                 foreach (Job item in getbus.GetAllBusinessJobs())
                 {
+                    Bjobs.Add(item);
                     jobs.Add(item);
                 }
             }
