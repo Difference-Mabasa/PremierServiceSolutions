@@ -13,7 +13,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
     [Serializable]
 
     class ObjectSerializer
-    {
+    {   
         public void SerializeEmployee(Employee employee)
         {
 

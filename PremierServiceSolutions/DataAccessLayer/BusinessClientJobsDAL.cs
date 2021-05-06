@@ -164,7 +164,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                     ICjob.Description = row["JobDescription"].ToString();
                     ICjob.Status = row["JobStatus"].ToString();
                     ICjob.Duration = int.Parse(row["JobDuration"].ToString());
-                    ICjob.ClientID = row["ClientID"].ToString();
+                    ICjob.ClientID = row["CompanyID"].ToString();
                     ICjob.EmployeeID = row["EmployeeID"].ToString();
                     ICJobs.Add(ICjob);
                 }
@@ -181,59 +181,6 @@ namespace PremierServiceSolutions.DataAccessLayer
             return ICJobs;
         }
 
-        public List<Job> GetAllJobs()
-        {
-            List<Job> Jobs = new List<Job>();
-
-            DataTable dataBC = new DataTable();
-            string queryBC = $"select * from BusinessClientJobs";
-
-            DataTable dataIC = new DataTable();
-            string queryIC = $"select * from IndividualClientJobs";
-
-            try
-            {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(queryBC, conn);
-                adapter.Fill(dataBC);
-                foreach (DataRow row in dataBC.Rows)
-                {
-                    Job BCjob = new Job();
-
-                    BCjob.JobID = row["JobID"].ToString();
-                    BCjob.Description = row["JobDescription"].ToString();
-                    BCjob.Status = row["JobStatus"].ToString();
-                    BCjob.Duration = int.Parse(row["JobDuration"].ToString());
-                    BCjob.ClientID = row["CompanyID"].ToString();
-                    BCjob.EmployeeID = row["EmployeeID"].ToString();
-                    Jobs.Add(BCjob);
-                }
-
-                adapter = new SqlDataAdapter(queryIC, conn);
-                adapter.Fill(dataIC);
-                foreach (DataRow row in dataIC.Rows)
-                {
-                    Job ICjob = new Job();
-
-                    ICjob.JobID = row["JobID"].ToString();
-                    ICjob.Description = row["JobDescription"].ToString();
-                    ICjob.Status = row["JobStatus"].ToString();
-                    ICjob.Duration = int.Parse(row["JobDuration"].ToString());
-                    ICjob.ClientID = row["ClientID"].ToString();
-                    ICjob.EmployeeID = row["EmployeeID"].ToString();
-                    Jobs.Add(ICjob);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-
-            }
-            return Jobs;
-        }
+        
     }
 }
