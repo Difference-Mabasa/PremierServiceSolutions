@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 
 
+using PremierServiceSolutions.PresentationLayer;
 using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
 
 namespace PremierServiceSolutions
@@ -26,7 +27,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Technicians());
+            Application.Run(new JobTracking());
         }
     }
 }

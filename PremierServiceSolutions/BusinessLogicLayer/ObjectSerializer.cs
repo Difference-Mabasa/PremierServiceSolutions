@@ -17,7 +17,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public void SerializeEmployee(Employee employee)
         {
 
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Employee.dat";
+            string path = "Employee.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Create, FileAccess.Write);
 
@@ -29,7 +29,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         public Employee DeSerializeEmployee()
         {
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Employee.dat";
+            string path = "Employee.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Open, FileAccess.Read);
 
@@ -41,7 +41,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public void SerializeCall(Call call)
         {
 
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Call.dat";
+            string path = "Call.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Create, FileAccess.Write);
 
@@ -53,7 +53,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         public Call DeSerializeCall()
         {
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Call.dat";
+            string path = "Call.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Open, FileAccess.Read);
 
@@ -65,7 +65,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public void SerializeIndividualClient(IndividualClient individualClient)
         {
 
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Caller.dat";
+            string path = "Caller.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Create, FileAccess.Write);
 
@@ -77,7 +77,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         public IndividualClient DeSerializeIndividualClient()
         {
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Caller.dat";
+            string path = "Caller.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Open, FileAccess.Read);
 
@@ -89,7 +89,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public void SerializeBusinessClient(BusinessClient businessClient)
         {
 
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Caller.dat";
+            string path = "Caller.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Create, FileAccess.Write);
 
@@ -101,7 +101,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
         public BusinessClient DeSerializeBusinessClient()
         {
-            string path = "C:\\Users\\Public\\Documents\\PSSData\\Caller.dat";
+            string path = "Caller.dat";
             IFormatter formatter = new BinaryFormatter();
             Stream s = new FileStream(path, FileMode.Open, FileAccess.Read);
 

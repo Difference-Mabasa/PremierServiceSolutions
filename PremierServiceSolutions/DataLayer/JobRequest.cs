@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
+    [Serializable]
+
     class JobRequest
     {
         string requestID, clientName, employeeName, date;
