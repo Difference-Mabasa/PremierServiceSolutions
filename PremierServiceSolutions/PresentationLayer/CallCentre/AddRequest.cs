@@ -77,6 +77,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
                 BusinessClientCallReportsBLL report = new BusinessClientCallReportsBLL();
                 report.InsertBusinessCallReport(call);
             }
+
+            MessageBox.Show($"Call Ended \nDuration: {call.Duration} Minutes");
+            this.Hide();
         }
     }
 }
