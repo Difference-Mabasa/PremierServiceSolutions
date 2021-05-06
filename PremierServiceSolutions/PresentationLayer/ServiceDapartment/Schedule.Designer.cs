@@ -31,6 +31,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             this.dgbDisplay = new System.Windows.Forms.DataGridView();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnJob = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgbDisplay)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,12 +62,32 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnJob
+            // 
+            this.btnJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJob.ForeColor = System.Drawing.Color.White;
+            this.btnJob.IconChar = FontAwesome.Sharp.IconChar.Tasks;
+            this.btnJob.IconColor = System.Drawing.Color.White;
+            this.btnJob.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnJob.IconSize = 30;
+            this.btnJob.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnJob.Location = new System.Drawing.Point(69, 464);
+            this.btnJob.Name = "btnJob";
+            this.btnJob.Size = new System.Drawing.Size(155, 42);
+            this.btnJob.TabIndex = 60;
+            this.btnJob.Text = "Job Tracking";
+            this.btnJob.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnJob.UseVisualStyleBackColor = true;
+            this.btnJob.Click += new System.EventHandler(this.btnJob_Click);
+            // 
             // Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(781, 529);
+            this.Controls.Add(this.btnJob);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgbDisplay);
             this.Name = "Schedule";
@@ -80,5 +101,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         #endregion
         private System.Windows.Forms.DataGridView dgbDisplay;
         private FontAwesome.Sharp.IconButton btnBack;
+        private FontAwesome.Sharp.IconButton btnJob;
     }
 }

@@ -171,6 +171,12 @@
     <Compile Include="PresentationLayer\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\JobTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\JobTracking.Designer.cs">
+      <DependentUpon>JobTracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ServiceDapartment\Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\JobTracking.resx">
+      <DependentUpon>JobTracking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
