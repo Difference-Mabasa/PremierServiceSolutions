@@ -32,8 +32,8 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             contract.ContractID = txtID.Text;
             contract.ContractType = txtName.Text;
             contract.ContractDesc = txtSurname.Text;
-            contract.IPrice = double.Parse(txtPhone.Text);
-            contract.BPrice = double.Parse(txtEmail.Text);
+            contract.IPrice = decimal.Parse(txtPhone.Text);
+            contract.BPrice = decimal.Parse(txtEmail.Text);
             //contract.ContractAvailable = bool.Parse(txtContract.Text);
             contractBLL.UpdateContract(contract);
         }

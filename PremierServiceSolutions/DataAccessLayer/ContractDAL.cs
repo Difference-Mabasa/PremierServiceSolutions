@@ -150,8 +150,8 @@ namespace PremierServiceSolutions.DataAccessLayer
                         c.ContractID = rdr.GetString(0);
                         c.ContractType = rdr.GetString(1);
                         c.ContractDesc = rdr.GetString(2);
-                        c.IPrice = rdr.GetDouble(3);
-                        c.BPrice = rdr.GetDouble(4);
+                        c.IPrice = rdr.GetDecimal(3);
+                        c.BPrice = rdr.GetDecimal(4);
                         c.ContractAvailable = rdr.GetBoolean(5);
                         allContracts.Add(c);
                     }

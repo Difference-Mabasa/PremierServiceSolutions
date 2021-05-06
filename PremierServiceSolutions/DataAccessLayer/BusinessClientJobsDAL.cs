@@ -164,7 +164,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                     ICjob.Description = row["JobDescription"].ToString();
                     ICjob.Status = row["JobStatus"].ToString();
                     ICjob.Duration = int.Parse(row["JobDuration"].ToString());
-                    ICjob.ClientID = row["ClientID"].ToString();
+                    ICjob.ClientID = row["CompanyID"].ToString();
                     ICjob.EmployeeID = row["EmployeeID"].ToString();
                     ICJobs.Add(ICjob);
                 }
