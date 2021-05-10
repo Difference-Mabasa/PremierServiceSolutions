@@ -57,26 +57,13 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             //this will update the job status
             //check the logic of combobox first
-
-            if (String.IsNullOrEmpty(comboBox1.Text))
-            {
-                MessageBox.Show("Please select a job status from the dropdown menu");
-            }
+            
+            
         }
         DBOperations data = new DBOperations();
 
         private void JobTracking_Load(object sender, EventArgs e)
         {
-            //combobox
-            comboBox1.Items.Add("Not assigned");
-            comboBox1.Items.Add("Started");
-            comboBox1.Items.Add("In progress");
-            comboBox1.Items.Add("Completed");
-            comboBox1.Items.Add("Sent to client satisfaction");
-
-            //populating the datagrid
-
-
 
             dataGridView1.DataSource = data.GetAllJobs();
         }
@@ -86,7 +73,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         public void ALL()
         {
             //method populates the datagrid to have all jobs
-            lblStatus.Text = "ALL";
 
             dataGridView1.DataSource = data.GetAllJobs();
         }
@@ -95,7 +81,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             
             //method populates the datagrid to have ONLY business related jobs
-            lblStatus.Text = "Business";
 
             dataGridView1.DataSource = data.Bjobs;
 
@@ -104,7 +89,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         public void Individual()
         {
             //method populates the datagrid to have ONLY Individual related jobs
-            lblStatus.Text = "Individual";
 
             List<Job> Individualjobs = new List<Job>();
 
@@ -119,5 +103,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
             dataGridView1.DataSource = data.Ijobs;
         }
+
     }
 }
