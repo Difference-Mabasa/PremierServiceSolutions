@@ -55,10 +55,32 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this will update the job status
-            //check the logic of combobox first
+            IndividualClientJobsBLL indiv = new IndividualClientJobsBLL();
+            BusinessClientJobsBLL busin = new BusinessClientJobsBLL();
+
+             DataGridViewRow row = dataGridView1.Rows[rowindexa];
+
+            Job jobb = new Job();
+
+            jobb.JobID = row.Cells[0].Value.ToString();
+            jobb.ClientID = row.Cells[1].Value.ToString();
+            jobb.Technician = row.Cells[2].Value.ToString();
+            jobb.Finished = bool.Parse(row.Cells[3].Value.ToString());
+            jobb.Duration = int.Parse(row.Cells[4].Value.ToString());
+            jobb.Description = row.Cells[5].Value.ToString();
+            jobb.Status = row.Cells[6].Value.ToString();
+            jobb.EmployeeID = row.Cells[7].Value.ToString();
             
-            
+
+            if (row.Cells[1].Value.ToString().Contains("IC"))
+            {
+                indiv.UpdateIndividualClientJob(jobb);
+            }
+            else
+            {
+                busin.UpdateBusinessClientJob(jobb);
+            }
+
         }
         DBOperations data = new DBOperations();
 
@@ -89,20 +111,25 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         public void Individual()
         {
             //method populates the datagrid to have ONLY Individual related jobs
-
-            List<Job> Individualjobs = new List<Job>();
-
-            foreach (var item in data.GetAllJobs())
-            {
-                
-                if (item.ToString().Contains("IC"))
-                {
-                    Individualjobs.Add(item);
-                }
-            }
-
+            
             dataGridView1.DataSource = data.Ijobs;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowindexa = e.RowIndex;
+
+            DataGridViewRow row = dataGridView1.Rows[rowindexa];
+
+            lbltest.Text = row.Cells[0].Value.ToString();
+            label1.Text = row.Cells[1].Value.ToString();
+            label3.Text = row.Cells[3].Value.ToString();
+            label4.Text = row.Cells[4].Value.ToString();
+            label5.Text = row.Cells[5].Value.ToString();
+            label6.Text = row.Cells[6].Value.ToString();
+            label7.Text = row.Cells[7].Value.ToString();
+        }
+
+        int rowindexa;
     }
 }
