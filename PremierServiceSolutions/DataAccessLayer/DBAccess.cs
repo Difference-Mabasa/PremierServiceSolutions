@@ -11,8 +11,7 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         public static SqlConnection GetSQLConnection()
         {
-            String connectionString = "Data Source = (local); Initial Catalog = master; Integrated Security = SSPI";
-            //String connectionString = "Data Source = BAVHU\\SQLEXPRESS01; Initial Catalog = PremierServiceSolutionsDB; Integrated Security = SSPI";
+            String connectionString = "Data Source = BAVHU\\SQLEXPRESS01; Initial Catalog = PremierServiceSolutionsDB; Integrated Security = SSPI";
 
             SqlConnection conn = new SqlConnection(connectionString);
 
