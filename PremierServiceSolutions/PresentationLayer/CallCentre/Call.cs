@@ -46,7 +46,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             counter = 0;
 
             CallCentre call = new CallCentre();
-            call.ibtnClientDetails.PerformClick();
+            this.Close();
+            call.OpenChildForm(new ClientDetails());
+            call.Show();
 
 
 

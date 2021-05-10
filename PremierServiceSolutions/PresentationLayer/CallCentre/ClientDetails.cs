@@ -35,10 +35,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Drops the call
 
-            Call call = new Call();
+            
 
             this.Hide();
-            call.Show();
+            
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -70,8 +70,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //request update
 
-            CallCentre call = new CallCentre();           
-            call.ibtnUpdateRequest_Click(sender, e);
+            CallCentre call = new CallCentre();
+            this.Close();
+            call.OpenChildForm(new UpdateRequest());
+            call.Show();
 
         }
 
@@ -79,7 +81,6 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //adding a request           
             CallCentre call = new CallCentre();
-            this.Hide();
             this.Close();
             call.OpenChildForm(new AddRequest());            
             call.Show();

@@ -323,7 +323,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(280, 336);
+            this.lblDate.Location = new System.Drawing.Point(280, 367);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(77, 32);
             this.lblDate.TabIndex = 2;
@@ -334,7 +334,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(280, 289);
+            this.lblTime.Location = new System.Drawing.Point(280, 320);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(79, 32);
             this.lblTime.TabIndex = 1;
@@ -342,10 +342,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.download__4_;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 113);
+            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.callcentre;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -395,9 +396,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
-        private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMax;
         private FontAwesome.Sharp.IconButton btnMin;
         public FontAwesome.Sharp.IconButton ibtnClientDetails;
+        public FontAwesome.Sharp.IconButton btnClose;
     }
 }

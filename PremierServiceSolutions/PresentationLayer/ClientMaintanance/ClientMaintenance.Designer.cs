@@ -74,7 +74,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(258, 336);
+            this.lblDate.Location = new System.Drawing.Point(261, 374);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(77, 32);
             this.lblDate.TabIndex = 5;
@@ -85,7 +85,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(258, 289);
+            this.lblTime.Location = new System.Drawing.Point(261, 327);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(79, 32);
             this.lblTime.TabIndex = 4;
@@ -94,9 +94,9 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.client;
-            this.pictureBox1.Location = new System.Drawing.Point(231, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(216, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
