@@ -14,9 +14,9 @@ using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
-    public partial class Call: Form
+    public partial class frmCall: Form
     {
-        public Call()
+        public frmCall()
         {
             InitializeComponent();
             //this is to initiate the call
@@ -30,10 +30,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Randomize call
 
-            CallBLL call = new CallBLL();
-            IndividualClient client = call.RandomizeCall();
+            Call c = new Call();
+            IndividualClient client = c.RandomizeCall();
             caller = client.Name;
 
+            ObjectSerializer serializer = new ObjectSerializer();
+            serializer.SerializeIndividualClient(client);
+            
             //label1.Text
 
 
@@ -43,14 +46,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
-            counter = 0;
+            ObjectSerializer serializer = new ObjectSerializer();
 
-            CallCentre call = new CallCentre();
-            call.ibtnClientDetails.PerformClick();
-            
+            Call call = new Call();
+            call.AcceptCall(serializer.DeSerializeIndividualClient(), serializer.DeSerializeEmployee());
 
-            //ClientDetails frm = new ClientDetails();
-            //frm.Show();
+            serializer.SerializeCall(call);
+
+            ClientDetails frm = new ClientDetails();
+            frm.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

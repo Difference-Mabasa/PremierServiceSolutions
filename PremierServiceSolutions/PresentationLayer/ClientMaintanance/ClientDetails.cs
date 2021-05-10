@@ -29,14 +29,36 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private void ClientDetails_Load(object sender, EventArgs e)
         {
-            source.DataSource = individual.GetAllIndividualClients();
-            dgvDisplay.DataSource = source;
+            DBOperations db = new DBOperations();
+            db.ViewAllClients(dgvIndividualClients, dgvBusinessClients);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            bc = business.GetBusinessClientByID(txtSearchClient.Text);
+            txtID.Text = bc.clientID;
+            txtName.Text = bc.CompanyName;
+            txtPhone.Text = bc.Phone;
+            txtEmail.Text = bc.Email;
+            txtAddress.Text = bc.AddressID;
+            txtContract.Text = bc.ContractID;
+
+            ic = individual.GetIndividualClientByID(txtSearchClient.Text);
+            txtID.Text = ic.clientID;
+            txtName.Text = ic.Name;
+            txtSurname.Text = ic.Surname;
+            txtPhone.Text = ic.Phone;
+            txtEmail.Text = ic.Email;
+            txtAddress.Text = ic.AddressID;
+            txtContract.Text = ic.ContractID;
+
+
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            source.DataSource = DB.AllClients();
-            dgvDisplay.DataSource = source;
+            
         }
     }
 }

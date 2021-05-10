@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
-     class Contract
+    [Serializable]
+
+    class Contract
     {
-        string contractID;
-        string contractType;
-        string contractDesc;
-        double iPrice;
-        double bPrice;
+        string contractID, contractType, contractDesc;
+        decimal iPrice, bPrice;
         bool contractAvailable;
 
         public string ContractID { get => contractID; set => contractID = value; }
         public string ContractType { get => contractType; set => contractType = value; }
         public string ContractDesc { get => contractDesc; set => contractDesc = value; }
-        public double IPrice { get => iPrice; set => iPrice = value; }
-        public double BPrice { get => bPrice; set => bPrice = value; }
+        public decimal IPrice { get => iPrice; set => iPrice = value; }
+        public decimal BPrice { get => bPrice; set => bPrice = value; }
         public bool ContractAvailable { get => contractAvailable; set => contractAvailable = value; }
 
         //string serviceLevel;
 
 
 
-        public Contract(string contractID, string contractType,  string contractDesc, double iPrice, double bPrice) 
+        public Contract(string contractID, string contractType,  string contractDesc, decimal iPrice, decimal bPrice) 
         {
             this.ContractID = contractID;
             this.ContractType = contractType;

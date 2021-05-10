@@ -10,7 +10,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class ContractDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = DBAccess.GetSQLConnection();
 
         //list of all individual contracts
         //public List<Contract> GetContracts()
@@ -71,13 +71,14 @@ namespace PremierServiceSolutions.DataAccessLayer
         //    }
         //    return BContractList;
         //} 
-        
+
         public void UpdateContract(Contract cont)
         {
             string query = $"update Contracts set ContractID = '{cont.ContractID}', ContractType = '{cont.ContractType}', ContractDescription = '{cont.ContractDesc}', IndividualPrice = '{cont.IPrice}', BusinessPrice = '{cont.BPrice}', ContractAvailable = '{cont.ContractAvailable}' where ContractID = '{cont.ContractID}'";
             
             try
             {
+                conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader rdr = cmd.ExecuteReader();
                 MessageBox.Show("Updated Contract Successfully");
@@ -150,8 +151,8 @@ namespace PremierServiceSolutions.DataAccessLayer
                         c.ContractID = rdr.GetString(0);
                         c.ContractType = rdr.GetString(1);
                         c.ContractDesc = rdr.GetString(2);
-                        c.IPrice = rdr.GetDouble(3);
-                        c.BPrice = rdr.GetDouble(4);
+                        c.IPrice = rdr.GetDecimal(3);
+                        c.BPrice = rdr.GetDecimal(4);
                         c.ContractAvailable = rdr.GetBoolean(5);
                         allContracts.Add(c);
                     }

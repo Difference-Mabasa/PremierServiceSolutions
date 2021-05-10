@@ -23,7 +23,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         private void Technicians_Load(object sender, EventArgs e)
         {
             EmployeeBLL emp = new EmployeeBLL();
-            BusinessClientJobsBLL business = new BusinessClientJobsBLL();
+            DBOperations business = new DBOperations();
             BindingSource source = new BindingSource();
             source.DataSource = business.GetAllJobs();
             dataGridView1.DataSource = source;

@@ -33,7 +33,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvPreviousRequest = new System.Windows.Forms.DataGridView();
+            this.dgvPreviousRequests = new System.Windows.Forms.DataGridView();
             this.GbSearchStud = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearchClient = new System.Windows.Forms.TextBox();
@@ -41,9 +41,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvClientDetails = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequest)).BeginInit();
+            this.dgvCallHistory = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequests)).BeginInit();
             this.GbSearchStud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPhone
@@ -93,22 +96,22 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 279);
+            this.label3.Location = new System.Drawing.Point(44, 167);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 24);
+            this.label3.Size = new System.Drawing.Size(184, 24);
             this.label3.TabIndex = 51;
-            this.label3.Text = "Previous Request";
+            this.label3.Text = "Previous Requests";
             // 
-            // dgvPreviousRequest
+            // dgvPreviousRequests
             // 
-            this.dgvPreviousRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPreviousRequest.Location = new System.Drawing.Point(48, 310);
-            this.dgvPreviousRequest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dgvPreviousRequest.Name = "dgvPreviousRequest";
-            this.dgvPreviousRequest.Size = new System.Drawing.Size(559, 175);
-            this.dgvPreviousRequest.TabIndex = 50;
-            this.dgvPreviousRequest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreviousRequest_CellContentClick);
+            this.dgvPreviousRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPreviousRequests.Location = new System.Drawing.Point(48, 203);
+            this.dgvPreviousRequests.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvPreviousRequests.Name = "dgvPreviousRequests";
+            this.dgvPreviousRequests.Size = new System.Drawing.Size(559, 150);
+            this.dgvPreviousRequests.TabIndex = 50;
+            this.dgvPreviousRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreviousRequest_CellContentClick);
             // 
             // GbSearchStud
             // 
@@ -179,7 +182,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.dgvClientDetails.Location = new System.Drawing.Point(48, 55);
             this.dgvClientDetails.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvClientDetails.Name = "dgvClientDetails";
-            this.dgvClientDetails.Size = new System.Drawing.Size(559, 175);
+            this.dgvClientDetails.Size = new System.Drawing.Size(559, 93);
             this.dgvClientDetails.TabIndex = 46;
             this.dgvClientDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientDetails_CellContentClick);
             // 
@@ -195,17 +198,41 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label1.TabIndex = 45;
             this.label1.Text = "Client Details";
             // 
+            // dgvCallHistory
+            // 
+            this.dgvCallHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCallHistory.Location = new System.Drawing.Point(52, 402);
+            this.dgvCallHistory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvCallHistory.Name = "dgvCallHistory";
+            this.dgvCallHistory.Size = new System.Drawing.Size(559, 160);
+            this.dgvCallHistory.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(48, 375);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 24);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Call History";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // ClientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(797, 568);
+            this.ClientSize = new System.Drawing.Size(842, 574);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dgvCallHistory);
             this.Controls.Add(this.btnPhone);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvPreviousRequest);
+            this.Controls.Add(this.dgvPreviousRequests);
             this.Controls.Add(this.GbSearchStud);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dgvClientDetails);
@@ -216,10 +243,11 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ClientDetails";
             this.Text = "ClientDetails";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequests)).EndInit();
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCallHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +259,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvPreviousRequest;
+        private System.Windows.Forms.DataGridView dgvPreviousRequests;
         private System.Windows.Forms.GroupBox GbSearchStud;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearchClient;
@@ -239,5 +267,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgvClientDetails;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvCallHistory;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -30,17 +30,60 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
         }
 
-        public List<Object> AllClients()
+        public void ViewAllClients(DataGridView dgvIndividualClients, DataGridView dgvBusinessClients)
         {
-            List<Object> obj = new List<Object>();
-            IndividualClientDAL indiData = new IndividualClientDAL();
-            BusinessClientDAL busiData = new BusinessClientDAL();
-            List<IndividualClient> individual = indiData.GetAllIndividualClients();
-            List<BusinessClient> business = busiData.GetAllBusinessClients();
-            obj.Add(individual);
-            obj.Add(business);
-            return obj;
 
+            //Get lists of individual clients and business clients
+            IndividualClientDAL id = new IndividualClientDAL();
+            List<IndividualClient> individualClients = id.GetAllIndividualClients();
+
+            BusinessClientDAL bd = new BusinessClientDAL();
+            List<BusinessClient> businessClients = bd.GetAllBusinessClients();
+
+            //Create binding sources for both lists
+            BindingSource sourceI = new BindingSource();
+            sourceI.DataSource = individualClients;
+
+            BindingSource sourceB = new BindingSource();
+            sourceB.DataSource = businessClients;
+
+            //bind datagridviews to lists
+            dgvIndividualClients.DataSource = sourceI;
+
+            dgvBusinessClients.DataSource = sourceB;
+
+        }
+
+        //individually
+        public List<Job> Bjobs = new List<Job>();
+        public List<Job> Ijobs = new List<Job>();
+
+        public List<Job> GetAllJobs()
+        {
+            //for all clients
+            List<Job> jobs = new List<Job>();
+
+
+            try
+            {
+                BusinessClientJobsDAL getbus = new BusinessClientJobsDAL();
+                IndividualClientJobsDAL getindividual = new IndividualClientJobsDAL();
+                foreach (Job item in getindividual.GetAllIndividualJobs())
+                {
+                    Ijobs.Add(item);
+                    jobs.Add(item);
+                }
+                foreach (Job item in getbus.GetAllBusinessJobs())
+                {
+                    Bjobs.Add(item);
+                    jobs.Add(item);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error on Business Client Jobs {e.Message}");
+            }
+            return jobs;
         }
 
     }

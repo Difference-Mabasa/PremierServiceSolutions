@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PremierServiceSolutions
 {
+
+    [Serializable]
+
     abstract class Person
     {
         string name, surname, phone, email, addressID, contractID;
