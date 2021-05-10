@@ -90,7 +90,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
         }
 
-        public void ViewServices()
+        public List<string> ViewServices()
         {
             List<string> services = new List<string>();
             try
@@ -111,6 +111,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             {
                 MessageBox.Show("Unable to view services");
             }
+            return services;
         }
         public void InserctConract(Contract cont) 
         {
