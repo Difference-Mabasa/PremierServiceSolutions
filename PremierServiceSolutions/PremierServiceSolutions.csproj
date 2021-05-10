@@ -51,19 +51,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\BusinessClientBLL.cs" />
+    <Compile Include="BusinessLogicLayer\BusinessClientCallReportsBLL.cs" />
     <Compile Include="BusinessLogicLayer\BusinessClientJobsBLL.cs" />
-    <Compile Include="BusinessLogicLayer\CallBLL.cs" />
+    <Compile Include="BusinessLogicLayer\Call.cs" />
     <Compile Include="BusinessLogicLayer\ClientSatisfaction.cs" />
     <Compile Include="BusinessLogicLayer\ContractBLL.cs" />
     <Compile Include="BusinessLogicLayer\DBOperations.cs" />
     <Compile Include="BusinessLogicLayer\EmployeeBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientBLL.cs" />
+    <Compile Include="BusinessLogicLayer\IndividualClientCallReportsBLL.cs" />
     <Compile Include="BusinessLogicLayer\IndividualClientJobsBLL.cs" />
     <Compile Include="BusinessLogicLayer\JobRequestBLL.cs" />
+    <Compile Include="BusinessLogicLayer\ObjectSerializer.cs" />
+    <Compile Include="DataAccessLayer\BusinessClientCallReportsDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientDAL.cs" />
     <Compile Include="DataAccessLayer\BusinessClientJobsDAL.cs" />
+    <Compile Include="DataAccessLayer\DBAccess.cs" />
     <Compile Include="DataAccessLayer\EmployeeDAL.cs" />
     <Compile Include="DataAccessLayer\ContractDAL.cs" />
+    <Compile Include="DataAccessLayer\IndividualClientCallReportsDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientDAL.cs" />
     <Compile Include="DataAccessLayer\IndividualClientJobsDAL.cs" />
     <Compile Include="DataLayer\BusinessClient.cs" />
@@ -76,11 +82,11 @@
     <Compile Include="PresentationLayer\CallCentre\AddRequest.Designer.cs">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\CallCentre\Call.cs">
+    <Compile Include="PresentationLayer\CallCentre\frmCall.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\CallCentre\Call.Designer.cs">
-      <DependentUpon>Call.cs</DependentUpon>
+    <Compile Include="PresentationLayer\CallCentre\frmCall.Designer.cs">
+      <DependentUpon>frmCall.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\CallCentre\CallCentre.cs">
       <SubType>Form</SubType>
@@ -171,6 +177,12 @@
     <Compile Include="PresentationLayer\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\JobTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ServiceDapartment\JobTracking.Designer.cs">
+      <DependentUpon>JobTracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ServiceDapartment\Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,8 +206,8 @@
     <EmbeddedResource Include="PresentationLayer\CallCentre\AddRequest.resx">
       <DependentUpon>AddRequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\CallCentre\Call.resx">
-      <DependentUpon>Call.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\CallCentre\frmCall.resx">
+      <DependentUpon>frmCall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\CallCentre\CallCentre.resx">
       <DependentUpon>CallCentre.cs</DependentUpon>
@@ -238,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ServiceDapartment\JobTracking.resx">
+      <DependentUpon>JobTracking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ServiceDapartment\Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>

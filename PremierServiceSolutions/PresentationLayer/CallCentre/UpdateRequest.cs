@@ -30,7 +30,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             //Drops the call
 
-            Call call = new Call();
+            frmCall call = new frmCall();
 
             this.Hide();
             call.Show();

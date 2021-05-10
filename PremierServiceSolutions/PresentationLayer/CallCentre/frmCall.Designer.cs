@@ -1,6 +1,6 @@
 ﻿namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
-    partial class Call
+    partial class frmCall
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Decline";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -58,6 +59,7 @@
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Accept";
+            this.label2.Visible = false;
             // 
             // pictureBox3
             // 
@@ -68,6 +70,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // btnAcceptCall
             // 
@@ -78,6 +81,7 @@
             this.btnAcceptCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAcceptCall.TabIndex = 2;
             this.btnAcceptCall.TabStop = false;
+            this.btnAcceptCall.Visible = false;
             this.btnAcceptCall.Click += new System.EventHandler(this.btnAcceptCall_Click);
             // 
             // btnDeclineCall
@@ -89,21 +93,23 @@
             this.btnDeclineCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDeclineCall.TabIndex = 1;
             this.btnDeclineCall.TabStop = false;
+            this.btnDeclineCall.Visible = false;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(271, 167);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(288, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 22);
+            this.label4.Size = new System.Drawing.Size(0, 24);
             this.label4.TabIndex = 7;
-            this.label4.Text = "incomming call";
+            this.label4.Visible = false;
             // 
             // Call
             // 

@@ -11,7 +11,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class EmployeeDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = DBAccess.GetSQLConnection();
         SqlCommand cmd;
         string query;
 

@@ -12,7 +12,7 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class IndividualClientDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+        SqlConnection conn = DBAccess.GetSQLConnection();
 
 
         public IndividualClient SearchIndividualClientByID(string id)

@@ -14,9 +14,9 @@ using PremierServiceSolutions.BusinessLogicLayer;
 
 namespace PremierServiceSolutions.PresentationLayer.CallCentre
 {
-    public partial class Call: Form
+    public partial class frmCall: Form
     {
-        public Call()
+        public frmCall()
         {
             InitializeComponent();
             //this is to initiate the call
@@ -24,17 +24,20 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         }
         //just a variable
         int counter = 0;
+        public string caller;
 
         private void Call_Load(object sender, EventArgs e)
         {
             //Randomize call
 
-            CallBLL call = new CallBLL();
-            IndividualClient client = call.RandomizeCall();
+            Call c = new Call();
+            IndividualClient client = c.RandomizeCall();
+            caller = client.Name;
 
-            //lblCall.Text = $"Incoming cass from {client.Name}";
+            ObjectSerializer serializer = new ObjectSerializer();
+            serializer.SerializeIndividualClient(client);
+            
             //label1.Text
-            label4.Text = $"Incoming cass from {client.Name}";
 
 
             //this is to initiate the call
@@ -43,25 +46,15 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnAcceptCall_Click(object sender, EventArgs e)
         {
-            counter = 0;
+            ObjectSerializer serializer = new ObjectSerializer();
 
-            CallCentre call = new CallCentre();
-            this.Close();
-            call.OpenChildForm(new ClientDetails());
-            call.Show();
+            Call call = new Call();
+            call.AcceptCall(serializer.DeSerializeIndividualClient(), serializer.DeSerializeEmployee());
 
+            serializer.SerializeCall(call);
 
-
-
-
-
-
-
-
-
-
-            //ClientDetails frm = new ClientDetails();
-            //frm.Show();
+            ClientDetails frm = new ClientDetails();
+            frm.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -72,8 +65,13 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             //you will only answer the call after 1 second
             if (counter == 3)
             {
+                pictureBox3.Visible = true;
+                label4.Visible = true;
+                label4.Text = $"Incoming call from {caller}";
+                btnDeclineCall.Visible = true;
+                btnAcceptCall.Visible = true;
+                label2.Visible = true;
                 label1.Visible = true;
-
             }
 
             //this will come after 1 second after the call notification

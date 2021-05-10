@@ -45,6 +45,14 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             dgbDisplay.DataSource = technoguys;
         }
 
-        
+        private void btnJob_Click(object sender, EventArgs e)
+        {
+            //JobTracking
+
+            JobTracking jobs = new JobTracking();
+
+            this.Hide();
+            jobs.Show();
+        }
     }
 }

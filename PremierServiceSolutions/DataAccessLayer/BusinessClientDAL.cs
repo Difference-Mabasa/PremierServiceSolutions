@@ -11,7 +11,8 @@ namespace PremierServiceSolutions.DataAccessLayer
 {
     class BusinessClientDAL
     {
-        SqlConnection conn = new SqlConnection("Server= (local); Database = PremierServiceSolutionsDB; Trusted_Connection = true");
+         
+        SqlConnection conn = DBAccess.GetSQLConnection();
 
         public List<BusinessClient> GetAllBusinessClients()
         {

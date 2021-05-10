@@ -41,7 +41,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbPackage = new System.Windows.Forms.ComboBox();
             this.GbDisplayButtons = new System.Windows.Forms.GroupBox();
             this.btnBusiness = new System.Windows.Forms.Button();
             this.btnIndividual = new System.Windows.Forms.Button();
@@ -189,14 +189,14 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.dataGridView1.Size = new System.Drawing.Size(554, 282);
             this.dataGridView1.TabIndex = 41;
             // 
-            // comboBox1
+            // cmbPackage
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(160, 315);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 40;
+            this.cmbPackage.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPackage.FormattingEnabled = true;
+            this.cmbPackage.Location = new System.Drawing.Point(160, 315);
+            this.cmbPackage.Name = "cmbPackage";
+            this.cmbPackage.Size = new System.Drawing.Size(121, 26);
+            this.cmbPackage.TabIndex = 40;
             // 
             // GbDisplayButtons
             // 
@@ -254,7 +254,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbPackage);
             this.Controls.Add(this.GbDisplayButtons);
             this.Name = "Contracts";
             this.Text = "Contract";
@@ -280,7 +280,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbPackage;
         private System.Windows.Forms.GroupBox GbDisplayButtons;
         private System.Windows.Forms.Button btnBusiness;
         private System.Windows.Forms.Button btnIndividual;
