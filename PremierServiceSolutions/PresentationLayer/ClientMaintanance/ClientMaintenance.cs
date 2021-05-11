@@ -139,7 +139,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private void ibtnClientDetails_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new ClientDetails());
         }
 
@@ -151,13 +151,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private void ibtnUpdateClients_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new UpdateClient());
         }
 
         private void ibtnLogOout_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.color4);
             this.Hide();
             Form1 f1 = new Form1();
             f1.Show();
