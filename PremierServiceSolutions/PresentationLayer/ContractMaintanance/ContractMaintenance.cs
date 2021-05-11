@@ -132,7 +132,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new UpdateContract());
         }
-        private void ibtnAddClients_Click(object sender, EventArgs e)
+        private void ibtnAddContracts_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new AddContracts());
