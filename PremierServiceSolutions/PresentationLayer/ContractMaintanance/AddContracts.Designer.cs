@@ -130,7 +130,6 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.lblContract.Size = new System.Drawing.Size(128, 15);
             this.lblContract.TabIndex = 10;
             this.lblContract.Text = "Contract Available";
-            this.lblContract.Click += new System.EventHandler(this.lblContract_Click);
             // 
             // lblIP
             // 

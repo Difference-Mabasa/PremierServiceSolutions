@@ -50,7 +50,11 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             ContractMaintenance contracts = new ContractMaintenance();
             this.Show();
             contracts.OpenChildForm(new UpdateContract());
-      
+
+            this.Hide();
+            AddContracts addContracts = new AddContracts();
+            addContracts.Show();
+
         }
 
         private void btnIndividual_Click(object sender, EventArgs e)
@@ -62,13 +66,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             binder.DataSource = contractBLL.ViewAllContracts();
             dataGridView1.DataSource = binder;
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AddContracts addContracts = new AddContracts();
-            addContracts.Show();
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

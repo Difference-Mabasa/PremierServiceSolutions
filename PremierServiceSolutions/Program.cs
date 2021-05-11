@@ -28,7 +28,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ContractMaintenance());
+            Application.Run(new JobTracking());
         }
     }
 }
