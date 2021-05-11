@@ -131,5 +131,12 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         }
 
         int rowindexa;
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            ServiceDapartment service = new ServiceDapartment();
+            service.Show();
+            service.OpenChildForm(new Technicians());
+        }
     }
 }

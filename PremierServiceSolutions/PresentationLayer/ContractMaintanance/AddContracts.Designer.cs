@@ -204,6 +204,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnBack.Text = "Back";
             this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnAdd
             // 
@@ -222,6 +223,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnAdd.Text = "Add Contract";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AddContracts
             // 

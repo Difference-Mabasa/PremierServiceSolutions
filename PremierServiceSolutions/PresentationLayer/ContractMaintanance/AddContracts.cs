@@ -16,5 +16,17 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ContractMaintenance maintanance = new ContractMaintenance();
+            maintanance.Show();
+            maintanance.OpenChildForm(new Contracts());
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
