@@ -12,7 +12,7 @@ using FontAwesome.Sharp;
 
 
 using PremierServiceSolutions.PresentationLayer;
-using PremierServiceSolutions.PresentationLayer.ContractMaintanance;
+using PremierServiceSolutions.PresentationLayer.ClientMaintanance;
 using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
 
 namespace PremierServiceSolutions
@@ -28,7 +28,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ClientMaintenance());
         }
     }
 }

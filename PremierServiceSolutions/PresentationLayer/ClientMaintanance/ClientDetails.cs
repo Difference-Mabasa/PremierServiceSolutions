@@ -31,29 +31,33 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
             DBOperations db = new DBOperations();
             db.ViewAllClients(dgvIndividualClients, dgvBusinessClients);
+
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
-            bc = business.GetBusinessClientByID(txtSearchClient.Text);
-            txtID.Text = bc.clientID;
-            txtName.Text = bc.CompanyName;
-            txtPhone.Text = bc.Phone;
-            txtEmail.Text = bc.Email;
-            txtAddress.Text = bc.AddressID;
-            txtContract.Text = bc.ContractID;
-
-            ic = individual.GetIndividualClientByID(txtSearchClient.Text);
-            txtID.Text = ic.clientID;
-            txtName.Text = ic.Name;
-            txtSurname.Text = ic.Surname;
-            txtPhone.Text = ic.Phone;
-            txtEmail.Text = ic.Email;
-            txtAddress.Text = ic.AddressID;
-            txtContract.Text = ic.ContractID;
-
-
+            if (txtSearchClient.Text.Contains("I"))
+            {
+                ic = individual.GetIndividualClientByID(txtSearchClient.Text);
+                txtID.Text = ic.clientID;
+                txtName.Text = ic.Name;
+                txtSurname.Text = ic.Surname;
+                txtPhone.Text = ic.Phone;
+                txtEmail.Text = ic.Email;
+                txtAddress.Text = ic.AddressID;
+                txtContract.Text = ic.ContractID;
+            }
+            else
+            {
+                bc = business.GetBusinessClientByID(txtSearchClient.Text);
+                txtID.Text = bc.clientID;
+                txtName.Text = bc.CompanyName;
+                txtPhone.Text = bc.Phone;
+                txtEmail.Text = bc.Email;
+                txtAddress.Text = bc.AddressID;
+                txtContract.Text = bc.ContractID;
+            }
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
