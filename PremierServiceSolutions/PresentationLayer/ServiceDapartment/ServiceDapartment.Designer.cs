@@ -41,6 +41,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.ipbChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.ibtnJobTracking = new FontAwesome.Sharp.IconButton();
             this.ibtnLogOout = new FontAwesome.Sharp.IconButton();
             this.ibtnSchedule = new FontAwesome.Sharp.IconButton();
             this.ibtnTechnicians = new FontAwesome.Sharp.IconButton();
@@ -65,7 +66,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDesktop.Location = new System.Drawing.Point(188, 80);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(796, 669);
+            this.pnlDesktop.Size = new System.Drawing.Size(801, 669);
             this.pnlDesktop.TabIndex = 6;
             // 
             // lblDate
@@ -111,7 +112,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(188, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(796, 80);
+            this.pnlTitle.Size = new System.Drawing.Size(801, 80);
             this.pnlTitle.TabIndex = 5;
             // 
             // btnClose
@@ -125,7 +126,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(757, 0);
+            this.btnClose.Location = new System.Drawing.Point(762, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(39, 15);
             this.btnClose.TabIndex = 63;
@@ -144,7 +145,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnMax.IconColor = System.Drawing.Color.White;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 15;
-            this.btnMax.Location = new System.Drawing.Point(731, 0);
+            this.btnMax.Location = new System.Drawing.Point(736, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(39, 15);
             this.btnMax.TabIndex = 62;
@@ -163,7 +164,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 15;
-            this.btnMin.Location = new System.Drawing.Point(702, 0);
+            this.btnMin.Location = new System.Drawing.Point(707, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(39, 15);
             this.btnMin.TabIndex = 61;
@@ -198,6 +199,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.ibtnJobTracking);
             this.pnlMenu.Controls.Add(this.ibtnLogOout);
             this.pnlMenu.Controls.Add(this.ibtnSchedule);
             this.pnlMenu.Controls.Add(this.ibtnTechnicians);
@@ -207,6 +209,29 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(188, 749);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // ibtnJobTracking
+            // 
+            this.ibtnJobTracking.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnJobTracking.FlatAppearance.BorderSize = 0;
+            this.ibtnJobTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnJobTracking.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnJobTracking.ForeColor = System.Drawing.Color.White;
+            this.ibtnJobTracking.IconChar = FontAwesome.Sharp.IconChar.ShippingFast;
+            this.ibtnJobTracking.IconColor = System.Drawing.Color.White;
+            this.ibtnJobTracking.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnJobTracking.IconSize = 40;
+            this.ibtnJobTracking.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnJobTracking.Location = new System.Drawing.Point(0, 279);
+            this.ibtnJobTracking.Name = "ibtnJobTracking";
+            this.ibtnJobTracking.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnJobTracking.Size = new System.Drawing.Size(188, 60);
+            this.ibtnJobTracking.TabIndex = 6;
+            this.ibtnJobTracking.Text = "Job Tracking";
+            this.ibtnJobTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnJobTracking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnJobTracking.UseVisualStyleBackColor = true;
+            this.ibtnJobTracking.Click += new System.EventHandler(this.ibtnJobTracking_Click);
             // 
             // ibtnLogOout
             // 
@@ -308,7 +333,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.ClientSize = new System.Drawing.Size(989, 749);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
@@ -347,5 +372,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMax;
         private FontAwesome.Sharp.IconButton btnMin;
+        private FontAwesome.Sharp.IconButton ibtnJobTracking;
     }
 }

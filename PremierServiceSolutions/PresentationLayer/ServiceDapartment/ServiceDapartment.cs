@@ -119,14 +119,21 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void ibtnTechnicians_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new Technicians());
         }
 
         private void ibtnSchedule_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new Schedule());
+        }
+
+
+        private void ibtnJobTracking_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new JobTracking());
         }
 
         private void ibtnLogOout_Click(object sender, EventArgs e)
@@ -136,6 +143,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             Form1 f1 = new Form1();
             f1.Show();
         }
+
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -192,5 +200,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
     }
 }
