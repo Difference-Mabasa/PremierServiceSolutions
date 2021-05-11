@@ -48,10 +48,14 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             ObjectSerializer serializer = new ObjectSerializer();
 
-            CallCentre call = new CallCentre();
-            call.ibtnClientDetails.PerformClick();
-
+            Call call = new Call();
+            call.AcceptCall(serializer.DeSerializeIndividualClient(), serializer.DeSerializeEmployee());
             serializer.SerializeCall(call);
+
+            CallCentre callC = new CallCentre();
+            callC.ibtnClientDetails.PerformClick();
+
+            
 
             ClientDetails frm = new ClientDetails();
             frm.Show();
