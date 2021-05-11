@@ -47,6 +47,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.IbtnJobtracking = new FontAwesome.Sharp.IconButton();
             this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
@@ -63,9 +64,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlDesktop.Controls.Add(this.lblTime);
             this.pnlDesktop.Controls.Add(this.pictureBox1);
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(188, 80);
+            this.pnlDesktop.Location = new System.Drawing.Point(251, 98);
+            this.pnlDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(796, 669);
+            this.pnlDesktop.Size = new System.Drawing.Size(1061, 824);
             this.pnlDesktop.TabIndex = 6;
             // 
             // lblDate
@@ -73,9 +75,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(228, 387);
+            this.lblDate.Location = new System.Drawing.Point(304, 476);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(72, 31);
+            this.lblDate.Size = new System.Drawing.Size(89, 39);
             this.lblDate.TabIndex = 8;
             this.lblDate.Text = "Date";
             // 
@@ -84,18 +87,20 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(228, 340);
+            this.lblTime.Location = new System.Drawing.Point(304, 418);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(74, 31);
+            this.lblTime.Size = new System.Drawing.Size(93, 39);
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "Time";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.service;
-            this.pictureBox1.Location = new System.Drawing.Point(198, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 97);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(309, 295);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -109,9 +114,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlTitle.Controls.Add(this.lblTitleChildForm);
             this.pnlTitle.Controls.Add(this.ipbChildForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(188, 0);
+            this.pnlTitle.Location = new System.Drawing.Point(251, 0);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(796, 80);
+            this.pnlTitle.Size = new System.Drawing.Size(1061, 98);
             this.pnlTitle.TabIndex = 5;
             // 
             // btnClose
@@ -125,9 +131,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(757, 0);
+            this.btnClose.Location = new System.Drawing.Point(1009, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(39, 15);
+            this.btnClose.Size = new System.Drawing.Size(52, 18);
             this.btnClose.TabIndex = 63;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -144,9 +151,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnMax.IconColor = System.Drawing.Color.White;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 15;
-            this.btnMax.Location = new System.Drawing.Point(731, 0);
+            this.btnMax.Location = new System.Drawing.Point(975, 0);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(39, 15);
+            this.btnMax.Size = new System.Drawing.Size(52, 18);
             this.btnMax.TabIndex = 62;
             this.btnMax.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMax.UseVisualStyleBackColor = true;
@@ -163,9 +171,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 15;
-            this.btnMin.Location = new System.Drawing.Point(702, 0);
+            this.btnMin.Location = new System.Drawing.Point(936, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(39, 15);
+            this.btnMin.Size = new System.Drawing.Size(52, 18);
             this.btnMin.TabIndex = 61;
             this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMin.UseVisualStyleBackColor = true;
@@ -176,9 +185,10 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(40, 33);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(53, 41);
+            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(52, 20);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(64, 25);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -189,23 +199,27 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ipbChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.ipbChildForm.IconColor = System.Drawing.Color.LightSeaGreen;
             this.ipbChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ipbChildForm.Location = new System.Drawing.Point(7, 27);
+            this.ipbChildForm.IconSize = 39;
+            this.ipbChildForm.Location = new System.Drawing.Point(9, 33);
+            this.ipbChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ipbChildForm.Name = "ipbChildForm";
-            this.ipbChildForm.Size = new System.Drawing.Size(32, 32);
+            this.ipbChildForm.Size = new System.Drawing.Size(43, 39);
             this.ipbChildForm.TabIndex = 0;
             this.ipbChildForm.TabStop = false;
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.IbtnJobtracking);
             this.pnlMenu.Controls.Add(this.ibtnLogOout);
             this.pnlMenu.Controls.Add(this.ibtnSchedule);
             this.pnlMenu.Controls.Add(this.ibtnTechnicians);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(188, 749);
+            this.pnlMenu.Size = new System.Drawing.Size(251, 922);
             this.pnlMenu.TabIndex = 4;
             // 
             // ibtnLogOout
@@ -220,10 +234,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnLogOout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogOout.IconSize = 40;
             this.ibtnLogOout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogOout.Location = new System.Drawing.Point(0, 689);
+            this.ibtnLogOout.Location = new System.Drawing.Point(0, 848);
+            this.ibtnLogOout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ibtnLogOout.Name = "ibtnLogOout";
-            this.ibtnLogOout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnLogOout.Size = new System.Drawing.Size(188, 60);
+            this.ibtnLogOout.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.ibtnLogOout.Size = new System.Drawing.Size(251, 74);
             this.ibtnLogOout.TabIndex = 5;
             this.ibtnLogOout.Text = " Log Out";
             this.ibtnLogOout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,10 +258,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnSchedule.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSchedule.IconSize = 40;
             this.ibtnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnSchedule.Location = new System.Drawing.Point(0, 219);
+            this.ibtnSchedule.Location = new System.Drawing.Point(0, 270);
+            this.ibtnSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ibtnSchedule.Name = "ibtnSchedule";
-            this.ibtnSchedule.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnSchedule.Size = new System.Drawing.Size(188, 60);
+            this.ibtnSchedule.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.ibtnSchedule.Size = new System.Drawing.Size(251, 74);
             this.ibtnSchedule.TabIndex = 2;
             this.ibtnSchedule.Text = "Schedule";
             this.ibtnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,10 +282,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.ibtnTechnicians.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnTechnicians.IconSize = 40;
             this.ibtnTechnicians.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnTechnicians.Location = new System.Drawing.Point(0, 159);
+            this.ibtnTechnicians.Location = new System.Drawing.Point(0, 196);
+            this.ibtnTechnicians.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ibtnTechnicians.Name = "ibtnTechnicians";
-            this.ibtnTechnicians.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnTechnicians.Size = new System.Drawing.Size(188, 60);
+            this.ibtnTechnicians.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.ibtnTechnicians.Size = new System.Drawing.Size(251, 74);
             this.ibtnTechnicians.TabIndex = 1;
             this.ibtnTechnicians.Text = "Technicians";
             this.ibtnTechnicians.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,18 +299,20 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.pnlLogo.Controls.Add(this.btnHome);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 159);
+            this.pnlLogo.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.pnlLogo.Size = new System.Drawing.Size(251, 196);
             this.pnlLogo.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.pss2;
-            this.btnHome.Location = new System.Drawing.Point(10, 0);
+            this.btnHome.Location = new System.Drawing.Point(13, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(168, 159);
+            this.btnHome.Size = new System.Drawing.Size(225, 196);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -304,14 +323,39 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // IbtnJobtracking
+            // 
+            this.IbtnJobtracking.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IbtnJobtracking.FlatAppearance.BorderSize = 0;
+            this.IbtnJobtracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IbtnJobtracking.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnJobtracking.ForeColor = System.Drawing.Color.White;
+            this.IbtnJobtracking.IconChar = FontAwesome.Sharp.IconChar.ShippingFast;
+            this.IbtnJobtracking.IconColor = System.Drawing.Color.White;
+            this.IbtnJobtracking.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnJobtracking.IconSize = 40;
+            this.IbtnJobtracking.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnJobtracking.Location = new System.Drawing.Point(0, 344);
+            this.IbtnJobtracking.Margin = new System.Windows.Forms.Padding(4);
+            this.IbtnJobtracking.Name = "IbtnJobtracking";
+            this.IbtnJobtracking.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.IbtnJobtracking.Size = new System.Drawing.Size(251, 74);
+            this.IbtnJobtracking.TabIndex = 6;
+            this.IbtnJobtracking.Text = "Job Tracking ";
+            this.IbtnJobtracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnJobtracking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnJobtracking.UseVisualStyleBackColor = true;
+            this.IbtnJobtracking.Click += new System.EventHandler(this.IbtnJobtracking_Click);
+            // 
             // ServiceDapartment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.ClientSize = new System.Drawing.Size(1312, 922);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ServiceDapartment";
             this.Text = "ServiceDapartment";
             this.Load += new System.EventHandler(this.ServiceDapartment_Load);
@@ -347,5 +391,6 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMax;
         private FontAwesome.Sharp.IconButton btnMin;
+        private FontAwesome.Sharp.IconButton IbtnJobtracking;
     }
 }

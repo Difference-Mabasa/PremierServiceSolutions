@@ -58,7 +58,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             IndividualClientJobsBLL indiv = new IndividualClientJobsBLL();
             BusinessClientJobsBLL busin = new BusinessClientJobsBLL();
 
-             DataGridViewRow row = dataGridView1.Rows[rowindexa];
+            DataGridViewRow row = dataGridView1.Rows[rowindexa];
 
             Job jobb = new Job();
 
@@ -131,5 +131,42 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         }
 
         int rowindexa;
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (button1.Text == "Individuals")
+            {
+                button1.Text = "Business";
+                //call method
+                Individual();
+
+            }
+            else if (button1.Text == "Business")
+            {
+                button1.Text = "All";
+                //call method
+                Business();
+            }
+            else
+            {
+                button1.Text = "Individuals";
+                //call method
+                ALL();
+
+            }
+        }
+
+        private void btnStatusUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            Technicians technicians = new Technicians();
+
+            this.Hide();
+            technicians.Show();
+        }
     }
 }

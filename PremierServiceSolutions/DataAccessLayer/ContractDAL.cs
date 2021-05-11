@@ -113,18 +113,16 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return services;
         }
-        public void InserctConract(Contract cont) 
+        public void InsertConract(Contract cont) 
         {
-            //string id = contractID;
-            //string type = contractType;
-            //double price = contractPrice;
-            //string level = serviceLevel;
 
             try
             {
-                string query = $"Insert Into Contracts(ContractID, ContractType, ContractDescription, IndividualPrice, BusinessPrice, ContractAvailable) Values('{cont.ContractID}', '{cont.ContractType}', '{cont.ContractDesc}', '{cont.IPrice}', '{cont.BPrice}','{cont.ContractAvailable}')";
+                conn.Open();
+                string query = $"Insert Into Contracts(ContractID, ContractType, ContractDescription, IndividualPrice, BusinessPrice, ContractAvailable) values('{cont.ContractID}', '{cont.ContractType}', '{cont.ContractDesc}', '{cont.IPrice}', '{cont.BPrice}','{cont.ContractAvailable}')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-
+                cmd.ExecuteNonQuery();
+                MessageBox.Show($"Successfully Added Contract ");
             }
             catch (Exception e)
             {

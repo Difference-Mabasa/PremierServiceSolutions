@@ -38,9 +38,18 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
-        {       
-            ContractMaintenance contracts = new ContractMaintenance();         
-            contracts.OpenChildForm(new UpdateContract());
+        {
+            ContractMaintenance maintanance = new ContractMaintenance();
+            maintanance.Show();
+            maintanance.OpenChildForm(new UpdateContract());
+            this.Hide();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            ContractMaintenance maintanance = new ContractMaintenance();
+            maintanance.Show();
+            maintanance.OpenChildForm(new AddContracts());
             this.Hide();
         }
     }

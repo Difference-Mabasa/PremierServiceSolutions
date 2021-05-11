@@ -201,5 +201,11 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void IbtnADDCont_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new AddContracts());
+        }
     }
 }

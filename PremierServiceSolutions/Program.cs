@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
-
 using PremierServiceSolutions.PresentationLayer;
+using PremierServiceSolutions.PresentationLayer.ClientMaintanance;
 using PremierServiceSolutions.PresentationLayer.ContractMaintanance;
 using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
 
@@ -27,8 +27,9 @@ namespace PremierServiceSolutions
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);Application.Run(new ClientMaintenance());
             Application.Run(new Form1());
+            //Application.Run(new ServiceDapartment());
         }
     }
 }

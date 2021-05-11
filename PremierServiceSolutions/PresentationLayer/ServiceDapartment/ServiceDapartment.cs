@@ -129,6 +129,12 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             OpenChildForm(new Schedule());
         }
 
+        private void IbtnJobtracking_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new JobTracking());
+        }
+
         private void ibtnLogOout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
@@ -192,5 +198,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }

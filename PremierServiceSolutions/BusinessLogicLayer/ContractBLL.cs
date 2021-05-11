@@ -97,5 +97,18 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             }
            
         }
+
+        public void InsertContract(Contract con)
+        {
+            try
+            {
+                ContractDAL contracts = new ContractDAL();
+                contracts.InsertConract(con);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error: {e.Message}");
+            }
+        }
     }
 }

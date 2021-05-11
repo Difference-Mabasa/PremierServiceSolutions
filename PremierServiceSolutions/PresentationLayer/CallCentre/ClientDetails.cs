@@ -57,8 +57,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
             //Search for client's previous job requests
 
-            //ObjectSerializer serializer = new ObjectSerializer();
-            //IndividualClient client = serializer.DeSerializeIndividualClient();
+            ObjectSerializer serializer = new ObjectSerializer();
+            IndividualClient client = serializer.DeSerializeIndividualClient();
 
             IndividualClientJobsBLL data = new IndividualClientJobsBLL();
             List <Job> clientJobs = data.GetIndividualClientJobByClientID(id);
