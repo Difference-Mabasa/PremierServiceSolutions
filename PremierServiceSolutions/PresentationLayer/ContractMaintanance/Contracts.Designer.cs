@@ -100,6 +100,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add Contract";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblPrice
             // 
@@ -188,6 +189,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(554, 282);
             this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cmbPackage
             // 
@@ -238,6 +240,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnIndividual.TabIndex = 0;
             this.btnIndividual.Text = "Individual";
             this.btnIndividual.UseVisualStyleBackColor = false;
+            this.btnIndividual.Click += new System.EventHandler(this.btnIndividual_Click);
             // 
             // Contracts
             // 

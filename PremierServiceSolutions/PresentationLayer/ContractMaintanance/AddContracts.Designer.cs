@@ -34,13 +34,11 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblBP = new System.Windows.Forms.Label();
             this.lblContract = new System.Windows.Forms.Label();
             this.lblIP = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.ContractID = new System.Windows.Forms.Label();
@@ -55,13 +53,11 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.GbCD.Controls.Add(this.txtEmail);
             this.GbCD.Controls.Add(this.txtName);
             this.GbCD.Controls.Add(this.txtSurname);
-            this.GbCD.Controls.Add(this.txtAddress);
             this.GbCD.Controls.Add(this.txtPhone);
             this.GbCD.Controls.Add(this.txtID);
             this.GbCD.Controls.Add(this.lblBP);
             this.GbCD.Controls.Add(this.lblContract);
             this.GbCD.Controls.Add(this.lblIP);
-            this.GbCD.Controls.Add(this.lblAddress);
             this.GbCD.Controls.Add(this.lblDes);
             this.GbCD.Controls.Add(this.lblType);
             this.GbCD.Controls.Add(this.ContractID);
@@ -76,7 +72,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             // 
             // txtContract
             // 
-            this.txtContract.Location = new System.Drawing.Point(134, 230);
+            this.txtContract.Location = new System.Drawing.Point(134, 209);
             this.txtContract.Name = "txtContract";
             this.txtContract.Size = new System.Drawing.Size(100, 23);
             this.txtContract.TabIndex = 18;
@@ -101,13 +97,6 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(100, 23);
             this.txtSurname.TabIndex = 15;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(134, 194);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 23);
-            this.txtAddress.TabIndex = 14;
             // 
             // txtPhone
             // 
@@ -136,11 +125,12 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             // lblContract
             // 
             this.lblContract.AutoSize = true;
-            this.lblContract.Location = new System.Drawing.Point(14, 230);
+            this.lblContract.Location = new System.Drawing.Point(0, 209);
             this.lblContract.Name = "lblContract";
-            this.lblContract.Size = new System.Drawing.Size(65, 15);
+            this.lblContract.Size = new System.Drawing.Size(128, 15);
             this.lblContract.TabIndex = 10;
-            this.lblContract.Text = "Contract";
+            this.lblContract.Text = "Contract Available";
+            this.lblContract.Click += new System.EventHandler(this.lblContract_Click);
             // 
             // lblIP
             // 
@@ -150,15 +140,6 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.lblIP.Size = new System.Drawing.Size(108, 15);
             this.lblIP.TabIndex = 4;
             this.lblIP.Text = "Individual Price";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(14, 197);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(60, 15);
-            this.lblAddress.TabIndex = 3;
-            this.lblAddress.Text = "Address";
             // 
             // lblDes
             // 
@@ -222,6 +203,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnAdd.Text = "Add Contract";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // AddContracts
             // 
@@ -249,13 +231,11 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblBP;
         private System.Windows.Forms.Label lblContract;
         private System.Windows.Forms.Label lblIP;
-        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label ContractID;

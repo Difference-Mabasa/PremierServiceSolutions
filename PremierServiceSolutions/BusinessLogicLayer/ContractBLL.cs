@@ -15,6 +15,13 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         Contract contract = new Contract();
         DataAccessLayer.ContractDAL contractDAL = new DataAccessLayer.ContractDAL();
 
+        //insert contracts
+        public void AddContract(Contract cont) 
+        {
+            ContractDAL contractDAL = new ContractDAL();
+            contractDAL.InsertContract(cont);
+        }
+        
         //list of individual contracts
         public List<Contract> GetContacts()
         {
@@ -23,12 +30,6 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 
             return contracts;
         }
-        //list of business contracts
-        //public void Bcontact()
-        //{
-        //     DataAccessLayer.ContractDAL contractDAL = new DataAccessLayer.ContractDAL();
-        //    contractDAL.BusinessContracts();
-        //}
        
         //update contract method to connect to update contract form
         public void UpdateContract(Contract cont)
@@ -37,57 +38,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             contractDAL.UpdateContract(cont);
         }
 
-        //public void NewIndividualContract(string contractID, string contractType, string contractDesc, double contractPrice, string serviceLevel)
-        //{
-        //    int cAvail = 50;
-
-        //    if (contractType == "standard")
-        //    {
-        //        contractPrice = 700;
-        //    }
-        //    else if(contractType == "premium")
-        //    {
-        //        contractPrice = 1400;
-        //    }
-        //    if (cAvail > 0 && cAvail < 50)
-        //    {
-        //        contractAvailable = true;
-        //        contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-        //        //contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-        //    }
-        //    else 
-        //    {
-        //        contractAvailable = false;
-        //        MessageBox.Show("failed to mak econtract");
-        //    }
-            
-        //}
-        //public void NewBusinessContract(string contractID, string contractType, string contractDesc, double contractPrice, string serviceLevel)
-        //{
-
-        //    if (contractType == "standard")
-        //    {
-        //        contractPrice = 1400;
-        //    }
-        //    else if (contractType == "premium")
-        //    {
-        //        contractPrice = 2800;
-        //    }
-            
-        //    int cAvail = 50;
-        //    if (cAvail > 0 && cAvail < 50)
-        //    {
-        //        contractAvailable = true;
-        //        contract = new Contract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-        //        //contractDAL.InsertContract(contractID, contractType, contractDesc, contractPrice, serviceLevel);
-        //    }
-        //    else
-        //    {
-        //        contractAvailable = false;
-        //        MessageBox.Show("failed to mak econtract");
-        //    }
-        //}
-        public void ViewAllContracts() 
+    
+        public List<Contract> ViewAllContracts() 
         {
             List<Contract> contracts = new List<Contract>();
 
@@ -95,7 +47,7 @@ namespace PremierServiceSolutions.BusinessLogicLayer
             {
                 contracts.Add(item);
             }
-           
+            return contracts;
         }
     }
 }

@@ -12,66 +12,6 @@ namespace PremierServiceSolutions.DataAccessLayer
     {
         SqlConnection conn = DBAccess.GetSQLConnection();
 
-        //list of all individual contracts
-        //public List<Contract> GetContracts()
-        //{
-        //    List<Contract> contractList = new List<Contract>();
-        //    try
-        //    {
-        //        string query = "select * From Contracts";
-        //        SqlCommand cmd = new SqlCommand(query, conn);   
-        //        SqlDataReader rdr = cmd.ExecuteReader();
-
-        //        if (rdr.HasRows)
-        //        {
-        //            while (rdr.Read())
-        //            {
-        //                Contract c = new Contract();
-        //                c.ContractID = rdr.GetString(0);
-        //                c.ContractType = rdr.GetString(1);
-        //                c.ContractDesc = rdr.GetString(2);
-        //                c.IPrice = rdr.GetDouble(3);
-        //                c.BPrice = rdr.GetDouble(4);
-        //                c.ContractAvailable = rdr.GetBoolean(5);
-        //                contractList.Add(c);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show($"cant get individual contract list {e.Message}");
-        //    }
-        //    return contractList;
-        //}
-        //list of all business contracts
-        //public List<Contract> GetBusinessContracts()
-        //{
-        //    List<Contract> bContractList = new List<Contract>();
-        //    try
-        //    {
-        //        string query = "select * From Contracts";
-        //        SqlCommand cmd = new SqlCommand(query, conn);   
-        //        SqlDataReader rdr = cmd.ExecuteReader();
-
-        //        if (rdr.HasRows)
-        //        {
-        //            while (rdr.Read())
-        //            {
-        //                Contract c = new Contract();
-        //                c.ContractType = rdr.GetString(0);
-        //                c.ContractDesc = rdr.GetString(1);
-        //                c.ContractPrice = rdr.GetDouble(2);
-        //                BContractList.Add(c);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show($"cant get business contract list {e.Message}");
-        //    }
-        //    return BContractList;
-        //} 
-
         public void UpdateContract(Contract cont)
         {
             string query = $"update Contracts set ContractID = '{cont.ContractID}', ContractType = '{cont.ContractType}', ContractDescription = '{cont.ContractDesc}', IndividualPrice = '{cont.IPrice}', BusinessPrice = '{cont.BPrice}', ContractAvailable = '{cont.ContractAvailable}' where ContractID = '{cont.ContractID}'";
@@ -113,12 +53,8 @@ namespace PremierServiceSolutions.DataAccessLayer
             }
             return services;
         }
-        public void InserctConract(Contract cont) 
+        public void InsertContract(Contract cont) 
         {
-            //string id = contractID;
-            //string type = contractType;
-            //double price = contractPrice;
-            //string level = serviceLevel;
 
             try
             {

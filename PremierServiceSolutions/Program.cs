@@ -14,6 +14,7 @@ using FontAwesome.Sharp;
 using PremierServiceSolutions.PresentationLayer;
 using PremierServiceSolutions.PresentationLayer.ClientMaintanance;
 using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
+using PremierServiceSolutions.PresentationLayer.ContractMaintanance;
 
 namespace PremierServiceSolutions
 {
@@ -28,7 +29,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClientMaintenance());
+            Application.Run(new Contracts());
         }
     }
 }
