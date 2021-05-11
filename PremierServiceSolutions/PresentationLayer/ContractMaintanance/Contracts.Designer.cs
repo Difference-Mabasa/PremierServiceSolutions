@@ -100,6 +100,7 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add Contract";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblPrice
             // 

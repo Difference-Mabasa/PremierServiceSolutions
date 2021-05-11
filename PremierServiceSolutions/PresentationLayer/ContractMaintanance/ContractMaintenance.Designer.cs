@@ -33,26 +33,27 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.pnlDesktop = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblTitleChildForm = new System.Windows.Forms.Label();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnMax = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.ipbChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.ibtnLogOout = new FontAwesome.Sharp.IconButton();
             this.ibtnUpdateContracts = new FontAwesome.Sharp.IconButton();
             this.ibtnContracts = new FontAwesome.Sharp.IconButton();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ibtnAddClients = new FontAwesome.Sharp.IconButton();
             this.pnlDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ipbChildForm)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ipbChildForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +92,16 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.lblTime.Text = "Time";
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.contract1;
+            this.pictureBox1.Location = new System.Drawing.Point(208, 72);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
@@ -105,55 +116,6 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.pnlTitle.Size = new System.Drawing.Size(796, 74);
             this.pnlTitle.TabIndex = 8;
             this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
-            // 
-            // lblTitleChildForm
-            // 
-            this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(40, 33);
-            this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(54, 18);
-            this.lblTitleChildForm.TabIndex = 1;
-            this.lblTitleChildForm.Text = "Home";
-            // 
-            // pnlMenu
-            // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.pnlMenu.Controls.Add(this.ibtnLogOout);
-            this.pnlMenu.Controls.Add(this.ibtnUpdateContracts);
-            this.pnlMenu.Controls.Add(this.ibtnContracts);
-            this.pnlMenu.Controls.Add(this.pnlLogo);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(188, 749);
-            this.pnlMenu.TabIndex = 7;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.btnHome);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 146);
-            this.pnlLogo.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PremierServiceSolutions.Properties.Resources.contract1;
-            this.pictureBox1.Location = new System.Drawing.Point(208, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 240);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // btnClose
             // 
@@ -212,6 +174,17 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnMin.UseVisualStyleBackColor = true;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
+            // lblTitleChildForm
+            // 
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(40, 33);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(54, 18);
+            this.lblTitleChildForm.TabIndex = 1;
+            this.lblTitleChildForm.Text = "Home";
+            // 
             // ipbChildForm
             // 
             this.ipbChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
@@ -224,6 +197,20 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.ipbChildForm.Size = new System.Drawing.Size(32, 32);
             this.ipbChildForm.TabIndex = 0;
             this.ipbChildForm.TabStop = false;
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.ibtnAddClients);
+            this.pnlMenu.Controls.Add(this.ibtnLogOout);
+            this.pnlMenu.Controls.Add(this.ibtnUpdateContracts);
+            this.pnlMenu.Controls.Add(this.ibtnContracts);
+            this.pnlMenu.Controls.Add(this.pnlLogo);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(188, 749);
+            this.pnlMenu.TabIndex = 7;
             // 
             // ibtnLogOout
             // 
@@ -294,6 +281,16 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.ibtnContracts.UseVisualStyleBackColor = true;
             this.ibtnContracts.Click += new System.EventHandler(this.ibtnContracts_Click);
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.btnHome);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.pnlLogo.Size = new System.Drawing.Size(188, 146);
+            this.pnlLogo.TabIndex = 0;
+            // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -305,6 +302,34 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ibtnAddClients
+            // 
+            this.ibtnAddClients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnAddClients.FlatAppearance.BorderSize = 0;
+            this.ibtnAddClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnAddClients.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnAddClients.ForeColor = System.Drawing.Color.White;
+            this.ibtnAddClients.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.ibtnAddClients.IconColor = System.Drawing.Color.White;
+            this.ibtnAddClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnAddClients.IconSize = 40;
+            this.ibtnAddClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnAddClients.Location = new System.Drawing.Point(0, 266);
+            this.ibtnAddClients.Name = "ibtnAddClients";
+            this.ibtnAddClients.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnAddClients.Size = new System.Drawing.Size(188, 60);
+            this.ibtnAddClients.TabIndex = 6;
+            this.ibtnAddClients.Text = "Add Clients";
+            this.ibtnAddClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnAddClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnAddClients.UseVisualStyleBackColor = true;
+            this.ibtnAddClients.Click += new System.EventHandler(this.ibtnAddClients_Click);
             // 
             // ContractMaintenance
             // 
@@ -321,12 +346,12 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             this.Load += new System.EventHandler(this.ContractMaintenance_Load);
             this.pnlDesktop.ResumeLayout(false);
             this.pnlDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ipbChildForm)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ipbChildForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
@@ -351,5 +376,6 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMax;
         private FontAwesome.Sharp.IconButton btnMin;
+        private FontAwesome.Sharp.IconButton ibtnAddClients;
     }
 }
