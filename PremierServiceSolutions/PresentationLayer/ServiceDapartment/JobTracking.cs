@@ -121,13 +121,13 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
             DataGridViewRow row = dataGridView1.Rows[rowindexa];
 
-            lbltest.Text = row.Cells[0].Value.ToString();
-            label1.Text = row.Cells[1].Value.ToString();
-            label3.Text = row.Cells[3].Value.ToString();
-            label4.Text = row.Cells[4].Value.ToString();
-            label5.Text = row.Cells[5].Value.ToString();
-            label6.Text = row.Cells[6].Value.ToString();
-            label7.Text = row.Cells[7].Value.ToString();
+            //lbltest.Text = row.Cells[0].Value.ToString();
+            //label1.Text = row.Cells[1].Value.ToString();
+            //label3.Text = row.Cells[3].Value.ToString();
+            //label4.Text = row.Cells[4].Value.ToString();
+            //label5.Text = row.Cells[5].Value.ToString();
+            //label6.Text = row.Cells[6].Value.ToString();
+            //label7.Text = row.Cells[7].Value.ToString();
         }
 
         int rowindexa;
