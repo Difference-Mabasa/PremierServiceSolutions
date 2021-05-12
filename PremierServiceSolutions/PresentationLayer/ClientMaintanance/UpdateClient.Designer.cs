@@ -47,7 +47,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnUpdateIC = new FontAwesome.Sharp.IconButton();
             this.btnUpdateBC = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.GbSearchStud = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearchClient = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.GbCD.SuspendLayout();
+            this.GbSearchStud.SuspendLayout();
             this.SuspendLayout();
             // 
             // GbCD
@@ -199,7 +204,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnUpdateIC.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUpdateIC.IconSize = 30;
             this.btnUpdateIC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateIC.Location = new System.Drawing.Point(389, 55);
+            this.btnUpdateIC.Location = new System.Drawing.Point(403, 190);
             this.btnUpdateIC.Name = "btnUpdateIC";
             this.btnUpdateIC.Size = new System.Drawing.Size(223, 42);
             this.btnUpdateIC.TabIndex = 56;
@@ -218,7 +223,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnUpdateBC.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUpdateBC.IconSize = 30;
             this.btnUpdateBC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateBC.Location = new System.Drawing.Point(388, 103);
+            this.btnUpdateBC.Location = new System.Drawing.Point(402, 238);
             this.btnUpdateBC.Name = "btnUpdateBC";
             this.btnUpdateBC.Size = new System.Drawing.Size(224, 42);
             this.btnUpdateBC.TabIndex = 57;
@@ -237,7 +242,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.IconSize = 30;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(388, 151);
+            this.btnBack.Location = new System.Drawing.Point(402, 286);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(224, 42);
             this.btnBack.TabIndex = 58;
@@ -246,12 +251,55 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // GbSearchStud
+            // 
+            this.GbSearchStud.Controls.Add(this.btnSearch);
+            this.GbSearchStud.Controls.Add(this.txtSearchClient);
+            this.GbSearchStud.Controls.Add(this.label2);
+            this.GbSearchStud.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GbSearchStud.ForeColor = System.Drawing.Color.White;
+            this.GbSearchStud.Location = new System.Drawing.Point(406, 45);
+            this.GbSearchStud.Name = "GbSearchStud";
+            this.GbSearchStud.Size = new System.Drawing.Size(220, 111);
+            this.GbSearchStud.TabIndex = 62;
+            this.GbSearchStud.TabStop = false;
+            this.GbSearchStud.Text = "Search Client";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(18, 67);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(185, 30);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search client";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearchClient
+            // 
+            this.txtSearchClient.Location = new System.Drawing.Point(17, 38);
+            this.txtSearchClient.Name = "txtSearchClient";
+            this.txtSearchClient.Size = new System.Drawing.Size(186, 23);
+            this.txtSearchClient.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Enter Client ID";
+            // 
             // UpdateClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(781, 529);
+            this.Controls.Add(this.GbSearchStud);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdateBC);
             this.Controls.Add(this.btnUpdateIC);
@@ -260,6 +308,8 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.Text = "UpdateClient";
             this.GbCD.ResumeLayout(false);
             this.GbCD.PerformLayout();
+            this.GbSearchStud.ResumeLayout(false);
+            this.GbSearchStud.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +334,9 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private FontAwesome.Sharp.IconButton btnUpdateIC;
         private FontAwesome.Sharp.IconButton btnUpdateBC;
         private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.GroupBox GbSearchStud;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearchClient;
+        private System.Windows.Forms.Label label2;
     }
 }

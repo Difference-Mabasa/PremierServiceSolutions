@@ -17,7 +17,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         {
             InitializeComponent();
         }
-
+        BindingSource source = new BindingSource();
+        BusinessClientBLL business = new BusinessClientBLL();
+        IndividualClientBLL individual = new IndividualClientBLL();
+        IndividualClient ic = new IndividualClient();
+        BusinessClient bc = new BusinessClient();
+        DBOperations DB = new DBOperations();
         private void btnUpdateIC_Click(object sender, EventArgs e)
         {
             try
@@ -68,6 +73,31 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             ClientMaintenance maintanance = new ClientMaintenance();
             maintanance.Show();
             maintanance.OpenChildForm(new ClientDetails());
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearchClient.Text.Contains("I"))
+            {
+                ic = individual.GetIndividualClientByID(txtSearchClient.Text);
+                txtID.Text = ic.clientID;
+                txtName.Text = ic.Name;
+                txtSurname.Text = ic.Surname;
+                txtPhone.Text = ic.Phone;
+                txtEmail.Text = ic.Email;
+                txtAddress.Text = ic.AddressID;
+                txtContract.Text = ic.ContractID;
+            }
+            else
+            {
+                bc = business.GetBusinessClientByID(txtSearchClient.Text);
+                txtID.Text = bc.clientID;
+                txtName.Text = bc.CompanyName;
+                txtPhone.Text = bc.Phone;
+                txtEmail.Text = bc.Email;
+                txtAddress.Text = bc.AddressID;
+                txtContract.Text = bc.ContractID;
+            }
         }
     }
 }

@@ -18,8 +18,8 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         //insert contracts
         public void AddContract(Contract cont) 
         {
-            ContractDAL contractDAL = new ContractDAL();
-            contractDAL.InsertContract(cont);
+            //ContractDAL contractDAL = new ContractDAL();
+            //contractDAL.InsertContract(cont);
         }
         
         //list of individual contracts
