@@ -11,23 +11,21 @@ namespace PremierServiceSolutions.BusinessLogicLayer
 {
     class ContractBLL
     {
-        bool contractAvailable;
-        Contract contract = new Contract();
-        DataAccessLayer.ContractDAL contractDAL = new DataAccessLayer.ContractDAL();
 
-        //insert contracts
-        public void AddContract(Contract cont) 
-        {
-            //ContractDAL contractDAL = new ContractDAL();
-            //contractDAL.InsertContract(cont);
-        }
-        
+      
         //list of individual contracts
         public List<Contract> GetContacts()
         {
-            ContractDAL dal = new ContractDAL();
-            List<Contract> contracts =  dal.GetAllContracts();
-
+            List<Contract> contracts = new List<Contract>();
+            try
+            {
+                ContractDAL dal = new ContractDAL();
+                contracts = dal.GetAllContracts();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error: {e.Message}");
+            }
             return contracts;
         }
        
@@ -42,12 +40,17 @@ namespace PremierServiceSolutions.BusinessLogicLayer
         public List<Contract> ViewAllContracts() 
         {
             List<Contract> contracts = new List<Contract>();
-
-            foreach (Contract item in contractDAL.GetAllContracts())
+            ContractDAL contractDAL = new ContractDAL();
+            try
             {
-                contracts.Add(item);
+                contracts = contractDAL.GetAllContracts();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Error: {e.Message}");
             }
             return contracts;
+            
         }
 
         public void InsertContract(Contract con)
