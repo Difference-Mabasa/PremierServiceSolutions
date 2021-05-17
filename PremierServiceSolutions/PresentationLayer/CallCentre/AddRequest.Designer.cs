@@ -132,7 +132,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.ForeColor = System.Drawing.Color.White;
-            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.Mixer;
+            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.btnEnd.IconColor = System.Drawing.Color.White;
             this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEnd.IconSize = 35;
@@ -141,7 +141,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(160, 52);
             this.btnEnd.TabIndex = 40;
-            this.btnEnd.Text = "End Call";
+            this.btnEnd.Text = "Back";
             this.btnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnd.UseVisualStyleBackColor = true;
             this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
