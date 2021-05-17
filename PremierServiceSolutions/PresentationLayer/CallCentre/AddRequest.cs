@@ -62,7 +62,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
-            
+            CallCentre call = new CallCentre();
+            call.Show();
+            call.OpenChildForm(new ClientDetails());
         }
     }
 }

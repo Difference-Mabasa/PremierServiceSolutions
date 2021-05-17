@@ -26,19 +26,18 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         }
 
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            //Drops the call
 
-            frmCall call = new frmCall();
-
-            this.Hide();
-            call.Show();
-        }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            CallCentre call = new CallCentre();
+            call.Show();
+            call.OpenChildForm(new ClientDetails());
         }
     }
 }
