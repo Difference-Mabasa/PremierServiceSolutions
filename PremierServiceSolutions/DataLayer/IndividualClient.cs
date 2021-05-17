@@ -22,6 +22,33 @@ namespace PremierServiceSolutions
 
         public string clientID { get; set; }
 
+        public string GenerateClientID()
+        {
+            Random rand = new Random();
+            int letter = rand.Next(1, 4);
+
+            string id = "";
+            int upper = rand.Next(10000000, 100000000);
+
+            switch (letter)
+            {
+                case 1:
+                    id += 'A';
+                    break;
+                case 2:
+                    id += 'B';
+                    break;
+                case 3:
+                    id += 'C';
+                    break;
+            }
+
+            id += Convert.ToString(upper);
+
+            return id;
+
+        }
+
         public override void Regiter()
         {
             try

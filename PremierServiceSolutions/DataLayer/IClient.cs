@@ -11,5 +11,9 @@ namespace PremierServiceSolutions
     {
         string clientID { get; set; }
         void sendRequest();
+
+        string GenerateClientID();
+
+
     }
 }
