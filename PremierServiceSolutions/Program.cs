@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
-
 using PremierServiceSolutions.PresentationLayer;
 using PremierServiceSolutions.PresentationLayer.ContractMaintanance;
 using PremierServiceSolutions.PresentationLayer.ServiceDapartment;
@@ -19,16 +18,12 @@ namespace PremierServiceSolutions
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        /// 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new JobTracking());
+            Application.Run(new ContractMaintenance());
         }
     }
 }
