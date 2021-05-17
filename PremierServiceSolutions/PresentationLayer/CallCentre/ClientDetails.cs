@@ -33,12 +33,25 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //Drops the call
+            ObjectSerializer serializer = new ObjectSerializer();
+            Call call = serializer.DeSerializeCall();
+            call.EndCall();
 
-            Call call = new Call();
+            if (call.ClientID.Contains("I"))
+            {
+                IndividualClientCallReportsBLL report = new IndividualClientCallReportsBLL();
+                report.InsertIndividualCallReport(call);
+            }
 
+            else if (call.ClientID.Contains("B"))
+            {
+                BusinessClientCallReportsBLL report = new BusinessClientCallReportsBLL();
+                report.InsertBusinessCallReport(call);
+            }
+
+            MessageBox.Show($"Call Ended \nDuration: {call.Duration} Minutes");
             this.Hide();
-            
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
