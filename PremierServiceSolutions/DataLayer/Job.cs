@@ -12,12 +12,10 @@ namespace PremierServiceSolutions
     {
         string jobID, clientID, technician, description, status, employeeID;
         int duration;
-        bool finished;
 
         public string JobID { get => jobID; set => jobID = value; }
         public string ClientID { get => clientID; set => clientID = value; }
         public string Technician { get => technician; set => technician = value; }
-        public bool Finished { get => finished; set => finished = value; }
         public int Duration { get => duration; set => duration = value; }
         public string Description { get => description; set => description = value; }
         public string Status { get => status; set => status = value; }

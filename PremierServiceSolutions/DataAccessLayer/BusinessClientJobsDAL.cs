@@ -93,12 +93,12 @@ namespace PremierServiceSolutions.DataAccessLayer
         public void UpdateBusinessClientJob(Job job)
         {
             string query = $"update BusinessClientJobs set " +
-                $"JobID = '{job.JobID}', " +
+                //$"JobID = '{job.JobID}', " +
                 $"JobDescription = '{job.Description}', " +
                 $"JobStatus = '{job.Status}', " +
-                $"JobDuration = '{job.Duration}', " +
-                $"CompanyID = '{job.ClientID}', " +
-                $"EmployeeID = '{job.EmployeeID}' " +
+                $"JobDuration = '{job.Duration}' " +
+                //$"CompanyID = '{job.ClientID}', " +
+                //$"EmployeeID = '{job.EmployeeID}' " +
                 $"where JobID = '{job.JobID}'";
             try
             {

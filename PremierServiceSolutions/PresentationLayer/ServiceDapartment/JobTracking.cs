@@ -65,7 +65,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             jobb.JobID = row.Cells[0].Value.ToString();
             jobb.ClientID = row.Cells[1].Value.ToString();
             jobb.Technician = row.Cells[2].Value.ToString();
-            jobb.Finished = bool.Parse(row.Cells[3].Value.ToString());
+            //jobb.Finished = bool.Parse(row.Cells[3].Value.ToString());
             jobb.Duration = int.Parse(row.Cells[4].Value.ToString());
             jobb.Description = row.Cells[5].Value.ToString();
             jobb.Status = row.Cells[6].Value.ToString();

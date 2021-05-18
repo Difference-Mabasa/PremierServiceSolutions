@@ -36,7 +36,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label12 = new System.Windows.Forms.Label();
             this.btnEnd = new FontAwesome.Sharp.IconButton();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
-            this.txtJobId = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.rtbdescrip = new System.Windows.Forms.RichTextBox();
@@ -145,12 +145,12 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txtJobId
+            // txtStatus
             // 
-            this.txtJobId.Location = new System.Drawing.Point(391, 71);
-            this.txtJobId.Name = "txtJobId";
-            this.txtJobId.Size = new System.Drawing.Size(182, 26);
-            this.txtJobId.TabIndex = 47;
+            this.txtStatus.Location = new System.Drawing.Point(391, 71);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(182, 26);
+            this.txtStatus.TabIndex = 47;
             // 
             // label11
             // 
@@ -159,9 +159,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(288, 84);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 18);
+            this.label11.Size = new System.Drawing.Size(60, 18);
             this.label11.TabIndex = 46;
-            this.label11.Text = "JobID";
+            this.label11.Text = "Status";
             // 
             // txtDuration
             // 
@@ -259,6 +259,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.dgvPreviousRequests.Name = "dgvPreviousRequests";
             this.dgvPreviousRequests.Size = new System.Drawing.Size(543, 150);
             this.dgvPreviousRequests.TabIndex = 64;
+            this.dgvPreviousRequests.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreviousRequests_CellClick);
             // 
             // UpdateRequest
             // 
@@ -269,7 +270,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.lblDuration);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtJobId);
+            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.rtbdescrip);
@@ -284,6 +285,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdateRequest";
+            this.Load += new System.EventHandler(this.UpdateRequest_Load);
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequests)).EndInit();
@@ -316,7 +318,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private System.Windows.Forms.Label label12;
         private FontAwesome.Sharp.IconButton btnEnd;
         private FontAwesome.Sharp.IconButton btnUpdate;
-        private System.Windows.Forms.TextBox txtJobId;
+        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.RichTextBox rtbdescrip;

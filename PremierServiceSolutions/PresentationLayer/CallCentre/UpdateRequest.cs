@@ -40,7 +40,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             IndividualClientJobsBLL indiJob = new IndividualClientJobsBLL();
             Job job = new Job();
             job.ClientID = lblID.Text;
-            job.JobID = txtJobId.Text;
+            job.Status = txtStatus.Text;
             job.Duration = int.Parse(txtDuration.Text);
             job.Description = rtbdescrip.Text;
             job.Status = "0";
@@ -97,6 +97,22 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
 
 
+
+        }
+
+        private void dgvPreviousRequests_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = dgvPreviousRequests.Rows[rowIndex];
+
+            txtStatus.Text = row.Cells[5].Value.ToString();
+            txtDuration.Text = row.Cells[3].Value.ToString();
+            rtbdescrip.Text = row.Cells[4].Value.ToString();
+
+        }
+
+        private void UpdateRequest_Load(object sender, EventArgs e)
+        {
 
         }
     }
