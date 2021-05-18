@@ -128,5 +128,10 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
 
         }
+
+        private void ClientDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

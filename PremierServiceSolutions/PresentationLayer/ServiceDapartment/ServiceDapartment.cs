@@ -119,7 +119,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void ibtnTechnicians_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Technicians());
         }
 
@@ -131,7 +131,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
 
         private void IbtnJobtracking_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new JobTracking());
         }
 

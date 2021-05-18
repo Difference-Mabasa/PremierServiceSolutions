@@ -37,13 +37,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.label2 = new System.Windows.Forms.Label();
             this.dgvIndividualClients = new System.Windows.Forms.DataGridView();
             this.GbCD = new System.Windows.Forms.GroupBox();
-            this.txtContract = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContract = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -54,6 +47,13 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.dgvBusinessClients = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.GbSearchStud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndividualClients)).BeginInit();
             this.GbCD.SuspendLayout();
@@ -112,20 +112,20 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // 
             // GbCD
             // 
-            this.GbCD.Controls.Add(this.txtContract);
-            this.GbCD.Controls.Add(this.txtEmail);
-            this.GbCD.Controls.Add(this.txtName);
-            this.GbCD.Controls.Add(this.txtSurname);
-            this.GbCD.Controls.Add(this.txtAddress);
-            this.GbCD.Controls.Add(this.txtPhone);
-            this.GbCD.Controls.Add(this.txtID);
+            this.GbCD.Controls.Add(this.label4);
             this.GbCD.Controls.Add(this.lblEmail);
             this.GbCD.Controls.Add(this.lblContract);
+            this.GbCD.Controls.Add(this.label5);
             this.GbCD.Controls.Add(this.lblPhone);
             this.GbCD.Controls.Add(this.lblAddress);
+            this.GbCD.Controls.Add(this.label6);
             this.GbCD.Controls.Add(this.lblSurname);
             this.GbCD.Controls.Add(this.lblName);
+            this.GbCD.Controls.Add(this.label7);
             this.GbCD.Controls.Add(this.lblClientID);
+            this.GbCD.Controls.Add(this.label10);
+            this.GbCD.Controls.Add(this.label8);
+            this.GbCD.Controls.Add(this.label9);
             this.GbCD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GbCD.ForeColor = System.Drawing.Color.White;
             this.GbCD.Location = new System.Drawing.Point(568, 185);
@@ -135,60 +135,10 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.GbCD.TabStop = false;
             this.GbCD.Text = "Client Details";
             // 
-            // txtContract
-            // 
-            this.txtContract.Location = new System.Drawing.Point(95, 230);
-            this.txtContract.Name = "txtContract";
-            this.txtContract.Size = new System.Drawing.Size(100, 23);
-            this.txtContract.TabIndex = 18;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(95, 160);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 23);
-            this.txtEmail.TabIndex = 17;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(95, 56);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 23);
-            this.txtName.TabIndex = 16;
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Location = new System.Drawing.Point(95, 85);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 23);
-            this.txtSurname.TabIndex = 15;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(95, 194);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(100, 23);
-            this.txtAddress.TabIndex = 14;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(95, 122);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 23);
-            this.txtPhone.TabIndex = 13;
-            // 
-            // txtID
-            // 
-            this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtID.Location = new System.Drawing.Point(95, 22);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 23);
-            this.txtID.TabIndex = 12;
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(15, 160);
+            this.lblEmail.Location = new System.Drawing.Point(93, 170);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(44, 15);
             this.lblEmail.TabIndex = 11;
@@ -197,7 +147,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblContract
             // 
             this.lblContract.AutoSize = true;
-            this.lblContract.Location = new System.Drawing.Point(14, 230);
+            this.lblContract.Location = new System.Drawing.Point(92, 240);
             this.lblContract.Name = "lblContract";
             this.lblContract.Size = new System.Drawing.Size(65, 15);
             this.lblContract.TabIndex = 10;
@@ -206,7 +156,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(15, 122);
+            this.lblPhone.Location = new System.Drawing.Point(93, 132);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(48, 15);
             this.lblPhone.TabIndex = 4;
@@ -215,7 +165,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(14, 197);
+            this.lblAddress.Location = new System.Drawing.Point(92, 207);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(60, 15);
             this.lblAddress.TabIndex = 3;
@@ -224,7 +174,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(15, 85);
+            this.lblSurname.Location = new System.Drawing.Point(93, 95);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(66, 15);
             this.lblSurname.TabIndex = 2;
@@ -233,7 +183,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(15, 56);
+            this.lblName.Location = new System.Drawing.Point(93, 66);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(45, 15);
             this.lblName.TabIndex = 1;
@@ -242,7 +192,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // lblClientID
             // 
             this.lblClientID.AutoSize = true;
-            this.lblClientID.Location = new System.Drawing.Point(14, 29);
+            this.lblClientID.Location = new System.Drawing.Point(92, 39);
             this.lblClientID.Name = "lblClientID";
             this.lblClientID.Size = new System.Drawing.Size(58, 15);
             this.lblClientID.TabIndex = 0;
@@ -278,12 +228,75 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.label3.TabIndex = 50;
             this.label3.Text = "Business Clients";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Contract";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 15);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Phone";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 207);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 15);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Address";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 15);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Surname";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 15);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Name";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 15);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "clientID";
+            // 
             // ClientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(800, 701);
+            this.ClientSize = new System.Drawing.Size(817, 635);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBusinessClients);
@@ -346,13 +359,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvIndividualClients;
         private System.Windows.Forms.GroupBox GbCD;
-        private System.Windows.Forms.TextBox txtContract;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContract;
         private System.Windows.Forms.Label lblPhone;
@@ -363,5 +369,12 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private System.Windows.Forms.DataGridView dgvBusinessClients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

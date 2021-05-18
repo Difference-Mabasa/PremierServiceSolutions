@@ -139,19 +139,19 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
 
         private void ibtnClientDetails_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new ClientDetails());
         }
 
         private void ibtnAddClients_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new AddClients());
         }
 
         private void ibtnUpdateClients_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new UpdateClient());
         }
 

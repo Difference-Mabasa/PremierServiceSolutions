@@ -31,7 +31,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                     {
                         clientJob.JobID = reader.GetString(0);
                         clientJob.Description = reader.GetString(1);
-                        clientJob.Status = reader.GetString(2);
+                        clientJob.Status = reader.GetBoolean(2).ToString();
                         clientJob.Duration = reader.GetInt32(3);
                         clientJob.ClientID = reader.GetString(4);
                         clientJob.EmployeeID = reader.GetString(5);
@@ -93,13 +93,13 @@ namespace PremierServiceSolutions.DataAccessLayer
 
         public void UpdateIndividualClientJob(Job job)
         {
-            string query = $"update IndividualClientJobs set" +
+            string query = $"update IndividualClientJobs set " +
                 $"JobID = '{job.JobID}', " +
                 $"JobDescription = '{job.Description}', " +
                 $"JobStatus = '{job.Status}', " +
                 $"JobDuration = '{job.Duration}', " +
-                $"ClientID = {job.ClientID}, " +
-                $"EmployeeID = '{job.EmployeeID}'" +
+                $"ClientID = '{job.ClientID}' " +
+                //$"EmployeeID = '{job.EmployeeID}' " +
                 $"where JobID = '{job.JobID}'";
             try
             {
