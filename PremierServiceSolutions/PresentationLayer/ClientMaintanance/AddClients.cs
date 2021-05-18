@@ -29,7 +29,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             {
                 IndividualClientBLL clientData = new IndividualClientBLL();
                 IndividualClient client = new IndividualClient();
-                client.clientID = txtID.Text;
+                client.clientID = client.GenerateClientID();
                 client.Name = txtName.Text;
                 client.Surname = txtSurname.Text;
                 client.Phone = txtPhone.Text;
@@ -38,7 +38,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 client.ContractID = txtContract.Text;
                 clientData.InsertIndividualClient(client);
 
-                MessageBox.Show("Individual Client Saved");
+                MessageBox.Show($"Individual Client Saved\nYour ID is: {client.clientID}");
             }
             catch (Exception exp)
             {
@@ -52,7 +52,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             {
                 BusinessClientBLL clientData = new BusinessClientBLL();
                 BusinessClient client = new BusinessClient();
-                client.clientID = txtID.Text;
+                client.clientID = client.GenerateClientID();
                 client.CompanyName = txtName.Text;
                 client.Phone = txtPhone.Text;
                 client.Email = txtEmail.Text;
@@ -60,7 +60,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
                 client.ContractID = txtContract.Text;
                 clientData.InsertBusinessClient(client);
 
-                MessageBox.Show("Business Client Saved");
+                MessageBox.Show($"Business Client Saved\nYour ID is: {client.clientID}");
             }
             catch (Exception exp)
             {

@@ -21,6 +21,30 @@ namespace PremierServiceSolutions
         public string AddressID { get => addressID; set => addressID = value; }
         public string ContractID { get => contractID; set => contractID = value; }
 
+        public string GenerateClientID()
+        {
+            Random rand = new Random();
+            int letter = rand.Next(1, 3);
+
+            string id = "";
+            int upper = rand.Next(10000000, 100000000);
+
+            switch (letter)
+            {
+                case 1:
+                    id += 'D';
+                    break;
+                case 2:
+                    id += 'E';
+                    break;
+               
+            }
+
+            id += Convert.ToString(upper);
+
+            return id;
+        }
+
         public void sendRequest()
         {
             throw new NotImplementedException();
