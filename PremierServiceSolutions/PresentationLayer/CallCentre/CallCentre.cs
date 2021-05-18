@@ -213,6 +213,30 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void ibtnClients_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            this.Hide();
+            ClientMaintanance.ClientMaintenance frm = new ClientMaintanance.ClientMaintenance();
+            frm.Show();
+        }
+
+        private void ibtnContracts_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            this.Hide();
+            ContractMaintanance.ContractMaintenance frm = new ContractMaintanance.ContractMaintenance();
+            frm.Show();
+        }
+
+        private void ibtnService_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            this.Hide();
+            ServiceDapartment.ServiceDapartment frm = new ServiceDapartment.ServiceDapartment();
+            frm.Show();
+        }
     }
 
 }

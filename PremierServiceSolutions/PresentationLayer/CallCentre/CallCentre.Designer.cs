@@ -49,6 +49,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.lblTime = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ibtnService = new FontAwesome.Sharp.IconButton();
+            this.ibtnContracts = new FontAwesome.Sharp.IconButton();
+            this.ibtnClients = new FontAwesome.Sharp.IconButton();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -61,6 +64,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.ibtnClients);
+            this.pnlMenu.Controls.Add(this.ibtnContracts);
+            this.pnlMenu.Controls.Add(this.ibtnService);
             this.pnlMenu.Controls.Add(this.ibtnLogOout);
             this.pnlMenu.Controls.Add(this.ibtnUpdateRequest);
             this.pnlMenu.Controls.Add(this.ibtnAddRequest);
@@ -70,7 +76,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(188, 749);
+            this.pnlMenu.Size = new System.Drawing.Size(199, 749);
             this.pnlMenu.TabIndex = 0;
             // 
             // ibtnLogOout
@@ -88,7 +94,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnLogOout.Location = new System.Drawing.Point(0, 689);
             this.ibtnLogOout.Name = "ibtnLogOout";
             this.ibtnLogOout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnLogOout.Size = new System.Drawing.Size(188, 60);
+            this.ibtnLogOout.Size = new System.Drawing.Size(199, 60);
             this.ibtnLogOout.TabIndex = 5;
             this.ibtnLogOout.Text = " Log Out";
             this.ibtnLogOout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,7 +117,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnUpdateRequest.Location = new System.Drawing.Point(0, 333);
             this.ibtnUpdateRequest.Name = "ibtnUpdateRequest";
             this.ibtnUpdateRequest.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnUpdateRequest.Size = new System.Drawing.Size(188, 60);
+            this.ibtnUpdateRequest.Size = new System.Drawing.Size(199, 60);
             this.ibtnUpdateRequest.TabIndex = 4;
             this.ibtnUpdateRequest.Text = "Update Request";
             this.ibtnUpdateRequest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +140,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnAddRequest.Location = new System.Drawing.Point(0, 273);
             this.ibtnAddRequest.Name = "ibtnAddRequest";
             this.ibtnAddRequest.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnAddRequest.Size = new System.Drawing.Size(188, 60);
+            this.ibtnAddRequest.Size = new System.Drawing.Size(199, 60);
             this.ibtnAddRequest.TabIndex = 3;
             this.ibtnAddRequest.Text = "Add Request";
             this.ibtnAddRequest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +163,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnClientDetails.Location = new System.Drawing.Point(0, 213);
             this.ibtnClientDetails.Name = "ibtnClientDetails";
             this.ibtnClientDetails.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnClientDetails.Size = new System.Drawing.Size(188, 60);
+            this.ibtnClientDetails.Size = new System.Drawing.Size(199, 60);
             this.ibtnClientDetails.TabIndex = 2;
             this.ibtnClientDetails.Text = "Client Details";
             this.ibtnClientDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,7 +186,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.ibtnCall.Location = new System.Drawing.Point(0, 153);
             this.ibtnCall.Name = "ibtnCall";
             this.ibtnCall.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ibtnCall.Size = new System.Drawing.Size(188, 60);
+            this.ibtnCall.Size = new System.Drawing.Size(199, 60);
             this.ibtnCall.TabIndex = 1;
             this.ibtnCall.Text = "Call";
             this.ibtnCall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,7 +201,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.pnlLogo.Size = new System.Drawing.Size(188, 153);
+            this.pnlLogo.Size = new System.Drawing.Size(199, 153);
             this.pnlLogo.TabIndex = 0;
             // 
             // btnHome
@@ -204,7 +210,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnHome.Image = global::PremierServiceSolutions.Properties.Resources.pss2;
             this.btnHome.Location = new System.Drawing.Point(10, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(168, 153);
+            this.btnHome.Size = new System.Drawing.Size(179, 153);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -219,9 +225,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlTitle.Controls.Add(this.lblTitleChildForm);
             this.pnlTitle.Controls.Add(this.ipbChildForm);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(188, 0);
+            this.pnlTitle.Location = new System.Drawing.Point(199, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(796, 80);
+            this.pnlTitle.Size = new System.Drawing.Size(785, 80);
             this.pnlTitle.TabIndex = 1;
             this.pnlTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitle_MouseDown);
             // 
@@ -236,7 +242,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 15;
-            this.btnClose.Location = new System.Drawing.Point(757, 0);
+            this.btnClose.Location = new System.Drawing.Point(746, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(39, 15);
             this.btnClose.TabIndex = 63;
@@ -255,7 +261,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnMax.IconColor = System.Drawing.Color.White;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 15;
-            this.btnMax.Location = new System.Drawing.Point(731, 0);
+            this.btnMax.Location = new System.Drawing.Point(720, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(39, 15);
             this.btnMax.TabIndex = 62;
@@ -274,7 +280,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 15;
-            this.btnMin.Location = new System.Drawing.Point(702, 0);
+            this.btnMin.Location = new System.Drawing.Point(691, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(39, 15);
             this.btnMin.TabIndex = 61;
@@ -313,9 +319,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.pnlDesktop.Controls.Add(this.lblTime);
             this.pnlDesktop.Controls.Add(this.pictureBox1);
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(188, 80);
+            this.pnlDesktop.Location = new System.Drawing.Point(199, 80);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(796, 669);
+            this.pnlDesktop.Size = new System.Drawing.Size(785, 669);
             this.pnlDesktop.TabIndex = 3;
             // 
             // lblDate
@@ -354,6 +360,75 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ibtnService
+            // 
+            this.ibtnService.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ibtnService.FlatAppearance.BorderSize = 0;
+            this.ibtnService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnService.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnService.ForeColor = System.Drawing.Color.White;
+            this.ibtnService.IconChar = FontAwesome.Sharp.IconChar.SpeakerDeck;
+            this.ibtnService.IconColor = System.Drawing.Color.White;
+            this.ibtnService.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnService.IconSize = 40;
+            this.ibtnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnService.Location = new System.Drawing.Point(0, 636);
+            this.ibtnService.Name = "ibtnService";
+            this.ibtnService.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnService.Size = new System.Drawing.Size(199, 53);
+            this.ibtnService.TabIndex = 8;
+            this.ibtnService.Text = "Service Department";
+            this.ibtnService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnService.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnService.UseVisualStyleBackColor = true;
+            this.ibtnService.Click += new System.EventHandler(this.ibtnService_Click);
+            // 
+            // ibtnContracts
+            // 
+            this.ibtnContracts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ibtnContracts.FlatAppearance.BorderSize = 0;
+            this.ibtnContracts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnContracts.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnContracts.ForeColor = System.Drawing.Color.White;
+            this.ibtnContracts.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.ibtnContracts.IconColor = System.Drawing.Color.White;
+            this.ibtnContracts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnContracts.IconSize = 40;
+            this.ibtnContracts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnContracts.Location = new System.Drawing.Point(0, 583);
+            this.ibtnContracts.Name = "ibtnContracts";
+            this.ibtnContracts.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnContracts.Size = new System.Drawing.Size(199, 53);
+            this.ibtnContracts.TabIndex = 10;
+            this.ibtnContracts.Text = "Contract Maintenance";
+            this.ibtnContracts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnContracts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnContracts.UseVisualStyleBackColor = true;
+            this.ibtnContracts.Click += new System.EventHandler(this.ibtnContracts_Click);
+            // 
+            // ibtnClients
+            // 
+            this.ibtnClients.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ibtnClients.FlatAppearance.BorderSize = 0;
+            this.ibtnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnClients.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnClients.ForeColor = System.Drawing.Color.White;
+            this.ibtnClients.IconChar = FontAwesome.Sharp.IconChar.PeopleArrows;
+            this.ibtnClients.IconColor = System.Drawing.Color.White;
+            this.ibtnClients.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnClients.IconSize = 40;
+            this.ibtnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnClients.Location = new System.Drawing.Point(0, 530);
+            this.ibtnClients.Name = "ibtnClients";
+            this.ibtnClients.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnClients.Size = new System.Drawing.Size(199, 53);
+            this.ibtnClients.TabIndex = 11;
+            this.ibtnClients.Text = "Client Maintenance";
+            this.ibtnClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnClients.UseVisualStyleBackColor = true;
+            this.ibtnClients.Click += new System.EventHandler(this.ibtnClients_Click);
             // 
             // CallCentre
             // 
@@ -400,5 +475,8 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
         private FontAwesome.Sharp.IconButton btnMin;
         public FontAwesome.Sharp.IconButton ibtnClientDetails;
         public FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton ibtnClients;
+        private FontAwesome.Sharp.IconButton ibtnContracts;
+        private FontAwesome.Sharp.IconButton ibtnService;
     }
 }

@@ -199,6 +199,11 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             this.WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void ibtnCall_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CallCentre.CallCentre frm = new CallCentre.CallCentre();
+            frm.Show();
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ibtnCall = new FontAwesome.Sharp.IconButton();
             this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTitle.SuspendLayout();
@@ -199,6 +200,7 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.pnlMenu.Controls.Add(this.ibtnCall);
             this.pnlMenu.Controls.Add(this.ibtnLogOout);
             this.pnlMenu.Controls.Add(this.ibtnUpdateClients);
             this.pnlMenu.Controls.Add(this.ibtnAddClients);
@@ -329,6 +331,29 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ibtnCall
+            // 
+            this.ibtnCall.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ibtnCall.FlatAppearance.BorderSize = 0;
+            this.ibtnCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnCall.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnCall.ForeColor = System.Drawing.Color.White;
+            this.ibtnCall.IconChar = FontAwesome.Sharp.IconChar.PhoneSquareAlt;
+            this.ibtnCall.IconColor = System.Drawing.Color.White;
+            this.ibtnCall.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnCall.IconSize = 40;
+            this.ibtnCall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnCall.Location = new System.Drawing.Point(0, 541);
+            this.ibtnCall.Name = "ibtnCall";
+            this.ibtnCall.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ibtnCall.Size = new System.Drawing.Size(188, 60);
+            this.ibtnCall.TabIndex = 6;
+            this.ibtnCall.Text = "Call Centre";
+            this.ibtnCall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnCall.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnCall.UseVisualStyleBackColor = true;
+            this.ibtnCall.Click += new System.EventHandler(this.ibtnCall_Click);
+            // 
             // ClientMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,5 +398,6 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMax;
         private FontAwesome.Sharp.IconButton btnMin;
+        private FontAwesome.Sharp.IconButton ibtnCall;
     }
 }

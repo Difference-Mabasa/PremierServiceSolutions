@@ -25,7 +25,7 @@ namespace PremierServiceSolutions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UpdateRequest());
+            Application.Run(new CallCentre());
         }
     }
 }

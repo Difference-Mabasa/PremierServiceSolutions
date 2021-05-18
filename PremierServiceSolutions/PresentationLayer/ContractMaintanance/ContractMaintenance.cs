@@ -207,5 +207,12 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new AddContracts());
         }
+
+        private void ibtnCall_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CallCentre.CallCentre frm = new CallCentre.CallCentre();
+            frm.Show();
+        }
     }
 }
