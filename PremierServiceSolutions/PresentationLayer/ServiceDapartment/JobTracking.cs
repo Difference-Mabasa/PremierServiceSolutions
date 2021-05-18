@@ -127,7 +127,7 @@ namespace PremierServiceSolutions.PresentationLayer.ServiceDapartment
             label4.Text = row.Cells[4].Value.ToString();
             label5.Text = row.Cells[5].Value.ToString();
             label6.Text = row.Cells[6].Value.ToString();
-            label7.Text = row.Cells[7].Value.ToString();
+            //label7.Text = row.Cells[7].Value.ToString();
         }
 
         int rowindexa;
