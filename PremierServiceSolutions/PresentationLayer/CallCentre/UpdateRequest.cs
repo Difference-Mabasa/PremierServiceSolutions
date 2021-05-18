@@ -57,7 +57,9 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtSearchClient.Text.Contains("I"))
+            string id = txtSearchClient.Text;
+            //searches client using client id
+            if (id.Contains("I"))
             {
                 ic = individual.GetIndividualClientByID(txtSearchClient.Text);
                 lblID.Text = ic.clientID;
@@ -69,6 +71,33 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
                 lblID.Text = bc.clientID;
                 lblClientName.Text = bc.CompanyName;
             }
+
+            //display client previous requests
+            if (id.Contains("I"))
+            {
+                IndividualClientJobsBLL data = new IndividualClientJobsBLL();
+                List<Job> clientJobs = data.GetIndividualClientJobByClientID(id);
+
+                BindingSource source2 = new BindingSource();
+                source2.DataSource = clientJobs;
+
+                dgvPreviousRequests.DataSource = source2;
+            }
+            else
+            {
+                BusinessClientJobsBLL data = new BusinessClientJobsBLL();
+                List<Job> clientJobs = data.GetBusinessClientJobByClientID(id);
+
+                BindingSource source2 = new BindingSource();
+                source2.DataSource = clientJobs;
+
+                dgvPreviousRequests.DataSource = source2;
+            }
+           
+
+
+
+
         }
     }
 }

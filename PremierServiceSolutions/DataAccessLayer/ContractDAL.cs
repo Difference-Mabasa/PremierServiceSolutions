@@ -119,7 +119,7 @@ namespace PremierServiceSolutions.DataAccessLayer
             try
             {
                 conn.Open();
-                string query = $"Insert Into Contracts(ContractID, ContractType, ContractDescription, IndividualPrice, BusinessPrice, ContractAvailable) values('{cont.ContractID}', '{cont.ContractType}', '{cont.ContractDesc}', '{cont.IPrice}', '{cont.BPrice}','{cont.ContractAvailable}')";
+                string query = $"Insert Into Contracts(ContractID, ContractType, ContractDescription, IndividualPrice, BusinessPrice) values('{cont.ContractID}', '{cont.ContractType}', '{cont.ContractDesc}', '{cont.IPrice}', '{cont.BPrice}')";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show($"Successfully Added Contract ");

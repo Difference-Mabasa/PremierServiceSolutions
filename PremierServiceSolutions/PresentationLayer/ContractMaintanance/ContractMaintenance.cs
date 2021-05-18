@@ -123,13 +123,13 @@ namespace PremierServiceSolutions.PresentationLayer.ContractMaintanance
         
         private void ibtnContracts_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Contracts());
         }
 
         private void ibtnUpdateContracts_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new UpdateContract());
         }
         private void ibtnLogOout_Click(object sender, EventArgs e)

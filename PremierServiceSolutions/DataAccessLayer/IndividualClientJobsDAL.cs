@@ -31,7 +31,7 @@ namespace PremierServiceSolutions.DataAccessLayer
                     {
                         clientJob.JobID = reader.GetString(0);
                         clientJob.Description = reader.GetString(1);
-                        clientJob.Status = reader.GetString(2);
+                        clientJob.Status = reader.GetBoolean(2).ToString();
                         clientJob.Duration = reader.GetInt32(3);
                         clientJob.ClientID = reader.GetString(4);
                         clientJob.EmployeeID = reader.GetString(5);

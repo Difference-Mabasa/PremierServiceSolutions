@@ -243,6 +243,7 @@ namespace PremierServiceSolutions.PresentationLayer.CallCentre
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ClientDetails";
             this.Text = "ClientDetails";
+            this.Load += new System.EventHandler(this.ClientDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousRequests)).EndInit();
             this.GbSearchStud.ResumeLayout(false);
             this.GbSearchStud.PerformLayout();
