@@ -40,23 +40,23 @@ namespace PremierServiceSolutions.PresentationLayer.ClientMaintanance
             if (txtSearchClient.Text.Contains("I"))
             {
                 ic = individual.GetIndividualClientByID(txtSearchClient.Text);
-                txtID.Text = ic.clientID;
-                txtName.Text = ic.Name;
-                txtSurname.Text = ic.Surname;
-                txtPhone.Text = ic.Phone;
-                txtEmail.Text = ic.Email;
-                txtAddress.Text = ic.AddressID;
-                txtContract.Text = ic.ContractID;
+                lblClientID.Text = ic.clientID;
+                lblName.Text = ic.Name;
+                lblSurname.Text = ic.Surname;
+                lblPhone.Text = ic.Phone;
+                lblEmail.Text = ic.Email;
+                lblAddress.Text = ic.AddressID;
+                lblContract.Text = ic.ContractID;
             }
             else
             {
                 bc = business.GetBusinessClientByID(txtSearchClient.Text);
-                txtID.Text = bc.clientID;
-                txtName.Text = bc.CompanyName;
-                txtPhone.Text = bc.Phone;
-                txtEmail.Text = bc.Email;
-                txtAddress.Text = bc.AddressID;
-                txtContract.Text = bc.ContractID;
+                lblClientID.Text = bc.clientID;
+                lblName.Text = bc.CompanyName;
+                lblPhone.Text = bc.Phone;
+                lblEmail.Text = bc.Email;
+                lblAddress.Text = bc.AddressID;
+                lblContract.Text = bc.ContractID;
             }
         }
 
